@@ -1,7 +1,5 @@
 from pathlib import Path
 
-SRC_DIR = Path("./src/tramita")
-
 
 def tag_file(file_path: Path, tag_text: str):
     lines: list[str] = file_path.read_text().splitlines()
@@ -18,6 +16,28 @@ def tag_file(file_path: Path, tag_text: str):
     file_path.write_text(tagged_text)
 
 
-for filename in SRC_DIR.rglob("*.py"):
-    rel_path = filename.relative_to(SRC_DIR)
-    tag_file(filename, str(rel_path))
+def main():
+    SRC_DIR = Path("./src")
+    dumps = []
+
+    for filename in SRC_DIR.rglob("*.py"):
+        old_text = filename.read_text()
+        rel_path = filename.relative_to(SRC_DIR)
+        tag_file(filename, str(rel_path))
+        new_text = filename.read_text()
+        if old_text != new_text:
+            print(f"Tagged {rel_path}.")
+        dumps.append(filename.read_text())
+
+    divider = "\n# ------------------------------------------ #\n"
+
+    dumptext = divider.join(dumps)
+
+    with open("dump.txt", "w") as f:
+        f.write(dumptext)
+
+    print("Code dumped to dump.txt.")
+
+
+if __name__ == "__main__":
+    main()

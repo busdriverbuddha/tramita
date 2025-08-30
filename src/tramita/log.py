@@ -1,4 +1,4 @@
-# src/tramita/log.py
+# tramita/log.py
 
 import logging
 import sys

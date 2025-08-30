@@ -1,4 +1,4 @@
-# src/tramita/config.py
+# tramita/config.py
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import Field

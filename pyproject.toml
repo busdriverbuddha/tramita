@@ -10,13 +10,32 @@ authors = [
     {name = "Guilherme Gama", email = "guilhermegama@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
 ]
+
+# ✅ runtime dependencies
+dependencies = [
+    "typer>=0.12.0",
+    "httpx[http2]>=0.27.0",
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.2.1",
+    "pyarrow>=15.0.0",
+]
+
+[project.optional-dependencies]
+# optional zstandard support for the packing script
+zstd = ["zstandard>=0.22"]
+
+[project.scripts]
+tramita = "tramita.cli:app"
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -38,7 +57,7 @@ exclude = [
 
 [tool.black]
 line-length = 88
-target-version = ['py38']
+target-version = ["py310"]
 include = '\.pyi?$'
 extend-exclude = '''
 /(

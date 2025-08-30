@@ -1,4 +1,4 @@
-# src/tramita/http/rate.py
+# tramita/http/rate.py
 
 import asyncio
 import time

@@ -1,4 +1,4 @@
-# src/tramita/http/client.py
+# tramita/http/client.py
 
 import hashlib
 import httpx

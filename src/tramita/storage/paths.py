@@ -1,4 +1,4 @@
-# src/tramita/storage/paths.py
+# tramita/storage/paths.py
 
 import os
 

@@ -1,4 +1,4 @@
-# src/tramita/storage/manifest.py
+# tramita/storage/manifest.py
 
 import hashlib
 import platform
@@ -86,12 +86,13 @@ class SnapshotManifest(BaseModel):
     def save(self, path: Path) -> None:
         self.finalize()
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(self.json(indent=2, ensure_ascii=False))
+        text = self.model_dump_json(indent=2)
+        path.write_text(text, encoding="utf-8")
 
 
 def iso_now() -> str:
-    import datetime as dt
-    return dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+    from datetime import datetime, timezone
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
 def get_git_commit() -> str | None:

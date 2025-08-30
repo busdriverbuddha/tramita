@@ -1,4 +1,4 @@
-# src/tramita/scripts/pack_snapshot.py
+# tramita/scripts/pack_snapshot.py
 
 import argparse
 import hashlib
