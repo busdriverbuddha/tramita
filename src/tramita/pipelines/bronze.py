@@ -7,12 +7,28 @@ from tramita.log import setup_logging
 from tramita.storage.paths import BronzePaths
 from tramita.storage.manifest import new_manifest
 from tramita.sources.camara.pipelines import (
+    build_all_orgaos,
     build_autores_relations_and_entities,
     build_details_proposicoes,
+    build_frentes_via_deputados,
     build_index_proposicoes_tramitadas,
     build_temas_relations,
-    build_tramitacoes_relations,
     expand_index_via_relacionadas,
+    build_votacoes_votos_orientacoes,
+    build_index_eventos,
+    build_eventos_relations,
+    build_details_eventos,
+    expand_index_eventos_via_orgaos,
+    build_orgaos_membros,
+    build_orgaos_votacoes_relations,
+    build_tramitacoes_relations_and_orgaos,
+    build_deputados_catalog,
+    build_deputados_relations,
+    build_partidos_blocos_frentes_legislaturas,
+)
+
+from tramita.sources.camara.referencias import (
+    build_camara_referencias,
 )
 
 
@@ -61,8 +77,82 @@ async def bronze_camara(
         await build_details_proposicoes(paths, manifest, y, concurrency=20)
 
     await build_temas_relations(paths, manifest, years, concurrency_props=16)
-    await build_tramitacoes_relations(paths, manifest, years, concurrency_props=12)
+    await build_tramitacoes_relations_and_orgaos(
+        paths, manifest, years,
+        concurrency_props=12,
+        concurrency_orgaos=8,
+        concurrency_deputados=16,
+    )
+    await build_frentes_via_deputados(
+        paths, manifest, years,
+        page_size=page_size,
+        concurrency_deputados=16,
+        concurrency_frentes=16,
+    )
+    await build_votacoes_votos_orientacoes(
+        paths, manifest, years,
+        page_size=page_size,
+        concurrency_props=12,
+        concurrency_children=16,
+    )
 
+    await build_index_eventos(
+        paths, years,
+        window_days=window_days,
+        page_size=page_size,
+        concurrency_windows=4,
+        start_date=start_d, end_date=end_d,
+    )
+    for y in years:
+        await build_details_eventos(paths, manifest, y, concurrency=20)
+    await build_eventos_relations(
+        paths, manifest, years,
+        page_size=page_size,
+        concurrency_events=16,
+    )
+    await expand_index_eventos_via_orgaos(
+        paths, years,
+        window_days=window_days,
+        page_size=page_size,
+        concurrency_windows=4,
+        concurrency_orgaos=12,
+        start_date=start_d, end_date=end_d,
+    )
+    await build_index_eventos(
+        paths, years,
+        window_days=window_days,
+        page_size=page_size,
+        concurrency_windows=4,
+        start_date=start_d, end_date=end_d,
+    )
+    for y in years:
+        await build_details_eventos(paths, manifest, y, concurrency=20)
+    await build_eventos_relations(
+        paths, manifest, years,
+        page_size=page_size,
+        concurrency_events=16,
+    )
+    await build_all_orgaos(
+        paths, manifest,
+        page_size=page_size,
+        list_concurrency=8,
+        fetch_concurrency=16,
+        year_bucket=0,
+    )
+
+    # --- Órgãos relations: membros + votações ---
+    await build_orgaos_membros(
+        paths, manifest, years,
+        page_size=page_size,
+        concurrency_orgaos=16,
+        year_bucket=min(years),
+    )
+    await build_orgaos_votacoes_relations(
+        paths, manifest, years,
+        page_size=page_size,
+        concurrency_orgaos=12,
+        year_bucket=min(years),
+    )
     if autores:
         await build_autores_relations_and_entities(
             paths, manifest, years,
@@ -70,8 +160,33 @@ async def bronze_camara(
             concurrency_props=16,
             concurrency_deputados=16,
             concurrency_orgaos=8,
+            fetch_deputados=True,
+            fetch_orgaos=False,
         )
 
+    await build_camara_referencias(paths, manifest, year_bucket=0)
+    await build_deputados_catalog(
+        paths, manifest,
+        page_size=page_size,
+        list_concurrency=8,
+        fetch_concurrency=16,
+        year_bucket=0,
+    )
+    await build_deputados_relations(
+        paths, manifest, years,
+        page_size=page_size,
+        concurrency_deputados=16,
+    )
+
+    # --- NEW: Partidos / Blocos / Frentes / Legislaturas ---
+    await build_partidos_blocos_frentes_legislaturas(
+        paths, manifest, years,
+        page_size=page_size,
+        list_concurrency=8,
+        fetch_concurrency=16,
+        concurrency_rel=16,
+        year_bucket=0,
+    )
     manifest.save(paths.manifest_json)
 
 

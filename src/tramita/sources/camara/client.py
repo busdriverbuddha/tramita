@@ -2,7 +2,6 @@
 
 import json
 import re
-
 from typing import Any
 
 from tramita.sources.base import bounded_gather
@@ -21,7 +20,11 @@ def _extract_last_page(links: list[dict]) -> int:
     return 1
 
 
-async def camara_fetch_all_dados(
+def _has_next(links: list[dict]) -> bool:
+    return any((link.get("rel") or "").lower() == "next" for link in (links or []))
+
+
+async def camara_fetch(
     hc: HttpClient,
     path: str,
     params: dict[str, Any],
@@ -31,54 +34,81 @@ async def camara_fetch_all_dados(
     fallback_follow_next: bool = True,
 ) -> list[dict]:
     """
-    Fetches all pages using the 'last' link trick. Returns concatenated 'dados' in page order.
-    If 'last' is missing and fallback is True, follows next pages sequentially.
+    Fetch all rows under 'dados' from a Câmara endpoint.
+
+    Rules:
+      • First request is made WITHOUT pagina/itens (avoids 400 on non-paginated endpoints).
+      • If links indicate pagination (next/last), re-fetch page 1 WITH pagina=1&itens=<itens>
+        to ensure consistent sizing, then fetch remaining pages.
+      • If 'last' exists, use it to fan out concurrently. Otherwise (only 'next' present),
+        walk forward sequentially if fallback_follow_next=True.
+
+    Returns concatenated list of items from 'dados' (or [] if absent).
     """
-    # 1) first page
-    base = dict(params)
+    # 1) Probe without page params (works for both non-paginated and paginated endpoints).
+    text0 = await hc.get_text(path, params=params)
+    obj0 = json.loads(text0)
+    dados0 = list(obj0.get("dados") or [])
+    links0 = obj0.get("links") or []
+
+    # Non-paginated (no next/last): return as-is.
+    if not _has_next(links0) and _extract_last_page(links0) <= 1:
+        return dados0
+
+    # 2) Paginated: re-fetch page 1 with pagina/itens to standardize page size.
+    base = dict(params)  # copy
     base.update({"pagina": 1, "itens": itens})
+
     text1 = await hc.get_text(path, params=base)
     obj1 = json.loads(text1)
     dados_all: list[dict] = list(obj1.get("dados") or [])
-    links1: list[dict] = obj1.get("links") or []
+    links1 = obj1.get("links") or []
 
     last_page = _extract_last_page(links1)
+    has_next = _has_next(links1)
 
-    # 2) fast path if only one page
-    if last_page <= 1:
-        # optional fallback if there was a 'next' but no 'last'
-        has_next = any((link.get("rel") or "").lower() == "next" for link in links1)
-        if not (fallback_follow_next and has_next):
-            return dados_all
+    # a) If there's a 'last' page number, do concurrent fan-out.
+    if last_page > 1:
+        pages = list(range(2, last_page + 1))
 
-        # fallback: walk pagina=2,3,... until empty/stop
+        async def worker(pg: int):
+            t = await hc.get_text(path, params={**params, "pagina": pg, "itens": itens})
+            o = json.loads(t)
+            return pg, (o.get("dados") or [])
+
+        results, _ = await bounded_gather(pages, worker, concurrency=concurrency)
+        results.sort(key=lambda x: x[0])
+        for _, rows in results:
+            dados_all.extend(rows)
+        return dados_all
+
+    # b) If no 'last' but there's 'next', optionally walk sequentially.
+    if has_next and fallback_follow_next:
         page = 2
         while True:
-            t = await hc.get_text(path, params=base | {"pagina": page})
+            t = await hc.get_text(path, params={**params, "pagina": page, "itens": itens})
             o = json.loads(t)
             rows = o.get("dados") or []
             if not rows:
                 break
             dados_all.extend(rows)
-            # stop if links say no next
-            links = o.get("links") or []
-            has_next = any((link.get("rel") or "").lower() == "next" for link in links)
-            if not has_next:
+            if not _has_next(o.get("links") or []):
                 break
             page += 1
-        return dados_all
 
-    # 3) fetch remaining pages concurrently
-    pages = list(range(2, last_page + 1))
-
-    async def worker(pg: int):
-        t = await hc.get_text(path, params=base | {"pagina": pg})
-        o = json.loads(t)
-        return pg, (o.get("dados") or [])
-
-    results, errs = await bounded_gather(pages, worker, concurrency=concurrency)
-    # determinism: sort by page number regardless of completion order
-    results.sort(key=lambda x: x[0])
-    for _, rows in results:
-        dados_all.extend(rows)
     return dados_all
+
+
+# --- Temporary back-compat alias (remove once call sites switch to `fetch`) ---
+async def camara_fetch_all_dados(
+    hc: HttpClient,
+    path: str,
+    params: dict[str, Any],
+    *,
+    itens: int = 100,
+    concurrency: int = 8,
+    fallback_follow_next: bool = True,
+) -> list[dict]:
+    return await camara_fetch(
+        hc, path, params, itens=itens, concurrency=concurrency, fallback_follow_next=fallback_follow_next
+    )

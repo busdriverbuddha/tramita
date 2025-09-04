@@ -12,7 +12,7 @@ def tag_file(file_path: Path, tag_text: str):
     ]
 
     lines = header_lines + lines
-    tagged_text = "\n".join(lines)
+    tagged_text = "\n".join(lines) + "\n"
     file_path.write_text(tagged_text)
 
 
@@ -33,10 +33,10 @@ def main():
 
     dumptext = divider.join(dumps)
 
-    with open("dump.txt", "w") as f:
+    with open("code-dump.txt", "w") as f:
         f.write(dumptext)
 
-    print("Code dumped to dump.txt.")
+    print("Code dumped to code-dump.txt.")
 
 
 if __name__ == "__main__":
