@@ -101,7 +101,6 @@ async def build_frentes_via_deputados(
         log.info("[camara:frentes] no relevant deputados found; skipping")
         return (0, 0, 0)
 
-    # dep_rows_by_year: dict[int, list[dict[str, Any]]] = {}
     first_seen_frente: dict[str, int] = {}
 
     async with HttpClient(

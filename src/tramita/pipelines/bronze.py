@@ -5,7 +5,7 @@ from typing import Iterable
 
 from tramita.log import setup_logging
 from tramita.storage.paths import BronzePaths
-from tramita.storage.manifest import new_manifest
+from tramita.storage.manifest import new_manifest, SnapshotManifest
 from tramita.sources.camara.pipelines import (
     build_all_orgaos,
     build_autores_relations_and_entities,
@@ -51,109 +51,157 @@ async def bronze_camara(
     start: str | None = None,
     end: str | None = None,
     autores: bool = True,
+    resume_from: str = "all",
 ) -> None:
     setup_logging()
-    manifest = new_manifest(snapshot_name=paths.root.name, app_version="0.1.0")
+    try:
+        manifest = SnapshotManifest.model_validate_json(paths.manifest_json.read_text())
+    except FileNotFoundError:
+        manifest = new_manifest(snapshot_name=paths.root.name, app_version="0.1.0")
+
     paths.ensure_base_dirs()
     paths.set_latest_symlink()
+
+    order = [
+        "index_tram", "expand_rel", "details_props", "temas",
+        "tramitacoes", "frentes", "votacoes",
+        "eventos_index1", "eventos_details1", "eventos_rel1",
+        "eventos_expand_orgaos", "eventos_index2", "eventos_details2", "eventos_rel2",
+        "orgaos_all", "orgaos_membros", "orgaos_votacoes",
+        "autores", "referencias", "deputados_catalog", "deputados_relations",
+        "pblf"  # partidos/blocos/frentes/legislaturas
+    ]
+    start_idx = order.index(resume_from) if resume_from != "all" else 0
+
+    def should(stage: str) -> bool:
+        return order.index(stage) >= start_idx
 
     # 1) Index stage (tramitação windows)
     from datetime import date
     start_d = date.fromisoformat(start) if start else None
     end_d = date.fromisoformat(end) if end else None
-    await build_index_proposicoes_tramitadas(
-        paths, years,
-        window_days=window_days,
-        page_size=page_size,
-        concurrency_windows=4,
-        include_sigla=types or None,
-        sample=sample or None,
-        start_date=start_d,
-        end_date=end_d,
-    )
-    await expand_index_via_relacionadas(paths, manifest, years, concurrency=16, max_rounds=6)
+
+    if should("index_tram"):
+        await build_index_proposicoes_tramitadas(
+            paths, years,
+            window_days=window_days,
+            page_size=page_size,
+            concurrency_windows=4,
+            include_sigla=types or None,
+            sample=sample or None,
+            start_date=start_d,
+            end_date=end_d,
+        )
+    if should("expand_rel"):
+        await expand_index_via_relacionadas(paths, manifest, years, concurrency=16, max_rounds=6)
     # 2) Details stage (unchanged)
-    for y in years:
-        await build_details_proposicoes(paths, manifest, y, concurrency=20)
 
-    await build_temas_relations(paths, manifest, years, concurrency_props=16)
-    await build_tramitacoes_relations_and_orgaos(
-        paths, manifest, years,
-        concurrency_props=12,
-        concurrency_orgaos=8,
-        concurrency_deputados=16,
-    )
-    await build_frentes_via_deputados(
-        paths, manifest, years,
-        page_size=page_size,
-        concurrency_deputados=16,
-        concurrency_frentes=16,
-    )
-    await build_votacoes_votos_orientacoes(
-        paths, manifest, years,
-        page_size=page_size,
-        concurrency_props=12,
-        concurrency_children=16,
-    )
+    if should("details_props"):
+        for y in years:
+            await build_details_proposicoes(paths, manifest, y, concurrency=20)
 
-    await build_index_eventos(
-        paths, years,
-        window_days=window_days,
-        page_size=page_size,
-        concurrency_windows=4,
-        start_date=start_d, end_date=end_d,
-    )
-    for y in years:
-        await build_details_eventos(paths, manifest, y, concurrency=20)
-    await build_eventos_relations(
-        paths, manifest, years,
-        page_size=page_size,
-        concurrency_events=16,
-    )
-    await expand_index_eventos_via_orgaos(
-        paths, years,
-        window_days=window_days,
-        page_size=page_size,
-        concurrency_windows=4,
-        concurrency_orgaos=12,
-        start_date=start_d, end_date=end_d,
-    )
-    await build_index_eventos(
-        paths, years,
-        window_days=window_days,
-        page_size=page_size,
-        concurrency_windows=4,
-        start_date=start_d, end_date=end_d,
-    )
-    for y in years:
-        await build_details_eventos(paths, manifest, y, concurrency=20)
-    await build_eventos_relations(
-        paths, manifest, years,
-        page_size=page_size,
-        concurrency_events=16,
-    )
-    await build_all_orgaos(
-        paths, manifest,
-        page_size=page_size,
-        list_concurrency=8,
-        fetch_concurrency=16,
-        year_bucket=0,
-    )
+    if should("temas"):
+        await build_temas_relations(paths, manifest, years, concurrency_props=16)
 
-    # --- Órgãos relations: membros + votações ---
-    await build_orgaos_membros(
-        paths, manifest, years,
-        page_size=page_size,
-        concurrency_orgaos=16,
-        year_bucket=min(years),
-    )
-    await build_orgaos_votacoes_relations(
-        paths, manifest, years,
-        page_size=page_size,
-        concurrency_orgaos=12,
-        year_bucket=min(years),
-    )
-    if autores:
+    if should("tramitacoes"):
+        await build_tramitacoes_relations_and_orgaos(
+            paths, manifest, years,
+            concurrency_props=12,
+            concurrency_orgaos=8,
+            concurrency_deputados=16,
+        )
+
+    if should("frentes"):
+        await build_frentes_via_deputados(
+            paths, manifest, years,
+            page_size=page_size,
+            concurrency_deputados=16,
+            concurrency_frentes=16,
+        )
+
+    if should("votacoes"):
+        await build_votacoes_votos_orientacoes(
+            paths, manifest, years,
+            page_size=page_size,
+            concurrency_props=12,
+            concurrency_children=16,
+        )
+
+    if should("eventos_index1"):
+        await build_index_eventos(
+            paths, years,
+            window_days=window_days,
+            page_size=page_size,
+            concurrency_windows=4,
+            start_date=start_d, end_date=end_d,
+        )
+
+    if should("eventos_details1"):
+        for y in years:
+            await build_details_eventos(paths, manifest, y, concurrency=20)
+
+    if should("eventos_rel1"):
+        await build_eventos_relations(
+            paths, manifest, years,
+            page_size=page_size,
+            concurrency_events=16,
+        )
+
+    if should("eventos_expand_orgaos"):
+        await expand_index_eventos_via_orgaos(
+            paths, years,
+            window_days=window_days,
+            page_size=page_size,
+            concurrency_windows=4,
+            concurrency_orgaos=12,
+            start_date=start_d, end_date=end_d,
+        )
+
+    if should("eventos_index2"):
+        await build_index_eventos(
+            paths, years,
+            window_days=window_days,
+            page_size=page_size,
+            concurrency_windows=4,
+            start_date=start_d, end_date=end_d,
+        )
+
+    if should("eventos_details2"):
+        for y in years:
+            await build_details_eventos(paths, manifest, y, concurrency=20)
+
+    if should("eventos_rel2"):
+        await build_eventos_relations(
+            paths, manifest, years,
+            page_size=page_size,
+            concurrency_events=16,
+        )
+
+    if should("orgaos_all"):
+        await build_all_orgaos(
+            paths, manifest,
+            page_size=page_size,
+            list_concurrency=8,
+            fetch_concurrency=16,
+            year_bucket=0,
+        )
+
+    if should("orgaos_membros"):
+        # --- Órgãos relations: membros + votações ---
+        await build_orgaos_membros(
+            paths, manifest, years,
+            page_size=page_size,
+            concurrency_orgaos=16,
+            year_bucket=min(years),
+        )
+    if should("orgaos_votacoes"):
+        await build_orgaos_votacoes_relations(
+            paths, manifest, years,
+            page_size=page_size,
+            concurrency_orgaos=12,
+            year_bucket=min(years),
+        )
+    if should("autores") and autores:
         await build_autores_relations_and_entities(
             paths, manifest, years,
             page_size=page_size,
@@ -163,30 +211,33 @@ async def bronze_camara(
             fetch_deputados=True,
             fetch_orgaos=False,
         )
+    if should("referencias"):
+        await build_camara_referencias(paths, manifest, year_bucket=0)
+    if should("deputados_catalog"):
+        await build_deputados_catalog(
+            paths, manifest,
+            page_size=page_size,
+            list_concurrency=8,
+            fetch_concurrency=16,
+            year_bucket=0,
+        )
+    if should("deputados_relations"):
+        await build_deputados_relations(
+            paths, manifest, years,
+            page_size=page_size,
+            concurrency_deputados=16,
+        )
+    if should("pblf"):
+        # --- NEW: Partidos / Blocos / Frentes / Legislaturas ---
+        await build_partidos_blocos_frentes_legislaturas(
+            paths, manifest, years,
+            page_size=page_size,
+            list_concurrency=8,
+            fetch_concurrency=16,
+            concurrency_rel=16,
+            year_bucket=0,
+        )
 
-    await build_camara_referencias(paths, manifest, year_bucket=0)
-    await build_deputados_catalog(
-        paths, manifest,
-        page_size=page_size,
-        list_concurrency=8,
-        fetch_concurrency=16,
-        year_bucket=0,
-    )
-    await build_deputados_relations(
-        paths, manifest, years,
-        page_size=page_size,
-        concurrency_deputados=16,
-    )
-
-    # --- NEW: Partidos / Blocos / Frentes / Legislaturas ---
-    await build_partidos_blocos_frentes_legislaturas(
-        paths, manifest, years,
-        page_size=page_size,
-        list_concurrency=8,
-        fetch_concurrency=16,
-        concurrency_rel=16,
-        year_bucket=0,
-    )
     manifest.save(paths.manifest_json)
 
 
@@ -196,6 +247,7 @@ def run_bronze(
     window_days: int = 30, page_size: int = 100,
     start: str = "", end: str = "",
     autores: bool = True,
+    resume_from: str = "all",
 ) -> None:
     p = BronzePaths(data_root=__import__("pathlib").Path(data_root), snapshot=snapshot)
     ys = _parse_years(years)
@@ -207,6 +259,7 @@ def run_bronze(
             window_days=window_days, page_size=page_size,
             start=start or None, end=end or None,
             autores=autores,
+            resume_from=resume_from,
         ))
     else:
         raise SystemExit(f"Unsupported source: {source}")

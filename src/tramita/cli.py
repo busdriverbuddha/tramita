@@ -20,6 +20,7 @@ def bronze(
     start: str = typer.Option("", help="Optional start date YYYY-MM-DD (overrides years start)"),
     end: str = typer.Option("", help="Optional end date YYYY-MM-DD (overrides years end)"),
     autores: bool = typer.Option(True, "--autores/--no-autores", help="Fetch autores relations + author entities"),
+    resume_from: str = typer.Option("all", help="Resume from stage (e.g. 'tramitacoes')"),
 ):
     """Run Bronze ingestion."""
     run_bronze(
@@ -28,6 +29,7 @@ def bronze(
         window_days=window_days, page_size=page_size,
         start=start, end=end,
         autores=autores,
+        resume_from=resume_from,
     )
 
 
