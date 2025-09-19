@@ -2285,12 +2285,6 @@ async def build_partidos_blocos_frentes_legislaturas(
 
             async def worker(eid: str) -> dict[str, Any]:
                 url = f"/{base}/{eid}"
-                # txt = await hc.get_text(url)
-                # try:
-                #     obj = json.loads(txt)
-                #     dados = obj.get("dados") or []
-                # except Exception as e:
-                #     raise RuntimeError(f"{pid} relacionadas JSON decode error: {e}") from e
                 dados = await camara_fetch(
                     hc, url, {},
                     itens=100, concurrency=8, fallback_follow_next=True

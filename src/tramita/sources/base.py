@@ -27,21 +27,30 @@ async def bounded_gather(
     items: Iterable[Any],
     worker: Callable[[T], Awaitable[R]],
     concurrency: int = 20,
+    on_progress: Callable[[int, int], None] | None = None,  # NEW (optional)
 ) -> tuple[list[Any], list[Exception]]:
     sem = asyncio.Semaphore(concurrency)
     results: list[Any] = []
     errors: list[Exception] = []
 
+    items_list = list(items)  # we already create a task per item anyway
+    total = len(items_list)
+    done = 0
+
     async def run_one(x):
         async with sem:
             return await worker(x)
 
-    tasks: list[asyncio.Task[R]] = [asyncio.create_task(run_one(x)) for x in items]
+    tasks: list[asyncio.Task[R]] = [asyncio.create_task(run_one(x)) for x in items_list]
     for t in asyncio.as_completed(tasks):
         try:
             results.append(await t)
         except Exception as e:
             errors.append(e)
+        finally:
+            done += 1
+            if on_progress:
+                on_progress(done, total)
     return results, errors
 
 
@@ -83,3 +92,16 @@ async def paginate_json(
             if page_size_value and len(rows) < page_size_value:
                 break
         page += 1
+
+
+async def bounded_gather_pbar(
+    items: Iterable[Any],
+    worker: Callable[[T], Awaitable[R]],
+    *,
+    concurrency: int = 20,
+    description: str = "requests",
+) -> tuple[list[Any], list[Exception]]:
+    from tramita.ui import progress_reporter
+    items_list = list(items)
+    with progress_reporter(len(items_list), description) as on_progress:
+        return await bounded_gather(items_list, worker, concurrency=concurrency, on_progress=on_progress)

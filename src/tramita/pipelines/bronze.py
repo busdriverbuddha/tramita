@@ -31,6 +31,19 @@ from tramita.sources.camara.referencias import (
     build_camara_referencias,
 )
 
+from tramita.sources.senado.pipelines import (
+    build_index_processos as build_index_processos_senado,
+    build_details_processos_iterative as build_details_processos_iterative_senado,
+    build_votacoes_relations as build_votacoes_relations_senado,
+    build_index_parlamentares_via_autoria as build_index_parlamentares_via_autoria_senado,
+    build_index_parlamentares_via_legislaturas as build_index_parlamentares_via_legislaturas_senado,
+    build_details_parlamentares as build_details_parlamentares_senado,
+    build_emendas_relations as build_emendas_relations_senado,
+    build_colegiados as build_colegiados_senado,
+    build_colegiados_votacoes as build_colegiados_votacoes_senado,
+    build_relatorias_relations as build_relatorias_relations_senado,
+)
+
 
 def _parse_years(years: str) -> list[int]:
     years = years.strip()
@@ -251,6 +264,8 @@ def run_bronze(
 ) -> None:
     p = BronzePaths(data_root=__import__("pathlib").Path(data_root), snapshot=snapshot)
     ys = _parse_years(years)
+    if source not in ("all", "camara", "senado"):
+        raise SystemExit(f"Unsupported source: {source}")
     if source in ("all", "camara"):
         typs = [t.strip() for t in types.split(",") if t.strip()] or None
         asyncio.run(bronze_camara(
@@ -261,8 +276,15 @@ def run_bronze(
             autores=autores,
             resume_from=resume_from,
         ))
-    else:
-        raise SystemExit(f"Unsupported source: {source}")
+    if source in ("senado", "all"):
+        typs = [t.strip() for t in types.split(",") if t.strip()] or None
+        asyncio.run(bronze_senado(
+            p, ys,
+            types=typs,
+            window_days=window_days,
+            page_size=page_size,
+            resume_from=resume_from,
+        ))
 
 
 def verify_bronze(snapshot: str, data_root: str = "./data") -> int:
@@ -279,3 +301,79 @@ def verify_bronze(snapshot: str, data_root: str = "./data") -> int:
         return 1
     print("OK: manifest matches files on disk.")
     return 0
+
+
+async def bronze_senado(
+    paths: BronzePaths,
+    years: Iterable[int],
+    *,
+    types: list[str] | None = None,
+    page_size: int = 100,  # currently unused (Senado often unpaginated)
+    window_days: int = 30,
+    resume_from: str = "all",
+) -> None:
+    """
+    Initial Senado Bronze:
+      1) index: /materias/pesquisa?ano=YYYY
+      2) details: /materias/{id}
+    """
+    setup_logging()
+    try:
+        manifest = SnapshotManifest.model_validate_json(paths.manifest_json.read_text())
+    except FileNotFoundError:
+        manifest = new_manifest(snapshot_name=paths.root.name, app_version="0.1.0")
+
+    paths.ensure_base_dirs()
+    paths.set_latest_symlink()
+
+    order = [
+        "processos_index",
+        "processos_details_iter",
+        "processos_votacoes",
+        "processos_emendas",
+        "processos_relatorias",
+        "colegiados",
+        "colegiados_votacoes",
+        "parlamentares_index",
+        "parlamentares_details",
+    ]
+    start_idx = order.index(resume_from) if resume_from != "all" else 0
+
+    def should(stage: str) -> bool:
+        return order.index(stage) >= start_idx
+
+    if should("processos_index"):
+        await build_index_processos_senado(paths, years, tipo_siglas=types or None, window_days=window_days)
+
+    if should("processos_details_iter"):
+        await build_details_processos_iterative_senado(
+            paths, manifest, years, concurrency=16, max_rounds=8
+        )
+
+    if should("processos_votacoes"):
+        await build_votacoes_relations_senado(paths, manifest, years)
+
+    if should("processos_emendas"):
+        await build_emendas_relations_senado(paths, manifest, years)
+
+    if should("processos_relatorias"):
+        await build_relatorias_relations_senado(paths, manifest, years)
+
+    if should("colegiados"):
+        await build_colegiados_senado(paths, manifest, years)
+
+    if should("colegiados_votacoes"):
+        # iterate 30-day windows for each requested year (same window_days knob)
+        await build_colegiados_votacoes_senado(
+            paths, manifest, years, window_days=window_days
+        )
+
+    if should("parlamentares_index"):
+        await build_index_parlamentares_via_autoria_senado(paths, years)
+        await build_index_parlamentares_via_legislaturas_senado(paths, years)
+
+    if should("parlamentares_details"):
+        for yy in years:
+            await build_details_parlamentares_senado(paths, manifest, yy)
+
+    manifest.save(paths.manifest_json)

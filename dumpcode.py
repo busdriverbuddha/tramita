@@ -1,5 +1,6 @@
 from pathlib import Path
 
+EXCLUDES = ["camara"]
 
 def tag_file(file_path: Path, tag_text: str):
     lines: list[str] = file_path.read_text().splitlines()
@@ -27,7 +28,11 @@ def main():
         new_text = filename.read_text()
         if old_text != new_text:
             print(f"Tagged {rel_path}.")
-        dumps.append(filename.read_text())
+        for exclude in EXCLUDES:
+            if exclude in str(rel_path):
+                break
+        else:
+            dumps.append(filename.read_text())
 
     divider = "\n# ------------------------------------------ #\n"
 
