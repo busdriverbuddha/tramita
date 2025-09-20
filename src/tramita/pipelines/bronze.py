@@ -140,7 +140,7 @@ async def bronze_camara(
             await build_details_proposicoes(paths, manifest, y, concurrency=20)
 
     if should("temas"):
-        await build_temas_relations(paths, manifest, years, concurrency_props=16)
+        await build_temas_relations(paths, manifest, years, concurrency_props=30)
 
     if should("tramitacoes"):
         await build_tramitacoes_relations_and_orgaos(
@@ -375,7 +375,7 @@ async def bronze_senado(
 
     if should("processos_details_iter"):
         await build_details_processos_iterative_senado(
-            paths, manifest, years, concurrency=16, max_rounds=8
+            paths, manifest, years, concurrency=16, max_rounds=1
         )
 
     if should("processos_votacoes"):

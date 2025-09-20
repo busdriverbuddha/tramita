@@ -1,6 +1,7 @@
 # tramita/sources/senado/client.py
 
 import json
+
 from typing import Any
 
 from tramita.http.client import HttpClient

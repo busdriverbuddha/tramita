@@ -4,7 +4,7 @@ import json
 import re
 from typing import Any
 
-from tramita.sources.base import bounded_gather
+from tramita.sources.base import bounded_gather_pbar
 from tramita.http.client import HttpClient
 
 _LAST_PAGE_RE = re.compile(r"[?&]pagina=(\d+)\b")
@@ -32,7 +32,7 @@ async def camara_fetch(
     itens: int = 100,
     concurrency: int = 8,
     fallback_follow_next: bool = True,
-) -> list[dict]:
+) -> Any:
     """
     Fetch all rows under 'dados' from a Câmara endpoint.
 
@@ -49,12 +49,12 @@ async def camara_fetch(
     # 1) Probe without page params (works for both non-paginated and paginated endpoints).
     text0 = await hc.get_text(path, params=params)
     obj0 = json.loads(text0)
-    dados0 = list(obj0.get("dados") or [])
+    dados0 = obj0.get("dados")
     links0 = obj0.get("links") or []
 
     # Non-paginated (no next/last): return as-is.
     if not _has_next(links0) and _extract_last_page(links0) <= 1:
-        return dados0
+        return dados0 or ([] if isinstance(dados0, list) else {})
 
     # 2) Paginated: re-fetch page 1 with pagina/itens to standardize page size.
     base = dict(params)  # copy
@@ -62,7 +62,8 @@ async def camara_fetch(
 
     text1 = await hc.get_text(path, params=base)
     obj1 = json.loads(text1)
-    dados_all: list[dict] = list(obj1.get("dados") or [])
+    first = obj1.get("dados") or []
+    dados_all: list[dict] = list(first if isinstance(first, list) else [])
     links1 = obj1.get("links") or []
 
     last_page = _extract_last_page(links1)
@@ -77,7 +78,7 @@ async def camara_fetch(
             o = json.loads(t)
             return pg, (o.get("dados") or [])
 
-        results, _ = await bounded_gather(pages, worker, concurrency=concurrency)
+        results, _ = await bounded_gather_pbar(pages, worker, concurrency=concurrency)
         results.sort(key=lambda x: x[0])
         for _, rows in results:
             dados_all.extend(rows)

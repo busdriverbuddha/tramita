@@ -8,7 +8,7 @@ import logging
 from tramita.config import settings
 from tramita.http.client import HttpClient
 from tramita.log import setup_logging
-from tramita.sources.base import bounded_gather
+from tramita.sources.base import bounded_gather_pbar
 from tramita.sources.camara.client import camara_fetch
 from tramita.storage.manifest import SnapshotManifest
 from tramita.storage.parquet import write_relation_parts
@@ -90,7 +90,10 @@ async def build_votacoes_votos_orientacoes(
                     dados=dados,
                 )
 
-            rel_rows, rel_errs = await bounded_gather(prop_ids, prop_worker, concurrency=concurrency_props)
+            rel_rows, rel_errs = await bounded_gather_pbar(
+                prop_ids, prop_worker, concurrency=concurrency_props,
+                description="camara:votacoes",
+            )
             if rel_errs:
                 log.warning(f"[camara:votacoes] year={y} relation_errors={len(rel_errs)}")
 
@@ -151,7 +154,10 @@ async def build_votacoes_votos_orientacoes(
 
                 return votos_row, orients_row
 
-            results, child_errs = await bounded_gather(vid_list, child_worker, concurrency=concurrency_children)
+            results, child_errs = await bounded_gather_pbar(
+                vid_list, child_worker, concurrency=concurrency_children,
+                description="camara:votos+orientacoes"
+            )
             if child_errs:
                 log.warning(f"[camara:votos+orientacoes] year={y} errors={len(child_errs)}")
 

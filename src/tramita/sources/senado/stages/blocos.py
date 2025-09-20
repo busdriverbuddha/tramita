@@ -129,55 +129,48 @@ async def build_rel_bloco_partido(
 
     total = 0
 
-    for y in years_sorted:
-        # read all bloco details we wrote for this year
-        details_dir = paths.details_part_dir("senado", "bloco", y)
-        if not details_dir.exists():
-            log.info(f"[senado:bloco_partido] no bloco details for year={y}")
-            continue
+    by_year: dict[int, list[dict]] = defaultdict(list)
 
-        parts = sorted(details_dir.glob("part-*.parquet"))
-        if not parts:
-            continue
+    # entity details root: .../senado/bloco/details
+    probe_dir = paths.details_part_dir("senado", "bloco", (years_sorted or [0])[0]).parent
+    if not probe_dir.exists():
+        log.info(f"[senado:bloco_partido] no bloco details dir: {probe_dir}")
+        return 0
 
-        by_year: dict[int, list[dict]] = defaultdict(list)
+    part_files = sorted(probe_dir.glob("year=*/part-*.parquet"))
+    if not part_files:
+        log.info(f"[senado:bloco_partido] no bloco detail parts under: {probe_dir}")
+        return 0
 
-        for pf in parts:
-            tbl = pq.read_table(pf, columns=["id", "payload_json"])
-            for r in tbl.to_pylist():
-                bid = str(r["id"])
-                try:
-                    b = json.loads(r["payload_json"])
-                except Exception:
-                    continue
+    for pf in part_files:
+        tbl = pq.read_table(pf, columns=["id", "payload_json"])
+        for r in tbl.to_pylist():
+            bid = str(r["id"])
+            try:
+                b = json.loads(r["payload_json"])
+            except Exception:
+                continue
 
-                # Prefer creation year as a fallback for membership year
-                bloco_year_fallback = _year_of_str_date(b.get("DataCriacao"), y)
+            bloco_year_fallback = _year_of_str_date(b.get("DataCriacao"), 0)
+            membros = (((b.get("Membros") or {}).get("Membro")) or [])
+            if isinstance(membros, dict):
+                membros = [membros]
 
-                membros = (((b.get("Membros") or {}).get("Membro")) or [])
-                # normalize to list (some APIs return a single dict)
-                if isinstance(membros, dict):
-                    membros = [membros]
-
-                for mem in membros:
-                    # Build a compact membership payload (but keep original mem dict)
-                    pj = json.dumps(mem, ensure_ascii=False, separators=(",", ":"), sort_keys=True)
-
-                    partido = mem.get("Partido") or {}
-                    pid = _safe_str_int(partido.get("CodigoPartido")) or "na"
-                    adesao = mem.get("DataAdesao")
-
-                    part_year = _year_of_str_date(adesao, bloco_year_fallback)
-                    rid = f"{bid}:{pid}:{adesao or 'na'}"
-
-                    by_year[int(part_year)].append({
-                        "source": "senado",
-                        "entity": "bloco_partido",
-                        "year": int(part_year),
-                        "id": rid,
-                        "url": f"{SENADO_BASE}/dados/ListaBlocoParlamentar.json",
-                        "payload_json": pj,
-                    })
+            for mem in membros:
+                pj = json.dumps(mem, ensure_ascii=False, separators=(",", ":"), sort_keys=True)
+                partido = mem.get("Partido") or {}
+                pid = _safe_str_int(partido.get("CodigoPartido")) or "na"
+                adesao = mem.get("DataAdesao")
+                part_year = _year_of_str_date(adesao, bloco_year_fallback or (years_sorted[0] if years_sorted else 0))
+                rid = f"{bid}:{pid}:{adesao or 'na'}"
+                by_year[int(part_year)].append({
+                    "source": "senado",
+                    "entity": "bloco_partido",
+                    "year": int(part_year),
+                    "id": rid,
+                    "url": f"{SENADO_BASE}/dados/ListaBlocoParlamentar.json",
+                    "payload_json": pj,
+                })
 
         # write one partition per membership year
         for part_year, rows in sorted(by_year.items(), key=lambda kv: kv[0]):

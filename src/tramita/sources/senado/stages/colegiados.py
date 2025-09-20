@@ -198,24 +198,29 @@ async def build_colegiados_votacoes(
 
     # ---- 1) Discover committee SIGLAs from previously saved details
     siglas: set[str] = set()
-    for y in years_sorted:
-        details_dir = paths.details_part_dir("senado", "colegiado", y)
-        if not details_dir.exists():
+    probe_dir = paths.details_part_dir("senado", "colegiado", years_sorted[0]).parent  # .../details
+    if not probe_dir.exists():
+        log.warning("[senado:coleg_votos] no colegiado details found at %s", probe_dir)
+        return 0
+
+    part_files = sorted(probe_dir.glob("year=*/part-*.parquet"))
+    if not part_files:
+        log.warning("[senado:coleg_votos] no colegiado parts found under %s", probe_dir)
+        return 0
+
+    for pf in part_files:
+        try:
+            tbl = pq.read_table(pf, columns=["payload_json"])
+        except Exception:
             continue
-        parts = sorted(details_dir.glob("part-*.parquet"))
-        for pf in parts:
+        for row in tbl.to_pylist():
             try:
-                tbl = pq.read_table(pf, columns=["payload_json"])
+                obj = json.loads(row["payload_json"])
             except Exception:
                 continue
-            for row in tbl.to_pylist():
-                try:
-                    obj = json.loads(row["payload_json"])
-                except Exception:
-                    continue
-                s = (obj.get("SiglaColegiado") or obj.get("siglaColegiado") or "").strip()
-                if s:
-                    siglas.add(str(s))
+            s = (obj.get("SiglaColegiado") or obj.get("siglaColegiado") or "").strip()
+            if s:
+                siglas.add(str(s))
     if not siglas:
         log.warning("[senado:coleg_votos] no committee siglas discovered; did you run build_colegiados first?")
         return 0

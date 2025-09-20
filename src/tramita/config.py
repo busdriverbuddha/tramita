@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     http_timeout: float = 30.0
     user_agent: str = "tramita/0.1 (+contact: you@example.com)"
 
-    model_config = SettingsConfigDict(env_file=".env", env_prefix="tramita_")
+    model_config = SettingsConfigDict(env_file=".env", env_prefix="tramita_", extra="ignore")
 
 
 settings = Settings()  # type: ignore

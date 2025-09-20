@@ -8,7 +8,7 @@ import logging
 from tramita.config import settings
 from tramita.http.client import HttpClient
 from tramita.log import setup_logging
-from tramita.sources.base import bounded_gather
+from tramita.sources.base import bounded_gather_pbar
 from tramita.sources.camara.client import camara_fetch
 from tramita.storage.manifest import SnapshotManifest
 from tramita.storage.parquet import write_details_parts, write_relation_parts
@@ -89,7 +89,10 @@ async def build_tramitacoes_relations_and_orgaos(
                     dados=dados,
                 )
 
-            rel_rows, rel_errs = await bounded_gather(ids, rel_worker, concurrency=concurrency_props)
+            rel_rows, rel_errs = await bounded_gather_pbar(
+                ids, rel_worker, concurrency=concurrency_props,
+                description="camara:tramitacoes"
+            )
             if rel_errs:
                 log.warning(f"[camara:tramitacoes] year={y} relation_errors={len(rel_errs)}")
 
@@ -128,7 +131,10 @@ async def build_tramitacoes_relations_and_orgaos(
                     dados=dados,
                 )
 
-            org_rows, org_errs = await bounded_gather(org_ids, org_worker, concurrency=concurrency_orgaos)
+            org_rows, org_errs = await bounded_gather_pbar(
+                org_ids, org_worker, concurrency=concurrency_orgaos,
+                description="camara:tramita_orgaos",
+            )
             if org_errs:
                 log.warning(f"[camara:orgaos<-tramitacoes] year={y} errors={len(org_errs)}")
 
@@ -167,7 +173,10 @@ async def build_tramitacoes_relations_and_orgaos(
                     dados=dados,
                 )
 
-            dep_rows, dep_errs = await bounded_gather(dep_ids, dep_worker, concurrency=concurrency_deputados)
+            dep_rows, dep_errs = await bounded_gather_pbar(
+                dep_ids, dep_worker, concurrency=concurrency_deputados,
+                description="camara:tramita_deputados",
+            )
             if dep_errs:
                 log.warning(f"[camara:deputados<-tramitacoes] year={y} errors={len(dep_errs)}")
 

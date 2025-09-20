@@ -9,7 +9,7 @@ import logging
 from tramita.config import settings
 from tramita.http.client import HttpClient
 from tramita.log import setup_logging
-from tramita.sources.base import bounded_gather
+from tramita.sources.base import bounded_gather_pbar
 from tramita.sources.camara.client import camara_fetch
 from tramita.storage.manifest import SnapshotManifest
 from tramita.storage.paths import BronzePaths
@@ -71,7 +71,9 @@ async def _build_simple_relation(
                     dados=dados,
                 )
 
-            rel_rows, rel_errs = await bounded_gather(ids, rel_worker, concurrency=concurrency_props)
+            rel_rows, rel_errs = await bounded_gather_pbar(
+                ids, rel_worker, concurrency=concurrency_props, description=f"camara:{relation}"
+            )
             if rel_errs:
                 log.warning(f"[camara:{relation}] year={y} relation_errors={len(rel_errs)}")
 
@@ -145,7 +147,12 @@ async def _build_details_from_index(
                 dados=dados,
             )
 
-        rows, errs = await bounded_gather(recs, worker, concurrency=concurrency)
+        rows, errs = await bounded_gather_pbar(
+            recs,
+            worker,
+            concurrency=concurrency,
+            description=f"camara:{details_entity}",
+        )
 
     if errs:
         log.warning(f"[{source}:{details_entity}-details] year={year} errors={len(errs)}")

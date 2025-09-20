@@ -8,7 +8,7 @@ import logging
 from tramita.config import settings
 from tramita.http.client import HttpClient
 from tramita.log import setup_logging
-from tramita.sources.base import bounded_gather
+from tramita.sources.base import bounded_gather_pbar
 from tramita.sources.camara.client import camara_fetch
 from tramita.storage.manifest import SnapshotManifest
 from tramita.storage.parquet import write_details_parts, write_relation_parts
@@ -56,7 +56,9 @@ async def build_deputados_catalog(
                 dados=dados,
             )
 
-        rows, errs = await bounded_gather(ids, worker, concurrency=fetch_concurrency)
+        rows, errs = await bounded_gather_pbar(
+            ids, worker, concurrency=fetch_concurrency, description="camara:deputados",
+        )
         if errs:
             log.warning(f"[camara:deputados(all)] detail_errors={len(errs)} (continuing)")
 
@@ -129,7 +131,9 @@ async def build_deputados_relations(
                 row("deputados/frentes", y_frnt, dados_frentes),
             )
 
-        results, errs = await bounded_gather(dep_ids, dep_worker, concurrency=concurrency_deputados)
+        results, errs = await bounded_gather_pbar(
+            dep_ids, dep_worker, concurrency=concurrency_deputados, description="camara:deputados_rel"
+        )
         if errs:
             log.warning(f"[camara:deputados→relations] errors={len(errs)}")
 

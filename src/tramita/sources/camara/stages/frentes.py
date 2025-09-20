@@ -8,7 +8,7 @@ import logging
 from tramita.config import settings
 from tramita.http.client import HttpClient
 from tramita.log import setup_logging
-from tramita.sources.base import bounded_gather
+from tramita.sources.base import bounded_gather_pbar
 from tramita.sources.camara.client import camara_fetch
 from tramita.storage.manifest import SnapshotManifest
 from tramita.storage.parquet import write_details_parts, write_relation_parts
@@ -104,7 +104,9 @@ async def build_frentes_via_deputados(
                 first_seen_frente.setdefault(fid, y)
             return row
 
-        dep_rows, dep_errs = await bounded_gather(dep_ids, dep_worker, concurrency=concurrency_deputados)
+        dep_rows, dep_errs = await bounded_gather_pbar(
+            dep_ids, dep_worker, concurrency=concurrency_deputados, description="camara:deputados_frentes",
+        )
         if dep_errs:
             log.warning(f"[camara:deputados/frentes] errors={len(dep_errs)}")
 
@@ -146,7 +148,9 @@ async def build_frentes_via_deputados(
             }
 
         det_ids = sorted(first_seen_frente.keys(), key=int)
-        det_rows, det_errs = await bounded_gather(det_ids, fr_det_worker, concurrency=concurrency_frentes)
+        det_rows, det_errs = await bounded_gather_pbar(
+            det_ids, fr_det_worker, concurrency=concurrency_frentes, description="camara:deputados_frentes"
+        )
         if det_errs:
             log.warning(f"[camara:frentes(details)] errors={len(det_errs)}")
         if det_rows:
@@ -179,7 +183,9 @@ async def build_frentes_via_deputados(
 
             async def w(fid: str, yy: int = y):
                 return await fr_mem_worker(fid, yy)
-            mem_rows, mem_errs = await bounded_gather(fids, w, concurrency=concurrency_frentes)
+            mem_rows, mem_errs = await bounded_gather_pbar(
+                fids, w, concurrency=concurrency_frentes, description="camara:deputados_frentes",
+            )
             if mem_errs:
                 log.warning(f"[camara:frentes/membros] year={y} errors={len(mem_errs)}")
             if mem_rows:

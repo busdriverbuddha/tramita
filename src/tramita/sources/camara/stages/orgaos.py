@@ -8,7 +8,7 @@ import logging
 from tramita.config import settings
 from tramita.http.client import HttpClient
 from tramita.log import setup_logging
-from tramita.sources.base import bounded_gather
+from tramita.sources.base import bounded_gather_pbar
 from tramita.sources.camara.client import camara_fetch
 from tramita.storage.manifest import SnapshotManifest
 from tramita.storage.parquet import write_details_parts, write_relation_parts
@@ -61,7 +61,10 @@ async def build_all_orgaos(
                 dados=dados,
             )
 
-        rows, errs = await bounded_gather(ids, worker, concurrency=fetch_concurrency)
+        rows, errs = await bounded_gather_pbar(
+            ids, worker, concurrency=fetch_concurrency,
+            description="camara:orgaos",
+        )
         if errs:
             log.warning(f"[camara:orgaos(all)] detail_errors={len(errs)} (continuing with successes)")
 
@@ -121,7 +124,10 @@ async def build_orgaos_membros(
                 dados=dados,
             )
 
-        rows, errs = await bounded_gather(org_ids, worker, concurrency=concurrency_orgaos)
+        rows, errs = await bounded_gather_pbar(
+            org_ids, worker, concurrency=concurrency_orgaos,
+            description="camara:orgaos_membros",
+        )
         if errs:
             log.warning(f"[camara:orgaos/membros] errors={len(errs)} (continuing with successes)")
 
@@ -183,7 +189,10 @@ async def build_orgaos_votacoes_relations(
                 dados=dados,
             )
 
-        rows, errs = await bounded_gather(org_ids, worker, concurrency=concurrency_orgaos)
+        rows, errs = await bounded_gather_pbar(
+            org_ids, worker, concurrency=concurrency_orgaos,
+            description="camara:orgaos_votacoes",
+        )
         if errs:
             log.warning(f"[camara:orgaos/votacoes] errors={len(errs)} (continuing)")
 

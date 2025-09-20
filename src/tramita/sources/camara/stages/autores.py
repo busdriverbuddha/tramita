@@ -8,7 +8,7 @@ import logging
 from tramita.config import settings
 from tramita.http.client import HttpClient
 from tramita.log import setup_logging
-from tramita.sources.base import bounded_gather
+from tramita.sources.base import bounded_gather_pbar
 from tramita.sources.camara.client import camara_fetch
 from tramita.storage.manifest import SnapshotManifest
 from tramita.storage.parquet import write_details_parts, write_relation_parts
@@ -89,7 +89,9 @@ async def build_autores_relations_and_entities(
                     dados=dados,
                 )
 
-            rel_rows, rel_errs = await bounded_gather(ids, rel_worker, concurrency=concurrency_props)
+            rel_rows, rel_errs = await bounded_gather_pbar(
+                ids, rel_worker, concurrency=concurrency_props, description="camara:autores"
+            )
             if rel_errs:
                 log.warning(f"[camara:autores] year={y} relation_errors={len(rel_errs)}")
 
@@ -147,10 +149,11 @@ async def build_autores_relations_and_entities(
                 async def dep_id_worker(dep_id: str, yy: int = y) -> BronzeRow:
                     return await dep_worker(yy, dep_id)
 
-                dep_rows, dep_errs = await bounded_gather(
+                dep_rows, dep_errs = await bounded_gather_pbar(
                     dep_ids,
                     dep_id_worker,
                     concurrency=concurrency_deputados,
+                    description="camara:deputados"
                 )
                 if dep_errs:
                     log.warning(f"[camara:deputados] year={y} errors={len(dep_errs)}")
@@ -175,10 +178,11 @@ async def build_autores_relations_and_entities(
                 async def org_id_worker(org_id: str, yy: int = y) -> BronzeRow:
                     return await org_worker(yy, org_id)
 
-                org_rows, org_errs = await bounded_gather(
+                org_rows, org_errs = await bounded_gather_pbar(
                     org_ids,
                     org_id_worker,
                     concurrency=concurrency_orgaos,
+                    description="camara:orgaos",
                 )
                 if org_errs:
                     log.warning(f"[camara:orgaos] year={y} errors={len(org_errs)}")

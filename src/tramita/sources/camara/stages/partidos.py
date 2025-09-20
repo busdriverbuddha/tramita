@@ -8,7 +8,7 @@ import logging
 from tramita.config import settings
 from tramita.http.client import HttpClient
 from tramita.log import setup_logging
-from tramita.sources.base import bounded_gather
+from tramita.sources.base import bounded_gather_pbar
 from tramita.sources.camara.client import camara_fetch
 from tramita.storage.manifest import SnapshotManifest
 from tramita.storage.parquet import write_details_parts, write_relation_parts
@@ -80,7 +80,10 @@ async def build_partidos_blocos_frentes_legislaturas(
                     dados=dados,
                 )
 
-            rows, errs = await bounded_gather(ids, worker, concurrency=fetch_concurrency)
+            rows, errs = await bounded_gather_pbar(
+                ids, worker, concurrency=fetch_concurrency,
+                description="camara:frentes"
+            )
             if errs:
                 log.warning(f"[camara:{base}(all)] detail_errors={len(errs)}")
             parts = write_details_parts(
@@ -131,7 +134,10 @@ async def build_partidos_blocos_frentes_legislaturas(
                     out_rows.append(row)
                 return out_rows
 
-            results, errs = await bounded_gather(ids, rel_worker, concurrency=concurrency_rel)
+            results, errs = await bounded_gather_pbar(
+                ids, rel_worker, concurrency=concurrency_rel,
+                description=f"camara:{base}_rel",
+            )
             if errs:
                 log.warning(f"[camara:{base} relations] errors={len(errs)}")
             for rows in results:

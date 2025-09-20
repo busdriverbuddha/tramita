@@ -9,7 +9,7 @@ import logging
 from tramita.config import settings
 from tramita.http.client import HttpClient
 from tramita.log import setup_logging
-from tramita.sources.base import bounded_gather
+from tramita.sources.base import bounded_gather_pbar
 from tramita.sources.camara.client import camara_fetch
 from tramita.storage.manifest import SnapshotManifest
 from tramita.storage.parquet import write_index_parquet, write_relation_parts
@@ -107,7 +107,9 @@ async def build_eventos_relations(
                     row("eventos/orgaos", orgs),
                 )
 
-            results, errs = await bounded_gather(eids, rel_worker, concurrency=concurrency_events)
+            results, errs = await bounded_gather_pbar(
+                eids, rel_worker, concurrency=concurrency_events, description="camara:eventos_rel",
+            )
             if errs:
                 log.warning(f"[camara:eventos-rel] year={y} errors={len(errs)}")
 
@@ -227,7 +229,9 @@ async def expand_index_eventos_via_orgaos(
                         out.append(str(vid))
                 return out
 
-            results, errs = await bounded_gather(org_ids, org_worker, concurrency=concurrency_orgaos)
+            results, errs = await bounded_gather_pbar(
+                org_ids, org_worker, concurrency=concurrency_orgaos, description="camara:orgaos_eventos",
+            )
             if errs:
                 log.warning(f"[camara:orgaos→eventos] win={d0}..{d1} errors={len(errs)}")
 
@@ -235,7 +239,9 @@ async def expand_index_eventos_via_orgaos(
             discovered = set(x for lst in results for x in lst)
             return bucket_year, discovered
 
-        win_results, win_errs = await bounded_gather(windows, win_worker, concurrency=concurrency_windows)
+        win_results, win_errs = await bounded_gather_pbar(
+            windows, win_worker, concurrency=concurrency_windows, description="camara:orgaos_eventos"
+        )
         if win_errs:
             log.warning(f"[camara:orgaos→eventos] window_errors={len(win_errs)} (continuing)")
 
@@ -305,7 +311,9 @@ async def build_index_eventos(
             dados = await camara_fetch(hc, "/eventos", params, itens=page_size)
             return d0, d1, dados
 
-        results, errs = await bounded_gather(windows, worker, concurrency=concurrency_windows)
+        results, errs = await bounded_gather_pbar(
+            windows, worker, concurrency=concurrency_windows, description="camara:eventos",
+        )
 
     if errs:
         log.warning(f"[camara:eventos-index] windows_errors={len(errs)} (continuing)")

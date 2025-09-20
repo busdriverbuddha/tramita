@@ -2,8 +2,10 @@
 
 from typing import Iterable, TypedDict, Any
 from pathlib import Path
+
 import json
 import hashlib
+import re
 
 import pyarrow as pa
 import pyarrow.parquet as pq
@@ -40,6 +42,21 @@ class IndexRow(TypedDict):
 
 
 # ---- Helpers ----------------------------------------------------------------
+def _next_part_index(dirpath: Path) -> int:
+    _PART_RE = re.compile(r"^part-(\d+)\.parquet$")
+    max_idx = -1
+    for p in dirpath.glob("part-*.parquet"):
+        m = _PART_RE.match(p.name)
+        if not m:
+            continue
+        try:
+            idx = int(m.group(1))
+        except Exception:
+            continue
+        if idx > max_idx:
+            max_idx = idx
+    return max_idx + 1
+
 
 def _sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
@@ -176,7 +193,8 @@ def write_details_parts(
         return written
 
     start = 0
-    part_idx = 0
+    part_idx = _next_part_index(part_dir)
+
     while start < total:
         end = min(start + part_rows, total)
         chunk = normalized[start:end]
