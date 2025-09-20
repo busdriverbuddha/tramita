@@ -11,6 +11,7 @@ from tramita.storage.manifest import SnapshotManifest
 from tramita.storage.parquet import write_relation_parts
 from tramita.storage.paths import BronzePaths
 from tramita.sources.camara.client import camara_fetch
+from tramita.sources.camara.utils.rows import _row, BronzeRow
 
 log = logging.getLogger(__name__)
 
@@ -37,10 +38,6 @@ REF_ENDPOINTS: dict[str, str] = {
     'proposicoes_siglaTipo': '/referencias/proposicoes/siglaTipo',
     'situacoesDeputado': '/referencias/situacoesDeputado'
 }
-
-
-def _dump_sorted(obj: Any) -> str:
-    return json.dumps(obj, ensure_ascii=False, separators=(",", ":"), sort_keys=True)
 
 
 async def build_camara_referencias(
@@ -72,45 +69,26 @@ async def build_camara_referencias(
     ) as hc:
         for refname in targets:
             path = REF_ENDPOINTS[refname]
-            dados = await camara_fetch(
-                hc, path, {},
-                itens=100, concurrency=8, fallback_follow_next=True
-            )
+            dados = await camara_fetch(hc, path, None)
 
             if not isinstance(dados, list):
                 log.warning(
                     f"[camara:referencias] {refname} unexpected schema; storing nothing")
                 continue
 
-            rows: list[dict[str, Any]] = []
-            for it in dados:
-                # Prefer a human key (sigla); fall back to numeric code; last resort: full JSON hash via index
-                rid = None
-                if isinstance(it, dict):
-                    if "sigla" in it and it["sigla"]:
-                        rid = str(it["sigla"])
-                    elif "cod" in it and it["cod"] is not None:
-                        try:
-                            rid = str(int(it["cod"]))
-                        except Exception:
-                            rid = str(it["cod"])
-                if not rid:
-                    # fallback to a stable string
-                    rid = _dump_sorted(it)
-
-                payload_json = _dump_sorted(it)
-                rows.append({
-                    "source": "camara",
-                    # shows up grouped in manifest
-                    "entity": f"referencias/{refname}",
-                    "year": year_bucket,
-                    "id": rid,
-                    "url": CAMARA_BASE + path,
-                    "payload_json": payload_json,
-                })
-
+            rows: list[BronzeRow] = [
+                _row(
+                    entity=f"referencias/{refname}",
+                    year=year_bucket,
+                    id=_ref_id(it),
+                    url=CAMARA_BASE + path,
+                    dados=it,
+                    wrap_dados=False,
+                )
+                for it in dados
+            ]
             parts = write_relation_parts(
-                rows,
+                rows,  # type: ignore
                 paths=paths,
                 manifest=manifest,
                 source="camara",
@@ -126,3 +104,20 @@ async def build_camara_referencias(
 
     log.info(f"[camara:referencias] total_rows={total_rows}")
     return total_rows
+
+
+def _to_str_id(v: Any) -> str:
+    try:
+        return str(int(v))
+    except Exception:
+        return str(v)
+
+
+def _ref_id(it: Any) -> str:
+    if isinstance(it, dict):
+        if it.get("sigla"):
+            return str(it["sigla"])
+        if it.get("cod") is not None:
+            return _to_str_id(it["cod"])
+    # stable fallback
+    return json.dumps(it, ensure_ascii=False, separators=(",", ":"), sort_keys=True)

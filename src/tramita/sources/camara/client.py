@@ -27,7 +27,7 @@ def _has_next(links: list[dict]) -> bool:
 async def camara_fetch(
     hc: HttpClient,
     path: str,
-    params: dict[str, Any],
+    params: dict[str, Any] | None,
     *,
     itens: int = 100,
     concurrency: int = 8,
@@ -45,6 +45,7 @@ async def camara_fetch(
 
     Returns concatenated list of items from 'dados' (or [] if absent).
     """
+    params = params or {}
     # 1) Probe without page params (works for both non-paginated and paginated endpoints).
     text0 = await hc.get_text(path, params=params)
     obj0 = json.loads(text0)
@@ -97,18 +98,3 @@ async def camara_fetch(
             page += 1
 
     return dados_all
-
-
-# --- Temporary back-compat alias (remove once call sites switch to `fetch`) ---
-async def camara_fetch_all_dados(
-    hc: HttpClient,
-    path: str,
-    params: dict[str, Any],
-    *,
-    itens: int = 100,
-    concurrency: int = 8,
-    fallback_follow_next: bool = True,
-) -> list[dict]:
-    return await camara_fetch(
-        hc, path, params, itens=itens, concurrency=concurrency, fallback_follow_next=fallback_follow_next
-    )

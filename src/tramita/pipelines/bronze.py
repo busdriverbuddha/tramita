@@ -6,42 +6,68 @@ from typing import Iterable
 from tramita.log import setup_logging
 from tramita.storage.paths import BronzePaths
 from tramita.storage.manifest import new_manifest, SnapshotManifest
-from tramita.sources.camara.pipelines import (
-    build_all_orgaos,
-    build_autores_relations_and_entities,
-    build_details_proposicoes,
-    build_frentes_via_deputados,
+from tramita.sources.camara.stages.proposicoes import (
     build_index_proposicoes_tramitadas,
-    build_temas_relations,
     expand_index_via_relacionadas,
-    build_votacoes_votos_orientacoes,
-    build_index_eventos,
-    build_eventos_relations,
+    build_details_proposicoes,
+)
+from tramita.sources.camara.stages.temas import build_temas_relations
+from tramita.sources.camara.stages.tramitacoes import build_tramitacoes_relations_and_orgaos
+from tramita.sources.camara.stages.frentes import build_frentes_via_deputados
+from tramita.sources.camara.stages.votacoes import build_votacoes_votos_orientacoes
+from tramita.sources.camara.stages.eventos import (
     build_details_eventos,
+    build_eventos_relations,
     expand_index_eventos_via_orgaos,
+    build_index_eventos,
+)
+
+from tramita.sources.camara.stages.orgaos import (
+    build_all_orgaos,
     build_orgaos_membros,
     build_orgaos_votacoes_relations,
-    build_tramitacoes_relations_and_orgaos,
+)
+
+from tramita.sources.camara.stages.deputados import (
     build_deputados_catalog,
     build_deputados_relations,
-    build_partidos_blocos_frentes_legislaturas,
 )
+
+from tramita.sources.camara.stages.autores import build_autores_relations_and_entities
+
+from tramita.sources.camara.stages.partidos import build_partidos_blocos_frentes_legislaturas
+
 
 from tramita.sources.camara.referencias import (
     build_camara_referencias,
 )
 
-from tramita.sources.senado.pipelines import (
+from tramita.sources.senado.stages.processos import (
     build_index_processos as build_index_processos_senado,
     build_details_processos_iterative as build_details_processos_iterative_senado,
     build_votacoes_relations as build_votacoes_relations_senado,
+    build_emendas_relations as build_emendas_relations_senado,
+    build_relatorias_relations as build_relatorias_relations_senado,
+)
+
+from tramita.sources.senado.stages.colegiados import (
+    build_colegiados as build_colegiados_senado,
+    build_colegiados_votacoes as build_colegiados_votacoes_senado,
+)
+
+from tramita.sources.senado.stages.parlamentares import (
     build_index_parlamentares_via_autoria as build_index_parlamentares_via_autoria_senado,
     build_index_parlamentares_via_legislaturas as build_index_parlamentares_via_legislaturas_senado,
     build_details_parlamentares as build_details_parlamentares_senado,
-    build_emendas_relations as build_emendas_relations_senado,
-    build_colegiados as build_colegiados_senado,
-    build_colegiados_votacoes as build_colegiados_votacoes_senado,
-    build_relatorias_relations as build_relatorias_relations_senado,
+)
+
+from tramita.sources.senado.stages.blocos import (
+    build_blocos_details as build_blocos_details_senado,
+    build_rel_bloco_partido as build_rel_bloco_partido_senado,
+)
+
+from tramita.sources.senado.stages.partidos import (
+    build_partidos_details as build_partidos_details_senado
 )
 
 
@@ -106,7 +132,7 @@ async def bronze_camara(
             end_date=end_d,
         )
     if should("expand_rel"):
-        await expand_index_via_relacionadas(paths, manifest, years, concurrency=16, max_rounds=6)
+        await expand_index_via_relacionadas(paths, manifest, years, concurrency=16, max_rounds=1)
     # 2) Details stage (unchanged)
 
     if should("details_props"):
@@ -336,6 +362,8 @@ async def bronze_senado(
         "colegiados_votacoes",
         "parlamentares_index",
         "parlamentares_details",
+        "blocos",
+        "partidos",
     ]
     start_idx = order.index(resume_from) if resume_from != "all" else 0
 
@@ -375,5 +403,12 @@ async def bronze_senado(
     if should("parlamentares_details"):
         for yy in years:
             await build_details_parlamentares_senado(paths, manifest, yy)
+
+    if should("blocos"):
+        await build_blocos_details_senado(paths, manifest, years)
+        await build_rel_bloco_partido_senado(paths, manifest, years)
+
+    if should("partidos"):
+        await build_partidos_details_senado(paths, manifest, years)
 
     manifest.save(paths.manifest_json)
