@@ -1,6 +1,6 @@
 from pathlib import Path
+import sys
 
-EXCLUDES = ["camara"]
 
 def tag_file(file_path: Path, tag_text: str):
     lines: list[str] = file_path.read_text().splitlines()
@@ -19,6 +19,11 @@ def tag_file(file_path: Path, tag_text: str):
 
 def main():
     SRC_DIR = Path("./src")
+
+    # optional argument: subpath
+    subpath = Path(sys.argv[1]) if len(sys.argv) > 1 else None
+    dump_base = SRC_DIR / subpath if subpath else SRC_DIR
+
     dumps = []
 
     for filename in SRC_DIR.rglob("*.py"):
@@ -26,16 +31,18 @@ def main():
         rel_path = filename.relative_to(SRC_DIR)
         tag_file(filename, str(rel_path))
         new_text = filename.read_text()
+
         if old_text != new_text:
             print(f"Tagged {rel_path}.")
-        for exclude in EXCLUDES:
-            if exclude in str(rel_path):
-                break
-        else:
-            dumps.append(filename.read_text())
+
+        # Only collect for dump if inside subpath (or no subpath specified)
+        if subpath is None or filename.is_relative_to(dump_base):
+            if old_text != new_text:
+                dumps.append(new_text)
+            else:
+                dumps.append(old_text)
 
     divider = "\n# ------------------------------------------ #\n"
-
     dumptext = divider.join(dumps)
 
     with open("code-dump.txt", "w") as f:

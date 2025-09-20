@@ -211,3 +211,6 @@ __marimo__/
 *.parquet
 *dump*.txt
 data.tar.gz
+
+/schema_out/
+/.vscode/
