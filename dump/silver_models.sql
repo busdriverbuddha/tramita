@@ -43,6 +43,7 @@ WITH base AS (
 ),
 exploded AS (
   SELECT
+    CAST(id_proposicao AS BIGINT) as id_proposicao,
     CAST(json_extract_string(e.value, '$.codTipo') AS BIGINT)         AS cod_tipo,
     json_extract_string(e.value, '$.uri')                              AS uri_autor,
     CAST(json_extract_string(e.value, '$.ordemAssinatura') AS INTEGER) AS ordem_assinatura,
