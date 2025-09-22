@@ -214,5 +214,5 @@ data.tar.gz
 
 /schema_out/
 /.vscode/
-/dump/
+# /dump/
 /tmp_duckdb/
