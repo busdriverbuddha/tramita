@@ -214,4 +214,5 @@ data.tar.gz
 
 /schema_out/
 /.vscode/
-*.ipynb
+/dump/
+/tmp_duckdb/

@@ -113,7 +113,7 @@ async def bronze_camara(
     start_idx = order.index(resume_from) if resume_from != "all" else 0
 
     def should(stage: str) -> bool:
-        return order.index(stage) >= start_idx
+        return order.index(stage) >= start_idx if stage in order else True
 
     # 1) Index stage (tramitação windows)
     from datetime import date
@@ -368,7 +368,7 @@ async def bronze_senado(
     start_idx = order.index(resume_from) if resume_from != "all" else 0
 
     def should(stage: str) -> bool:
-        return order.index(stage) >= start_idx
+        return order.index(stage) >= start_idx if stage in order else True
 
     if should("processos_index"):
         await build_index_processos_senado(paths, years, tipo_siglas=types or None, window_days=window_days)

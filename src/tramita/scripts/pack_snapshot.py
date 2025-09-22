@@ -50,6 +50,25 @@ def make_tar_zst(src_dir: Path, out_path: Path) -> None:
             tar.add(src_dir, arcname=src_dir.name, recursive=True)
 
 
+def make_tar(src_dir: Path, out_base: Path) -> Path:
+    """
+    Create tarball; prefer .tar.zst if zstd available, else .tar.gz.
+    Returns the actual output path created.
+    """
+    out_base.parent.mkdir(parents=True, exist_ok=True)
+    if HAVE_ZSTD:
+        out_path = out_base  # e.g., foo.tar.zst
+        cctx = zstd.ZstdCompressor(level=10)  # type: ignore
+        with out_path.open("wb") as out_fh, cctx.stream_writer(out_fh) as compressor:
+            with tarfile.open(mode="w|", fileobj=compressor) as tar:
+                tar.add(src_dir, arcname=src_dir.name, recursive=True)
+    else:
+        out_path = out_base.with_suffix(".tar.gz")
+        with tarfile.open(out_path, mode="w:gz") as tar:
+            tar.add(src_dir, arcname=src_dir.name, recursive=True)
+    return out_path
+
+
 def split_file(path: Path, max_bytes: int) -> list[Path]:
     parts = []
     with path.open("rb") as src:
@@ -70,10 +89,10 @@ def split_file(path: Path, max_bytes: int) -> list[Path]:
 
 def main():
     ap = argparse.ArgumentParser(description="Pack and split a Bronze snapshot for release.")
-    ap.add_argument("--data-root", default="./data", help="Base data directory (default: ./data)")
-    ap.add_argument("--snapshot", required=True, help="Snapshot name, e.g., bronze-2020-2024-v1")
-    ap.add_argument("--out", default="./artifacts", help="Output dir for tar.zst and parts")
-    ap.add_argument("--max-part", default="1900MB", help="Max size per part (e.g., 1900MB)")
+    ap.add_argument("--data-root", default="./data")
+    ap.add_argument("--snapshot", required=True)
+    ap.add_argument("--out", default="./artifacts")
+    ap.add_argument("--max-part", default="1900MB")
     args = ap.parse_args()
 
     data_root = Path(args.data_root)
@@ -84,21 +103,20 @@ def main():
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    tar_zst = out_dir / f"{args.snapshot}.tar.zst"
-    print(f"[pack] Creating {tar_zst} ...")
-    make_tar_zst(snap_dir, tar_zst)
+    desired = out_dir / f"{args.snapshot}.tar.zst"
+    print(f"[pack] Creating {desired} ...")
+    tar_path = make_tar(snap_dir, desired)
 
     max_bytes = human_to_bytes(args.max_part)
-    if tar_zst.stat().st_size > max_bytes:
+    if tar_path.stat().st_size > max_bytes:
         print(f"[split] Splitting into ~{args.max_part} parts ...")
-        parts = split_file(tar_zst, max_bytes)
-        # also write manifest for parts
+        parts = split_file(tar_path, max_bytes)
         manifest_txt = out_dir / f"{args.snapshot}.parts.txt"
         lines = [p.name + "\t" + sha256_file(p) for p in parts]
         manifest_txt.write_text("\n".join(lines) + "\n")
         print(f"[done] Wrote {len(parts)} parts + per-part .sha256 files.")
     else:
-        (tar_zst.with_suffix(tar_zst.suffix + ".sha256")).write_text(sha256_file(tar_zst))
+        (tar_path.with_suffix(tar_path.suffix + ".sha256")).write_text(sha256_file(tar_path))
         print("[done] Single file fits under max-part; wrote .sha256.")
 
 
