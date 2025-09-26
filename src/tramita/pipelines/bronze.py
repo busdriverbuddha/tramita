@@ -132,8 +132,8 @@ async def bronze_camara(
             end_date=end_d,
         )
     if should("expand_rel"):
-        await expand_index_via_relacionadas(paths, manifest, years, concurrency=16, max_rounds=1)
-    # 2) Details stage (unchanged)
+        await expand_index_via_relacionadas(paths, manifest, years, concurrency=16, max_rounds=0)
+    # # 2) Details stage (unchanged)
 
     if should("details_props"):
         for y in years:
@@ -375,7 +375,7 @@ async def bronze_senado(
 
     if should("processos_details_iter"):
         await build_details_processos_iterative_senado(
-            paths, manifest, years, concurrency=16, max_rounds=1
+            paths, manifest, years, concurrency=16, max_rounds=0
         )
 
     if should("processos_votacoes"):
