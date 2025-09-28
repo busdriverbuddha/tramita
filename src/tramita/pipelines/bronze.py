@@ -44,7 +44,7 @@ from tramita.sources.camara.referencias import (
 
 from tramita.sources.senado.stages.processos import (
     build_index_processos as build_index_processos_senado,
-    build_details_processos_iterative as build_details_processos_iterative_senado,
+    build_details_processos as build_details_processos_iterative_senado,
     build_votacoes_relations as build_votacoes_relations_senado,
     build_emendas_relations as build_emendas_relations_senado,
     build_relatorias_relations as build_relatorias_relations_senado,
@@ -354,7 +354,7 @@ async def bronze_senado(
 
     order = [
         "processos_index",
-        "processos_details_iter",
+        "processos_details",
         "processos_votacoes",
         "processos_emendas",
         "processos_relatorias",
@@ -373,7 +373,7 @@ async def bronze_senado(
     if should("processos_index"):
         await build_index_processos_senado(paths, years, tipo_siglas=types or None, window_days=window_days)
 
-    if should("processos_details_iter"):
+    if should("processos_details"):
         await build_details_processos_iterative_senado(
             paths, manifest, years, concurrency=16, max_rounds=0
         )

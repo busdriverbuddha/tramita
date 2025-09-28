@@ -104,48 +104,62 @@ async def build_index_processos(
     log.info(f"[senado:index] total={total}")
     return total
 
-# build_details_processos_iterative_senado
 
-
-async def build_details_processos_iterative(
+async def build_details_processos(  # kept name/signature for drop-in use
     paths: BronzePaths,
     manifest: SnapshotManifest,
     years: Iterable[int],
     *,
     concurrency: int = 16,
-    max_rounds: int = 8,
+    max_rounds: int = 8,  # ignored
 ) -> int:
     """
-    Iteratively fetch /processo/{id} details starting from existing
-    senado/processo/index/year=YYYY/ids.parquet. After each round,
-    extract 'processosRelacionados[*].idOutroProcesso' from the freshly
-    fetched payloads to form the next wave. Stop when no new ids.
+    Fetch /processo/{id} details *only* for IDs present in
+    senado/processo/index/year=YYYY/ids.parquet (no related expansion).
 
-    Each fetched detail is bucketed by its *natural* year:
+    Each fetched detail is bucketed by its natural year:
       - prefer field 'ano'
       - fallback: documento.dataApresentacao[:4]
       - last resort: the smallest requested year
+
     Details are written to senado/processo/details/year=YYYY/part-*.parquet
     and recorded into the manifest.
 
-    Returns total number of *unique* processos fetched.
+    Returns total number of unique processos fetched.
     """
 
-    years_sorted = sorted(set(int(y) for y in years))
+    years_sorted = sorted({int(y) for y in years})
     if not years_sorted:
         return 0
 
-    # ---- Seed queue from existing per-year index files
+    # ---- Seed set of IDs from existing per-year index files
     seed_ids: set[str] = set()
     for y in years_sorted:
         idx_path = paths.index_file("senado", "processo", y)
         if idx_path.exists():
             tbl = pq.read_table(idx_path, columns=["id"])
+            # tbl.to_pylist() gives list[dict]; cast IDs to str to normalize
             seed_ids.update(str(r["id"]) for r in tbl.to_pylist())
 
     if not seed_ids:
-        log.info("[senado:details_iter] no ids found in index; nothing to do")
+        log.info("[senado:proc_details] no ids found in index; nothing to do")
         return 0
+
+    # ---- Helpers
+    def _infer_year(obj: dict) -> int:
+        ano = obj.get("ano")
+        if ano is not None:
+            try:
+                return int(ano)
+            except Exception:
+                pass
+        try:
+            da = ((obj.get("documento") or {}).get("dataApresentacao"))
+            if isinstance(da, str) and len(da) >= 4 and da[:4].isdigit():
+                return int(da[:4])
+        except Exception:
+            pass
+        return years_sorted[0]
 
     async with HttpClient(
         SENADO_BASE,
@@ -153,105 +167,62 @@ async def build_details_processos_iterative(
         timeout=settings.http_timeout,
         user_agent=settings.user_agent,
     ) as hc:
-        def _infer_year(obj: dict) -> int:
-            ano = obj.get("ano")
-            if ano is not None:
-                try:
-                    return int(ano)
-                except Exception:
-                    pass
-            try:
-                da = ((obj.get("documento") or {}).get("dataApresentacao"))
-                if isinstance(da, str) and len(da) >= 4 and da[:4].isdigit():
-                    return int(da[:4])
-            except Exception:
-                pass
-            return years_sorted[0]
 
-        def _related_ids(obj: dict) -> set[str]:
-            rels = obj.get("processosRelacionados") or []
-            out: set[str] = set()
-            for it in rels:
-                rid = it.get("idOutroProcesso")
-                if rid is None:
-                    continue
-                try:
-                    out.add(str(int(rid)))
-                except Exception:
-                    out.add(str(rid))
-            return out
-
-        seen: set[str] = set()          # fetched already (any round)
-        frontier: set[str] = set(seed_ids)
-        total_written = 0
-        round_idx = 0
-
-        while frontier and round_idx < max_rounds:
-            round_idx += 1
-            batch = sorted(pid for pid in frontier if pid not in seen)
-            if not batch:
-                break
-
-            # --- Round fetch
-            async def worker(pid: str):
-                obj = await senado_fetch(hc, f"/processo/{pid}", {})
-                year = _infer_year(obj)
-                payload_json = json.dumps(obj, ensure_ascii=False, separators=(",", ":"), sort_keys=True)
-                return year, {
-                    "source": "senado",
-                    "entity": "processo",
-                    "year": year,
-                    "id": pid,
-                    "url": f"{SENADO_BASE}/processo/{pid}",
-                    "payload_json": payload_json,
-                }, _related_ids(obj)
-
-            triplets, errs = await bounded_gather_pbar(
-                batch, worker, concurrency=concurrency,
-                description=f"senado:proc_details:round{round_idx}"
+        async def worker(pid: str):
+            obj = await senado_fetch(hc, f"/processo/{pid}", {})
+            year = _infer_year(obj)
+            payload_json = json.dumps(
+                obj,
+                ensure_ascii=False,
+                separators=(",", ":"),
+                sort_keys=True,
             )
-            if errs:
-                log.warning(f"[senado:details_iter] round={round_idx} errors={len(errs)} (continuing)")
+            return int(year), {
+                "source": "senado",
+                "entity": "processo",
+                "year": int(year),
+                "id": pid,
+                "url": f"{SENADO_BASE}/processo/{pid}",
+                "payload_json": payload_json,
+            }
 
-            # --- Group by year and write parts deterministically
-            by_year_rows: dict[int, list[dict]] = defaultdict(list)
-            next_frontier: set[str] = set()
+        batch = sorted(seed_ids)
+        log.info(f"[senado:proc_details] fetching {len(batch)} ids (no expansion)")
 
-            for year, row, relset in triplets:
-                by_year_rows[int(year)].append(row)
-                next_frontier.update(relset)
-                seen.add(row["id"])
+        pairs, errs = await bounded_gather_pbar(
+            batch, worker, concurrency=concurrency,
+            description="senado:proc_details"
+        )
+        if errs:
+            log.warning(f"[senado:proc_details] errors={len(errs)} (continuing)")
 
-            for year, rows in sorted(by_year_rows.items(), key=lambda kv: kv[0]):
-                if not rows:
-                    continue
-                parts = write_details_parts(
-                    rows,
-                    paths=paths,
-                    manifest=manifest,
-                    source="senado",
-                    entity="processo",
-                    year=int(year),
-                    part_rows=50_000,
-                    sort=True,
-                )
-                total_written += len(rows)
-                log.info(
-                    f"[senado:details_iter] round={round_idx} year={year}"
-                    f" wrote {len(rows)} rows in {len(parts)} part(s)"
-                )
+    # ---- Group by year and write parts deterministically
+    by_year_rows: dict[int, list[dict]] = defaultdict(list)
+    for year, row in pairs:
+        by_year_rows[int(year)].append(row)
 
-            # Prepare next wave: discovered minus already seen
-            frontier = {pid for pid in next_frontier if pid not in seen}
+    total_written = 0
+    for year, rows in sorted(by_year_rows.items(), key=lambda kv: kv[0]):
+        if not rows:
+            continue
+        parts = write_details_parts(
+            rows,
+            paths=paths,
+            manifest=manifest,
+            source="senado",
+            entity="processo",
+            year=int(year),
+            part_rows=50_000,
+            sort=True,
+        )
+        total_written += len(rows)
+        log.info(
+            f"[senado:proc_details] year={year} wrote {len(rows)} rows "
+            f"in {len(parts)} part(s)"
+        )
 
-            log.info(
-                f"[senado:details_iter] round={round_idx} fetched={len(batch)} "
-                f"discovered_next={len(frontier)} total_seen={len(seen)}"
-            )
-
-        log.info(f"[senado:details_iter] DONE after {round_idx} round(s), total unique detalhes={len(seen)}")
-
-    return len(seen)
+    log.info(f"[senado:proc_details] DONE total unique detalhes={total_written}")
+    return total_written
 
 
 # build_votacoes_relations_senado
