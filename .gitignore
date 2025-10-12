@@ -216,3 +216,5 @@ data.tar.gz
 /.vscode/
 # /dump/
 /tmp_duckdb/
+/entrega_parcial/outputs/
+

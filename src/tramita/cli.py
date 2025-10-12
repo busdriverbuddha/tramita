@@ -9,9 +9,9 @@ app = typer.Typer(no_args_is_help=True)
 
 @app.command()
 def bronze(
-    source: str = typer.Argument("camara", help="camara|senado|all"),
+    source: str = typer.Argument("all", help="camara|senado|all"),
     years: str = typer.Option("2020-2024", help="e.g. 2020-2024 or 2020,2021"),
-    snapshot: str = typer.Option("bronze-2020-2024-v1"),
+    snapshot: str = typer.Option("bronze-2020-2024-v2"),
     data_root: str = typer.Option("./data"),
     types: str = typer.Option("", help="Comma-separated siglaTipo filter, e.g. 'PL,PEC'"),
     sample: str = typer.Option("", help="Deterministic downsample like '1/200' (~0.5%)"),
@@ -36,7 +36,7 @@ def bronze(
 @app.command()
 def verify(
     target: str = typer.Argument("bronze"),
-    snapshot: str = typer.Option("bronze-2020-2024-v1"),
+    snapshot: str = typer.Option("bronze-2020-2024-v2"),
     data_root: str = typer.Option("./data"),
 ):
     """Verify Bronze manifest and files."""
