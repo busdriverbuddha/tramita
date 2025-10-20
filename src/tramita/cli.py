@@ -1,8 +1,50 @@
 # tramita/cli.py
 
+import os
+from pathlib import Path
 import typer
 
 from tramita.pipelines.bronze import run_bronze, verify_bronze
+from tramita.pipelines.silver import run_silver
+
+def _load_env_from_dotenv() -> None:
+    """Load environment variables from a .env file if present.
+
+    Tries python-dotenv first; if unavailable, falls back to a simple parser for
+    KEY=VALUE lines (ignores comments and blank lines). Existing environment
+    variables are not overwritten by the fallback.
+    """
+    # Try python-dotenv if installed
+    try:
+        from dotenv import load_dotenv  # type: ignore
+
+        load_dotenv()  # loads from .env in CWD if present
+        return
+    except Exception:
+        pass
+
+    # Minimal fallback: parse .env in current working directory
+    env_path = Path(".env")
+    if not env_path.exists():
+        return
+    try:
+        for raw in env_path.read_text(encoding="utf-8").splitlines():
+            line = raw.strip()
+            if not line or line.startswith("#"):
+                continue
+            if "=" not in line:
+                continue
+            key, val = line.split("=", 1)
+            key = key.strip()
+            val = val.strip().strip('"').strip("'")
+            os.environ.setdefault(key, val)
+    except Exception:
+        # Silently ignore malformed .env; users can fix or install python-dotenv
+        pass
+
+
+_load_env_from_dotenv()
+
 
 app = typer.Typer(no_args_is_help=True)
 
@@ -44,6 +86,37 @@ def verify(
         raise typer.BadParameter("Only 'bronze' is supported for now.")
     code = verify_bronze(snapshot, data_root)
     raise typer.Exit(code)
+
+
+@app.command()
+def silver(
+    source: str = typer.Argument("camara", help="camara|senado|all"),
+    snapshot: str = typer.Option("bronze-2020-2024-v2", help="Bronze snapshot name to read from"),
+    data_root: str = typer.Option("./data", help="Data root directory"),
+    duckdb_path: str = typer.Option(
+        default_factory=lambda: __import__("os").environ.get("SILVER_DUCKDB_PATH", ""),
+        help="Path to the Silver DuckDB file (must include snapshot signature)",
+    ),
+    steps_dir: str = typer.Option(
+        "",
+        help="Directory under data_root containing step files (.sql/.py); if empty, defaults based on snapshot signature",
+    ),
+    dry_run: bool = typer.Option(False, help="List planned steps and exit without executing"),
+):
+    """Run Silver pipeline (Câmara) using user-supplied steps under data_root."""
+    if not duckdb_path:
+        raise typer.BadParameter(
+            "duckdb_path is required (set --duckdb-path or SILVER_DUCKDB_PATH)"
+        )
+
+    run_silver(
+        source=source,
+        snapshot=snapshot,
+        data_root=data_root,
+        duckdb_path=duckdb_path,
+        steps_dir=steps_dir or None,
+        dry_run=dry_run,
+    )
 
 
 if __name__ == "__main__":
