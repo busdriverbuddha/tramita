@@ -1,3 +1,5 @@
+# tramita/pipelines/silver.py
+
 """
 Silver (Prata) pipeline stubs.
 
