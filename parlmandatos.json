@@ -1,0 +1,76 @@
+{
+    "MandatoParlamentar": {
+        "noNamespaceSchemaLocation": "https://legis.senado.leg.br/dadosabertos/dados/MandatoParlamentarv5.xsd",
+        "Metadados": {
+            "Versao": "27/10/2025 06:47:53",
+            "VersaoServico": "5",
+            "DataVersaoServico": "2021-09-09",
+            "DescricaoDataSet": "Retorna a relação dos Mandatos do Senador informado no parâmetro."
+        },
+        "Parlamentar": {
+            "Codigo": "5537",
+            "Nome": "Dário Berger",
+            "Mandatos": {
+                "Mandato": [
+                    {
+                        "CodigoMandato": "499",
+                        "UfParlamentar": "SC",
+                        "PrimeiraLegislaturaDoMandato": {
+                            "NumeroLegislatura": "55",
+                            "DataInicio": "2015-02-01",
+                            "DataFim": "2019-01-31"
+                        },
+                        "SegundaLegislaturaDoMandato": {
+                            "NumeroLegislatura": "56",
+                            "DataInicio": "2019-02-01",
+                            "DataFim": "2023-01-31"
+                        },
+                        "DescricaoParticipacao": "Titular",
+                        "Suplentes": {
+                            "Suplente": [
+                                {
+                                    "DescricaoParticipacao": "1º Suplente",
+                                    "CodigoParlamentar": "336",
+                                    "NomeParlamentar": "Paulo Gouvêa"
+                                },
+                                {
+                                    "DescricaoParticipacao": "2º Suplente",
+                                    "CodigoParlamentar": "5631",
+                                    "NomeParlamentar": "Ayres Marchetti"
+                                }
+                            ]
+                        },
+                        "Exercicios": {
+                            "Exercicio": [
+                                {
+                                    "CodigoExercicio": "2731",
+                                    "DataInicio": "2015-02-01",
+                                    "DataFim": "2023-01-31",
+                                    "SiglaCausaAfastamento": "TER",
+                                    "DescricaoCausaAfastamento": "Término do mandato"
+                                }
+                            ]
+                        },
+                        "Partidos": {
+                            "Partido": [
+                                {
+                                    "CodigoPartido": "63",
+                                    "Sigla": "PSB",
+                                    "Nome": "Partido Socialista Brasileiro",
+                                    "DataFiliacao": "2022-04-11"
+                                },
+                                {
+                                    "CodigoPartido": "33",
+                                    "Sigla": "MDB",
+                                    "Nome": "Movimento Democrático Brasileiro",
+                                    "DataFiliacao": "2015-02-01",
+                                    "DataDesfiliacao": "2022-04-10"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

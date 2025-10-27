@@ -21,20 +21,8 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
 ]
 
-# ✅ runtime dependencies
-dependencies = [
-    "duckdb>=1.4.0",
-    "typer>=0.12.0",
-    "httpx[http2]>=0.27.0",
-    "pydantic>=2.5.0",
-    "pydantic-settings>=2.2.1",
-    "pyarrow>=15.0.0",
-    "jupyter>=1.1.1",
-    "jupyterlab>=4.4.7",
-    "jupysql>=0.11.1",
-    "matplotlib>=3.10.6",
-    "networkx>=3.5",
-]
+# ✅ runtime dependencies are read dynamically from requirements.txt
+dynamic = ["dependencies"]
 
 [project.optional-dependencies]
 # optional zstandard support for the packing script
@@ -48,6 +36,10 @@ where = ["src"]
 
 [tool.setuptools.package-dir]
 "" = "src"
+
+# Read dependencies from requirements.txt (PEP 621 dynamic fields)
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
 
 [tool.flake8]
 max-line-length = 88
