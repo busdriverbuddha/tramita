@@ -207,8 +207,8 @@ marimo/_lsp/
 __marimo__/
 
 # Tramita data
-/data/
-*.parquet
+# /data/
+# *.parquet
 *dump*.txt
 data.tar.gz
 
