@@ -17,246 +17,6 @@
   <key id="e_weight" for="edge" attr.name="weight" attr.type="double"/>
   <graph id="G" edgedefault="undirected">
     <node id="n0">
-      <data key="v_name">SS:4531</data>
-      <data key="v_label">JAYME VERÍSSIMO DE CAMPOS</data>
-      <data key="v_partido">UNIÃO/MT</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">UNIÃO</data>
-      <data key="v_uf">MT</data>
-      <data key="v_ideol_partido">centre-right</data>
-      <data key="v_regiao">centro-oeste</data>
-      <data key="v_btwn">0.00277964848797347</data>
-      <data key="v_leiden_mod">0</data>
-    </node>
-    <node id="n1">
-      <data key="v_name">SS:5895</data>
-      <data key="v_label">JORGE KAJURU REIS DA COSTA NASSER</data>
-      <data key="v_partido">PSB/GO</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSB</data>
-      <data key="v_uf">GO</data>
-      <data key="v_ideol_partido">centre-left</data>
-      <data key="v_regiao">centro-oeste</data>
-      <data key="v_btwn">0.00201726352893711</data>
-      <data key="v_leiden_mod">0</data>
-    </node>
-    <node id="n2">
-      <data key="v_name">SS:5350</data>
-      <data key="v_label">JORGINHO DOS SANTOS MELLO</data>
-      <data key="v_partido">PL/SC</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PL</data>
-      <data key="v_uf">SC</data>
-      <data key="v_ideol_partido">far-right</data>
-      <data key="v_regiao">sul</data>
-      <data key="v_btwn">0.00198946246001572</data>
-      <data key="v_leiden_mod">0</data>
-    </node>
-    <node id="n3">
-      <data key="v_name">SS:5783</data>
-      <data key="v_label">ZENAIDE MAIA CALADO PEREIRA DOS SANTOS</data>
-      <data key="v_partido">PSD/RN</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSD</data>
-      <data key="v_uf">RN</data>
-      <data key="v_ideol_partido">centre</data>
-      <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.02663560228617</data>
-      <data key="v_leiden_mod">0</data>
-    </node>
-    <node id="n4">
-      <data key="v_name">SS:5979</data>
-      <data key="v_label">LEILA GOMES DE BARROS RÊGO</data>
-      <data key="v_partido">PDT/DF</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PDT</data>
-      <data key="v_uf">DF</data>
-      <data key="v_ideol_partido">centre-left</data>
-      <data key="v_regiao">centro-oeste</data>
-      <data key="v_btwn">0.0104022448060373</data>
-      <data key="v_leiden_mod">0</data>
-    </node>
-    <node id="n5">
-      <data key="v_name">SS:5322</data>
-      <data key="v_label">ROMARIO DE SOUZA FARIA</data>
-      <data key="v_partido">PL/RJ</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PL</data>
-      <data key="v_uf">RJ</data>
-      <data key="v_ideol_partido">far-right</data>
-      <data key="v_regiao">sudeste</data>
-      <data key="v_btwn">0.0901075067287862</data>
-      <data key="v_leiden_mod">1</data>
-    </node>
-    <node id="n6">
-      <data key="v_name">SS:5953</data>
-      <data key="v_label">FABIANO CONTARATO</data>
-      <data key="v_partido">PT/ES</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PT</data>
-      <data key="v_uf">ES</data>
-      <data key="v_ideol_partido">centre-left</data>
-      <data key="v_regiao">sudeste</data>
-      <data key="v_btwn">0.00618469169821201</data>
-      <data key="v_leiden_mod">1</data>
-    </node>
-    <node id="n7">
-      <data key="v_name">SS:4545</data>
-      <data key="v_label">JARBAS DE ANDRADE VASCONCELOS</data>
-      <data key="v_partido">MDB/PE</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">MDB</data>
-      <data key="v_uf">PE</data>
-      <data key="v_ideol_partido">centre</data>
-      <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.00221603723963391</data>
-      <data key="v_leiden_mod">1</data>
-    </node>
-    <node id="n8">
-      <data key="v_name">SS:5942</data>
-      <data key="v_label">MARCOS RIBEIRO DO VAL</data>
-      <data key="v_partido">PODEMOS/ES</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PODE</data>
-      <data key="v_uf">ES</data>
-      <data key="v_ideol_partido">centre-right</data>
-      <data key="v_regiao">sudeste</data>
-      <data key="v_btwn">0.0186377165043542</data>
-      <data key="v_leiden_mod">1</data>
-    </node>
-    <node id="n9">
-      <data key="v_name">SS:5411</data>
-      <data key="v_label">WEVERTON ROCHA MARQUES DE SOUSA</data>
-      <data key="v_partido">PDT/MA</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PDT</data>
-      <data key="v_uf">MA</data>
-      <data key="v_ideol_partido">centre-left</data>
-      <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.000239189762451996</data>
-      <data key="v_leiden_mod">2</data>
-    </node>
-    <node id="n10">
-      <data key="v_name">SS:5236</data>
-      <data key="v_label">JOSÉ ANTÔNIO MACHADO REGUFFE</data>
-      <data key="v_partido">Sem Partido/DF</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">Sem Partido</data>
-      <data key="v_uf">DF</data>
-      <data key="v_ideol_partido">none</data>
-      <data key="v_regiao">centro-oeste</data>
-      <data key="v_btwn">0.00259458744581426</data>
-      <data key="v_leiden_mod">2</data>
-    </node>
-    <node id="n11">
-      <data key="v_name">SS:581</data>
-      <data key="v_label">JAQUES WAGNER</data>
-      <data key="v_partido">PT/BA</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PT</data>
-      <data key="v_uf">BA</data>
-      <data key="v_ideol_partido">centre-left</data>
-      <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">2.63659882290903e-05</data>
-      <data key="v_leiden_mod">2</data>
-    </node>
-    <node id="n12">
-      <data key="v_name">SS:945</data>
-      <data key="v_label">ALVARO FERNANDES DIAS</data>
-      <data key="v_partido">PODEMOS/PR</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PODE</data>
-      <data key="v_uf">PR</data>
-      <data key="v_ideol_partido">centre-right</data>
-      <data key="v_regiao">sul</data>
-      <data key="v_btwn">0.000317951531282458</data>
-      <data key="v_leiden_mod">2</data>
-    </node>
-    <node id="n13">
-      <data key="v_name">SS:5959</data>
-      <data key="v_label">EANN STYVENSON VALENTIM MENDES</data>
-      <data key="v_partido">PSDB/RN</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSDB</data>
-      <data key="v_uf">RN</data>
-      <data key="v_ideol_partido">centre</data>
-      <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.00197267138777114</data>
-      <data key="v_leiden_mod">3</data>
-    </node>
-    <node id="n14">
-      <data key="v_name">SS:5905</data>
-      <data key="v_label">RODRIGO SANTOS CUNHA</data>
-      <data key="v_partido">PODEMOS/AL</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PODE</data>
-      <data key="v_uf">AL</data>
-      <data key="v_ideol_partido">centre-right</data>
-      <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.000135439781144602</data>
-      <data key="v_leiden_mod">3</data>
-    </node>
-    <node id="n15">
-      <data key="v_name">SS:5385</data>
-      <data key="v_label">IRAJÁ SILVESTRE FILHO</data>
-      <data key="v_partido">PSD/TO</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSD</data>
-      <data key="v_uf">TO</data>
-      <data key="v_ideol_partido">centre</data>
-      <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.000217769550002236</data>
-      <data key="v_leiden_mod">3</data>
-    </node>
-    <node id="n16">
-      <data key="v_name">SS:4981</data>
-      <data key="v_label">ACIR MARCOS GURGACZ</data>
-      <data key="v_partido">PDT/RO</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PDT</data>
-      <data key="v_uf">RO</data>
-      <data key="v_ideol_partido">centre-left</data>
-      <data key="v_regiao">norte</data>
-      <data key="v_btwn">6.47647764553495e-05</data>
-      <data key="v_leiden_mod">3</data>
-    </node>
-    <node id="n17">
-      <data key="v_name">SS:5012</data>
-      <data key="v_label">RANDOLPH FREDERICH RODRIGUES ALVES</data>
-      <data key="v_partido">PT/AP</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PT</data>
-      <data key="v_uf">AP</data>
-      <data key="v_ideol_partido">centre-left</data>
-      <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.0028132736573548</data>
-      <data key="v_leiden_mod">3</data>
-    </node>
-    <node id="n18">
-      <data key="v_name">SS:3806</data>
-      <data key="v_label">JOSÉ DA CRUZ MARINHO</data>
-      <data key="v_partido">PODEMOS/PA</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PODE</data>
-      <data key="v_uf">PA</data>
-      <data key="v_ideol_partido">centre-right</data>
-      <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.00898415665981726</data>
-      <data key="v_leiden_mod">3</data>
-    </node>
-    <node id="n19">
-      <data key="v_name">SS:5523</data>
-      <data key="v_label">OTTO ROBERTO MENDONÇA DE ALENCAR</data>
-      <data key="v_partido">PSD/BA</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSD</data>
-      <data key="v_uf">BA</data>
-      <data key="v_ideol_partido">centre</data>
-      <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">3.53905882269669e-06</data>
-      <data key="v_leiden_mod">3</data>
-    </node>
-    <node id="n20">
       <data key="v_name">SS:5533</data>
       <data key="v_label">LASIER COSTA MARTINS</data>
       <data key="v_partido">PODEMOS/RS</data>
@@ -265,22 +25,58 @@
       <data key="v_uf">RS</data>
       <data key="v_ideol_partido">centre-right</data>
       <data key="v_regiao">sul</data>
-      <data key="v_btwn">0.00110581431973981</data>
-      <data key="v_leiden_mod">4</data>
+      <data key="v_btwn">0.000129529552910699</data>
+      <data key="v_leiden_mod">0</data>
     </node>
-    <node id="n21">
-      <data key="v_name">SS:5748</data>
-      <data key="v_label">VENEZIANO VITAL DO RÊGO SEGUNDO NETO</data>
-      <data key="v_partido">MDB/PB</data>
+    <node id="n1">
+      <data key="v_name">SS:5982</data>
+      <data key="v_label">ALESSANDRO VIEIRA</data>
+      <data key="v_partido">MDB/SE</data>
       <data key="v_type">Senador</data>
       <data key="v_cod_partido">MDB</data>
-      <data key="v_uf">PB</data>
+      <data key="v_uf">SE</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.00281156989110316</data>
-      <data key="v_leiden_mod">4</data>
+      <data key="v_btwn">0.00211441069362014</data>
+      <data key="v_leiden_mod">0</data>
     </node>
-    <node id="n22">
+    <node id="n2">
+      <data key="v_name">SS:3806</data>
+      <data key="v_label">JOSÉ DA CRUZ MARINHO</data>
+      <data key="v_partido">PODEMOS/PA</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PODE</data>
+      <data key="v_uf">PA</data>
+      <data key="v_ideol_partido">centre-right</data>
+      <data key="v_regiao">norte</data>
+      <data key="v_btwn">0.0481331624810555</data>
+      <data key="v_leiden_mod">0</data>
+    </node>
+    <node id="n3">
+      <data key="v_name">SS:345</data>
+      <data key="v_label">FLÁVIO JOSÉ ARNS</data>
+      <data key="v_partido">PSB/PR</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PSB</data>
+      <data key="v_uf">PR</data>
+      <data key="v_ideol_partido">centre-left</data>
+      <data key="v_regiao">sul</data>
+      <data key="v_btwn">0.00249758459235351</data>
+      <data key="v_leiden_mod">0</data>
+    </node>
+    <node id="n4">
+      <data key="v_name">SS:945</data>
+      <data key="v_label">ALVARO FERNANDES DIAS</data>
+      <data key="v_partido">PODEMOS/PR</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PODE</data>
+      <data key="v_uf">PR</data>
+      <data key="v_ideol_partido">centre-right</data>
+      <data key="v_regiao">sul</data>
+      <data key="v_btwn">0.000692050313282544</data>
+      <data key="v_leiden_mod">0</data>
+    </node>
+    <node id="n5">
       <data key="v_name">SS:5718</data>
       <data key="v_label">ELIZIANE PEREIRA GAMA MELO</data>
       <data key="v_partido">PSD/MA</data>
@@ -289,7 +85,211 @@
       <data key="v_uf">MA</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.0297970029672716</data>
+      <data key="v_btwn">6.37030588085405e-06</data>
+      <data key="v_leiden_mod">0</data>
+    </node>
+    <node id="n6">
+      <data key="v_name">SS:5895</data>
+      <data key="v_label">JORGE KAJURU REIS DA COSTA NASSER</data>
+      <data key="v_partido">PSB/GO</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PSB</data>
+      <data key="v_uf">GO</data>
+      <data key="v_ideol_partido">centre-left</data>
+      <data key="v_regiao">centro-oeste</data>
+      <data key="v_btwn">0.000197479482306475</data>
+      <data key="v_leiden_mod">0</data>
+    </node>
+    <node id="n7">
+      <data key="v_name">SS:5959</data>
+      <data key="v_label">EANN STYVENSON VALENTIM MENDES</data>
+      <data key="v_partido">PSDB/RN</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PSDB</data>
+      <data key="v_uf">RN</data>
+      <data key="v_ideol_partido">centre</data>
+      <data key="v_regiao">nordeste</data>
+      <data key="v_btwn">0.000108365981150973</data>
+      <data key="v_leiden_mod">0</data>
+    </node>
+    <node id="n8">
+      <data key="v_name">SS:4545</data>
+      <data key="v_label">JARBAS DE ANDRADE VASCONCELOS</data>
+      <data key="v_partido">MDB/PE</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">MDB</data>
+      <data key="v_uf">PE</data>
+      <data key="v_ideol_partido">centre</data>
+      <data key="v_regiao">nordeste</data>
+      <data key="v_btwn">0.000101420156894904</data>
+      <data key="v_leiden_mod">1</data>
+    </node>
+    <node id="n9">
+      <data key="v_name">SS:4981</data>
+      <data key="v_label">ACIR MARCOS GURGACZ</data>
+      <data key="v_partido">PDT/RO</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PDT</data>
+      <data key="v_uf">RO</data>
+      <data key="v_ideol_partido">centre-left</data>
+      <data key="v_regiao">norte</data>
+      <data key="v_btwn">0.00883500798149244</data>
+      <data key="v_leiden_mod">2</data>
+    </node>
+    <node id="n10">
+      <data key="v_name">SS:5905</data>
+      <data key="v_label">RODRIGO SANTOS CUNHA</data>
+      <data key="v_partido">PODEMOS/AL</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PODE</data>
+      <data key="v_uf">AL</data>
+      <data key="v_ideol_partido">centre-right</data>
+      <data key="v_regiao">nordeste</data>
+      <data key="v_btwn">0.000368203679913364</data>
+      <data key="v_leiden_mod">2</data>
+    </node>
+    <node id="n11">
+      <data key="v_name">SS:5322</data>
+      <data key="v_label">ROMARIO DE SOUZA FARIA</data>
+      <data key="v_partido">PL/RJ</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PL</data>
+      <data key="v_uf">RJ</data>
+      <data key="v_ideol_partido">far-right</data>
+      <data key="v_regiao">sudeste</data>
+      <data key="v_btwn">0.020162652193505</data>
+      <data key="v_leiden_mod">2</data>
+    </node>
+    <node id="n12">
+      <data key="v_name">SS:581</data>
+      <data key="v_label">JAQUES WAGNER</data>
+      <data key="v_partido">PT/BA</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PT</data>
+      <data key="v_uf">BA</data>
+      <data key="v_ideol_partido">centre-left</data>
+      <data key="v_regiao">nordeste</data>
+      <data key="v_btwn">0.0050280824317581</data>
+      <data key="v_leiden_mod">2</data>
+    </node>
+    <node id="n13">
+      <data key="v_name">SS:5985</data>
+      <data key="v_label">NELSON TRAD FILHO</data>
+      <data key="v_partido">PSD/MS</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PSD</data>
+      <data key="v_uf">MS</data>
+      <data key="v_ideol_partido">centre</data>
+      <data key="v_regiao">centro-oeste</data>
+      <data key="v_btwn">0</data>
+      <data key="v_leiden_mod">2</data>
+    </node>
+    <node id="n14">
+      <data key="v_name">SS:5783</data>
+      <data key="v_label">ZENAIDE MAIA CALADO PEREIRA DOS SANTOS</data>
+      <data key="v_partido">PSD/RN</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PSD</data>
+      <data key="v_uf">RN</data>
+      <data key="v_ideol_partido">centre</data>
+      <data key="v_regiao">nordeste</data>
+      <data key="v_btwn">0.00913306189901351</data>
+      <data key="v_leiden_mod">2</data>
+    </node>
+    <node id="n15">
+      <data key="v_name">SS:5523</data>
+      <data key="v_label">OTTO ROBERTO MENDONÇA DE ALENCAR</data>
+      <data key="v_partido">PSD/BA</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PSD</data>
+      <data key="v_uf">BA</data>
+      <data key="v_ideol_partido">centre</data>
+      <data key="v_regiao">nordeste</data>
+      <data key="v_btwn">0.00111975821150123</data>
+      <data key="v_leiden_mod">3</data>
+    </node>
+    <node id="n16">
+      <data key="v_name">SS:5236</data>
+      <data key="v_label">JOSÉ ANTÔNIO MACHADO REGUFFE</data>
+      <data key="v_partido">Sem Partido/DF</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">Sem Partido</data>
+      <data key="v_uf">DF</data>
+      <data key="v_ideol_partido">none</data>
+      <data key="v_regiao">centro-oeste</data>
+      <data key="v_btwn">0.00110461103974009</data>
+      <data key="v_leiden_mod">3</data>
+    </node>
+    <node id="n17">
+      <data key="v_name">SS:5411</data>
+      <data key="v_label">WEVERTON ROCHA MARQUES DE SOUSA</data>
+      <data key="v_partido">PDT/MA</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PDT</data>
+      <data key="v_uf">MA</data>
+      <data key="v_ideol_partido">centre-left</data>
+      <data key="v_regiao">nordeste</data>
+      <data key="v_btwn">0.000490721261102866</data>
+      <data key="v_leiden_mod">3</data>
+    </node>
+    <node id="n18">
+      <data key="v_name">SS:5979</data>
+      <data key="v_label">LEILA GOMES DE BARROS RÊGO</data>
+      <data key="v_partido">PDT/DF</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PDT</data>
+      <data key="v_uf">DF</data>
+      <data key="v_ideol_partido">centre-left</data>
+      <data key="v_regiao">centro-oeste</data>
+      <data key="v_btwn">0.033033592746345</data>
+      <data key="v_leiden_mod">3</data>
+    </node>
+    <node id="n19">
+      <data key="v_name">SS:5350</data>
+      <data key="v_label">JORGINHO DOS SANTOS MELLO</data>
+      <data key="v_partido">PL/SC</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PL</data>
+      <data key="v_uf">SC</data>
+      <data key="v_ideol_partido">far-right</data>
+      <data key="v_regiao">sul</data>
+      <data key="v_btwn">3.71601176383153e-05</data>
+      <data key="v_leiden_mod">3</data>
+    </node>
+    <node id="n20">
+      <data key="v_name">SS:5953</data>
+      <data key="v_label">FABIANO CONTARATO</data>
+      <data key="v_partido">PT/ES</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PT</data>
+      <data key="v_uf">ES</data>
+      <data key="v_ideol_partido">centre-left</data>
+      <data key="v_regiao">sudeste</data>
+      <data key="v_btwn">0.0609193943962543</data>
+      <data key="v_leiden_mod">3</data>
+    </node>
+    <node id="n21">
+      <data key="v_name">SS:5012</data>
+      <data key="v_label">RANDOLPH FREDERICH RODRIGUES ALVES</data>
+      <data key="v_partido">PT/AP</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PT</data>
+      <data key="v_uf">AP</data>
+      <data key="v_ideol_partido">centre-left</data>
+      <data key="v_regiao">norte</data>
+      <data key="v_btwn">0.000446452270483188</data>
+      <data key="v_leiden_mod">4</data>
+    </node>
+    <node id="n22">
+      <data key="v_name">SS:5385</data>
+      <data key="v_label">IRAJÁ SILVESTRE FILHO</data>
+      <data key="v_partido">PSD/TO</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PSD</data>
+      <data key="v_uf">TO</data>
+      <data key="v_ideol_partido">centre</data>
+      <data key="v_regiao">norte</data>
+      <data key="v_btwn">0.0059677379397723</data>
       <data key="v_leiden_mod">4</data>
     </node>
     <node id="n23">
@@ -301,68 +301,68 @@
       <data key="v_uf">RS</data>
       <data key="v_ideol_partido">centre-left</data>
       <data key="v_regiao">sul</data>
-      <data key="v_btwn">0.0165283824627471</data>
+      <data key="v_btwn">0.0112668768867607</data>
       <data key="v_leiden_mod">4</data>
     </node>
     <node id="n24">
-      <data key="v_name">SS:5985</data>
-      <data key="v_label">NELSON TRAD FILHO</data>
-      <data key="v_partido">PSD/MS</data>
+      <data key="v_name">SS:5942</data>
+      <data key="v_label">MARCOS RIBEIRO DO VAL</data>
+      <data key="v_partido">PODEMOS/ES</data>
       <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSD</data>
-      <data key="v_uf">MS</data>
-      <data key="v_ideol_partido">centre</data>
-      <data key="v_regiao">centro-oeste</data>
-      <data key="v_btwn">0.00184761116057367</data>
+      <data key="v_cod_partido">PODE</data>
+      <data key="v_uf">ES</data>
+      <data key="v_ideol_partido">centre-right</data>
+      <data key="v_regiao">sudeste</data>
+      <data key="v_btwn">7.46741411589002e-05</data>
       <data key="v_leiden_mod">4</data>
     </node>
     <node id="n25">
-      <data key="v_name">SS:345</data>
-      <data key="v_label">FLÁVIO JOSÉ ARNS</data>
-      <data key="v_partido">PSB/PR</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSB</data>
-      <data key="v_uf">PR</data>
-      <data key="v_ideol_partido">centre-left</data>
-      <data key="v_regiao">sul</data>
-      <data key="v_btwn">0.00443578807509074</data>
-      <data key="v_leiden_mod">5</data>
-    </node>
-    <node id="n26">
-      <data key="v_name">SS:5982</data>
-      <data key="v_label">ALESSANDRO VIEIRA</data>
-      <data key="v_partido">MDB/SE</data>
+      <data key="v_name">SS:5748</data>
+      <data key="v_label">VENEZIANO VITAL DO RÊGO SEGUNDO NETO</data>
+      <data key="v_partido">MDB/PB</data>
       <data key="v_type">Senador</data>
       <data key="v_cod_partido">MDB</data>
-      <data key="v_uf">SE</data>
+      <data key="v_uf">PB</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.000530646479875142</data>
-      <data key="v_leiden_mod">5</data>
-    </node>
-    <node id="n27">
-      <data key="v_name">SS:5352</data>
-      <data key="v_label">ROGÉRIO CARVALHO SANTOS</data>
-      <data key="v_partido">PT/SE</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PT</data>
-      <data key="v_uf">SE</data>
-      <data key="v_ideol_partido">centre-left</data>
-      <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.0765074089021492</data>
+      <data key="v_btwn">0</data>
       <data key="v_leiden_mod">4</data>
     </node>
-    <node id="n28">
-      <data key="v_name">SS:374</data>
-      <data key="v_label">PAULO ROBERTO GALVÃO DA ROCHA</data>
-      <data key="v_partido">PT/PA</data>
+    <node id="n26">
+      <data key="v_name">SS:4531</data>
+      <data key="v_label">JAYME VERÍSSIMO DE CAMPOS</data>
+      <data key="v_partido">UNIÃO/MT</data>
       <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PT</data>
-      <data key="v_uf">PA</data>
-      <data key="v_ideol_partido">centre-left</data>
+      <data key="v_cod_partido">UNIÃO</data>
+      <data key="v_uf">MT</data>
+      <data key="v_ideol_partido">centre-right</data>
+      <data key="v_regiao">centro-oeste</data>
+      <data key="v_btwn">4.24687058723603e-05</data>
+      <data key="v_leiden_mod">4</data>
+    </node>
+    <node id="n27">
+      <data key="v_name">SS:4642</data>
+      <data key="v_label">EFRAIM DE ARAÚJO MORAIS FILHO</data>
+      <data key="v_partido">UNIÃO/PB</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">UNIÃO</data>
+      <data key="v_uf">PB</data>
+      <data key="v_ideol_partido">centre-right</data>
+      <data key="v_regiao">nordeste</data>
+      <data key="v_btwn">0.00934922504151803</data>
+      <data key="v_leiden_mod">0</data>
+    </node>
+    <node id="n28">
+      <data key="v_name">SS:5793</data>
+      <data key="v_label">HIRAN MANUEL GONÇALVES DA SILVA</data>
+      <data key="v_partido">PP/RR</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PP</data>
+      <data key="v_uf">RR</data>
+      <data key="v_ideol_partido">right</data>
       <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.00909844703207331</data>
-      <data key="v_leiden_mod">5</data>
+      <data key="v_btwn">0.0522155890148288</data>
+      <data key="v_leiden_mod">0</data>
     </node>
     <node id="n29">
       <data key="v_name">SS:5627</data>
@@ -373,10 +373,34 @@
       <data key="v_uf">RN</data>
       <data key="v_ideol_partido">centre-left</data>
       <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.000205672403481018</data>
-      <data key="v_leiden_mod">3</data>
+      <data key="v_btwn">0.0119458714435197</data>
+      <data key="v_leiden_mod">1</data>
     </node>
     <node id="n30">
+      <data key="v_name">SS:374</data>
+      <data key="v_label">PAULO ROBERTO GALVÃO DA ROCHA</data>
+      <data key="v_partido">PT/PA</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PT</data>
+      <data key="v_uf">PA</data>
+      <data key="v_ideol_partido">centre-left</data>
+      <data key="v_regiao">norte</data>
+      <data key="v_btwn">0.00856741173966479</data>
+      <data key="v_leiden_mod">0</data>
+    </node>
+    <node id="n31">
+      <data key="v_name">SS:5352</data>
+      <data key="v_label">ROGÉRIO CARVALHO SANTOS</data>
+      <data key="v_partido">PT/SE</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PT</data>
+      <data key="v_uf">SE</data>
+      <data key="v_ideol_partido">centre-left</data>
+      <data key="v_regiao">nordeste</data>
+      <data key="v_btwn">0.134859456747722</data>
+      <data key="v_leiden_mod">2</data>
+    </node>
+    <node id="n32">
       <data key="v_name">SS:5376</data>
       <data key="v_label">MARA CRISTINA GABRILLI</data>
       <data key="v_partido">PSD/SP</data>
@@ -385,10 +409,10 @@
       <data key="v_uf">SP</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">sudeste</data>
-      <data key="v_btwn">0.0115689234834658</data>
-      <data key="v_leiden_mod">3</data>
+      <data key="v_btwn">0.00658732096786181</data>
+      <data key="v_leiden_mod">4</data>
     </node>
-    <node id="n31">
+    <node id="n33">
       <data key="v_name">SS:5990</data>
       <data key="v_label">CARLOS ALBERTO DIAS VIANA</data>
       <data key="v_partido">PODEMOS/MG</data>
@@ -397,10 +421,10 @@
       <data key="v_uf">MG</data>
       <data key="v_ideol_partido">centre-right</data>
       <data key="v_regiao">sudeste</data>
-      <data key="v_btwn">0.000137667090112757</data>
-      <data key="v_leiden_mod">2</data>
+      <data key="v_btwn">0.00210750952891588</data>
+      <data key="v_leiden_mod">4</data>
     </node>
-    <node id="n32">
+    <node id="n34">
       <data key="v_name">SS:6027</data>
       <data key="v_label">ANTÔNIO MECIAS PEREIRA DE JESUS</data>
       <data key="v_partido">REPUBLICANOS/RR</data>
@@ -409,10 +433,10 @@
       <data key="v_uf">RR</data>
       <data key="v_ideol_partido">right</data>
       <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.00428962241781421</data>
-      <data key="v_leiden_mod">5</data>
+      <data key="v_btwn">0.000414839206232923</data>
+      <data key="v_leiden_mod">1</data>
     </node>
-    <node id="n33">
+    <node id="n35">
       <data key="v_name">SS:1173</data>
       <data key="v_label">WELLINGTON ANTONIO FAGUNDES</data>
       <data key="v_partido">PL/MT</data>
@@ -421,10 +445,10 @@
       <data key="v_uf">MT</data>
       <data key="v_ideol_partido">far-right</data>
       <data key="v_regiao">centro-oeste</data>
-      <data key="v_btwn">0.000147932658788722</data>
-      <data key="v_leiden_mod">2</data>
+      <data key="v_btwn">3.64523058737759e-05</data>
+      <data key="v_leiden_mod">0</data>
     </node>
-    <node id="n34">
+    <node id="n36">
       <data key="v_name">SS:1249</data>
       <data key="v_label">KÁTIA REGINA DE ABREU</data>
       <data key="v_partido">PP/TO</data>
@@ -433,10 +457,10 @@
       <data key="v_uf">TO</data>
       <data key="v_ideol_partido">right</data>
       <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.00835798268357963</data>
-      <data key="v_leiden_mod">2</data>
+      <data key="v_btwn">0.0161011073715056</data>
+      <data key="v_leiden_mod">1</data>
     </node>
-    <node id="n35">
+    <node id="n37">
       <data key="v_name">SS:22</data>
       <data key="v_label">ESPERIDIÃO AMIN HELOU FILHO</data>
       <data key="v_partido">PP/SC</data>
@@ -445,70 +469,10 @@
       <data key="v_uf">SC</data>
       <data key="v_ideol_partido">right</data>
       <data key="v_regiao">sul</data>
-      <data key="v_btwn">0.000454061246951986</data>
-      <data key="v_leiden_mod">1</data>
-    </node>
-    <node id="n36">
-      <data key="v_name">SS:3396</data>
-      <data key="v_label">TASSO RIBEIRO JEREISSATI</data>
-      <data key="v_partido">PSDB/CE</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSDB</data>
-      <data key="v_uf">CE</data>
-      <data key="v_ideol_partido">centre</data>
-      <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">6.28182941028663e-05</data>
-      <data key="v_leiden_mod">0</data>
-    </node>
-    <node id="n37">
-      <data key="v_name">SS:5899</data>
-      <data key="v_label">VANDERLAN VIEIRA CARDOSO</data>
-      <data key="v_partido">PSD/GO</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSD</data>
-      <data key="v_uf">GO</data>
-      <data key="v_ideol_partido">centre</data>
-      <data key="v_regiao">centro-oeste</data>
-      <data key="v_btwn">0.00137683453693097</data>
-      <data key="v_leiden_mod">0</data>
+      <data key="v_btwn">0.00735922508768018</data>
+      <data key="v_leiden_mod">2</data>
     </node>
     <node id="n38">
-      <data key="v_name">SS:285</data>
-      <data key="v_label">MARCIO MIGUEL BITTAR</data>
-      <data key="v_partido">PL/AC</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PL</data>
-      <data key="v_uf">AC</data>
-      <data key="v_ideol_partido">far-right</data>
-      <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.00208139127480438</data>
-      <data key="v_leiden_mod">0</data>
-    </node>
-    <node id="n39">
-      <data key="v_name">SS:5557</data>
-      <data key="v_label">MAILZA ASSIS DA SILVA</data>
-      <data key="v_partido">PP/AC</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PP</data>
-      <data key="v_uf">AC</data>
-      <data key="v_ideol_partido">right</data>
-      <data key="v_regiao">norte</data>
-      <data key="v_btwn">4.35304235191693e-05</data>
-      <data key="v_leiden_mod">0</data>
-    </node>
-    <node id="n40">
-      <data key="v_name">SS:5732</data>
-      <data key="v_label">RODRIGO OTAVIO SOARES PACHECO</data>
-      <data key="v_partido">PSD/MG</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSD</data>
-      <data key="v_uf">MG</data>
-      <data key="v_ideol_partido">centre</data>
-      <data key="v_regiao">sudeste</data>
-      <data key="v_btwn">0.00500396550775053</data>
-      <data key="v_leiden_mod">0</data>
-    </node>
-    <node id="n41">
       <data key="v_name">SS:475</data>
       <data key="v_label">CONFÚCIO AIRES MOURA</data>
       <data key="v_partido">MDB/RO</data>
@@ -517,58 +481,10 @@
       <data key="v_uf">RO</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.00427463146863212</data>
-      <data key="v_leiden_mod">0</data>
-    </node>
-    <node id="n42">
-      <data key="v_name">SS:751</data>
-      <data key="v_label">AROLDE DE OLIVEIRA</data>
-      <data key="v_partido">PSD/RJ</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSD</data>
-      <data key="v_uf">RJ</data>
-      <data key="v_ideol_partido">centre</data>
-      <data key="v_regiao">sudeste</data>
-      <data key="v_btwn">0.000114665505855373</data>
-      <data key="v_leiden_mod">0</data>
-    </node>
-    <node id="n43">
-      <data key="v_name">SS:5929</data>
-      <data key="v_label">SELMA ROSANE SANTOS ARRUDA</data>
-      <data key="v_partido">PODEMOS/MT</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PODE</data>
-      <data key="v_uf">MT</data>
-      <data key="v_ideol_partido">centre-right</data>
-      <data key="v_regiao">centro-oeste</data>
-      <data key="v_btwn">0</data>
+      <data key="v_btwn">0.00698943725762714</data>
       <data key="v_leiden_mod">1</data>
     </node>
-    <node id="n44">
-      <data key="v_name">SS:739</data>
-      <data key="v_label">CIRO NOGUEIRA LIMA FILHO</data>
-      <data key="v_partido">PP/PI</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PP</data>
-      <data key="v_uf">PI</data>
-      <data key="v_ideol_partido">right</data>
-      <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.000135549476647505</data>
-      <data key="v_leiden_mod">1</data>
-    </node>
-    <node id="n45">
-      <data key="v_name">SS:470</data>
-      <data key="v_label">FRANCISCO DE ASSIS RODRIGUES</data>
-      <data key="v_partido">PSB/RR</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSB</data>
-      <data key="v_uf">RR</data>
-      <data key="v_ideol_partido">centre-left</data>
-      <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.00311270836507865</data>
-      <data key="v_leiden_mod">1</data>
-    </node>
-    <node id="n46">
+    <node id="n39">
       <data key="v_name">SS:1186</data>
       <data key="v_label">LUIS CARLOS HEINZE</data>
       <data key="v_partido">PP/RS</data>
@@ -577,10 +493,10 @@
       <data key="v_uf">RS</data>
       <data key="v_ideol_partido">right</data>
       <data key="v_regiao">sul</data>
-      <data key="v_btwn">0.00733261124748272</data>
-      <data key="v_leiden_mod">1</data>
+      <data key="v_btwn">3.18515294042702e-06</data>
+      <data key="v_leiden_mod">0</data>
     </node>
-    <node id="n47">
+    <node id="n40">
       <data key="v_name">SS:5924</data>
       <data key="v_label">ORIOVISTO GUIMARAES</data>
       <data key="v_partido">PSDB/PR</data>
@@ -589,8 +505,92 @@
       <data key="v_uf">PR</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">sul</data>
-      <data key="v_btwn">0.000138730987998934</data>
-      <data key="v_leiden_mod">2</data>
+      <data key="v_btwn">0.000574566199864808</data>
+      <data key="v_leiden_mod">0</data>
+    </node>
+    <node id="n41">
+      <data key="v_name">SS:739</data>
+      <data key="v_label">CIRO NOGUEIRA LIMA FILHO</data>
+      <data key="v_partido">PP/PI</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PP</data>
+      <data key="v_uf">PI</data>
+      <data key="v_ideol_partido">right</data>
+      <data key="v_regiao">nordeste</data>
+      <data key="v_btwn">5.52093176340684e-05</data>
+      <data key="v_leiden_mod">1</data>
+    </node>
+    <node id="n42">
+      <data key="v_name">SS:285</data>
+      <data key="v_label">MARCIO MIGUEL BITTAR</data>
+      <data key="v_partido">PL/AC</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PL</data>
+      <data key="v_uf">AC</data>
+      <data key="v_ideol_partido">far-right</data>
+      <data key="v_regiao">norte</data>
+      <data key="v_btwn">0</data>
+      <data key="v_leiden_mod">1</data>
+    </node>
+    <node id="n43">
+      <data key="v_name">SS:5537</data>
+      <data key="v_label">DÁRIO ELIAS BERGER</data>
+      <data key="v_partido">PSB/SC</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PSB</data>
+      <data key="v_uf">SC</data>
+      <data key="v_ideol_partido">centre-left</data>
+      <data key="v_regiao">sul</data>
+      <data key="v_btwn">0.000549615835164796</data>
+      <data key="v_leiden_mod">1</data>
+    </node>
+    <node id="n44">
+      <data key="v_name">SS:751</data>
+      <data key="v_label">AROLDE DE OLIVEIRA</data>
+      <data key="v_partido">PSD/RJ</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PSD</data>
+      <data key="v_uf">RJ</data>
+      <data key="v_ideol_partido">centre</data>
+      <data key="v_regiao">sudeste</data>
+      <data key="v_btwn">0.0104596647567546</data>
+      <data key="v_leiden_mod">1</data>
+    </node>
+    <node id="n45">
+      <data key="v_name">SS:5525</data>
+      <data key="v_label">OMAR JOSÉ ABDEL AZIZ</data>
+      <data key="v_partido">PSD/AM</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PSD</data>
+      <data key="v_uf">AM</data>
+      <data key="v_ideol_partido">centre</data>
+      <data key="v_regiao">norte</data>
+      <data key="v_btwn">0.00187898323177077</data>
+      <data key="v_leiden_mod">1</data>
+    </node>
+    <node id="n46">
+      <data key="v_name">SS:5899</data>
+      <data key="v_label">VANDERLAN VIEIRA CARDOSO</data>
+      <data key="v_partido">PSD/GO</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PSD</data>
+      <data key="v_uf">GO</data>
+      <data key="v_ideol_partido">centre</data>
+      <data key="v_regiao">centro-oeste</data>
+      <data key="v_btwn">3.38687929332073e-05</data>
+      <data key="v_leiden_mod">1</data>
+    </node>
+    <node id="n47">
+      <data key="v_name">SS:470</data>
+      <data key="v_label">FRANCISCO DE ASSIS RODRIGUES</data>
+      <data key="v_partido">PSB/RR</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PSB</data>
+      <data key="v_uf">RR</data>
+      <data key="v_ideol_partido">centre-left</data>
+      <data key="v_regiao">norte</data>
+      <data key="v_btwn">0.000174652552900082</data>
+      <data key="v_leiden_mod">1</data>
     </node>
     <node id="n48">
       <data key="v_name">SS:5502</data>
@@ -601,22 +601,10 @@
       <data key="v_uf">AM</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.00549773203451336</data>
-      <data key="v_leiden_mod">2</data>
+      <data key="v_btwn">0.00898279107368472</data>
+      <data key="v_leiden_mod">1</data>
     </node>
     <node id="n49">
-      <data key="v_name">SS:5976</data>
-      <data key="v_label">LUIS EDUARDO GRANGEIRO GIRÃO</data>
-      <data key="v_partido">NOVO/CE</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">NOVO</data>
-      <data key="v_uf">CE</data>
-      <data key="v_ideol_partido">right</data>
-      <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.00403766766006502</data>
-      <data key="v_leiden_mod">2</data>
-    </node>
-    <node id="n50">
       <data key="v_name">SS:1023</data>
       <data key="v_label">MARIA DO CARMO DO NASCIMENTO ALVES</data>
       <data key="v_partido">PP/SE</data>
@@ -625,34 +613,10 @@
       <data key="v_uf">SE</data>
       <data key="v_ideol_partido">right</data>
       <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.000119514016442467</data>
-      <data key="v_leiden_mod">3</data>
+      <data key="v_btwn">0.000184738870544767</data>
+      <data key="v_leiden_mod">2</data>
     </node>
-    <node id="n51">
-      <data key="v_name">SS:5525</data>
-      <data key="v_label">OMAR JOSÉ ABDEL AZIZ</data>
-      <data key="v_partido">PSD/AM</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSD</data>
-      <data key="v_uf">AM</data>
-      <data key="v_ideol_partido">centre</data>
-      <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.0380499465794473</data>
-      <data key="v_leiden_mod">4</data>
-    </node>
-    <node id="n52">
-      <data key="v_name">SS:3777</data>
-      <data key="v_label">CARLOS EDUARDO TORRES GOMES</data>
-      <data key="v_partido">PL/TO</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PL</data>
-      <data key="v_uf">TO</data>
-      <data key="v_ideol_partido">far-right</data>
-      <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.000477762829467417</data>
-      <data key="v_leiden_mod">4</data>
-    </node>
-    <node id="n53">
+    <node id="n50">
       <data key="v_name">SS:5527</data>
       <data key="v_label">SIMONE NASSAR TEBET</data>
       <data key="v_partido">MDB/MS</data>
@@ -661,22 +625,10 @@
       <data key="v_uf">MS</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">centro-oeste</data>
-      <data key="v_btwn">0.00100548200211636</data>
-      <data key="v_leiden_mod">4</data>
+      <data key="v_btwn">0</data>
+      <data key="v_leiden_mod">2</data>
     </node>
-    <node id="n54">
-      <data key="v_name">SS:5540</data>
-      <data key="v_label">FERNANDO BEZERRA DE SOUZA COELHO</data>
-      <data key="v_partido">MDB/PE</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">MDB</data>
-      <data key="v_uf">PE</data>
-      <data key="v_ideol_partido">centre</data>
-      <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">1.06171764680901e-06</data>
-      <data key="v_leiden_mod">4</data>
-    </node>
-    <node id="n55">
+    <node id="n51">
       <data key="v_name">SS:4994</data>
       <data key="v_label">CARLOS EDUARDO DE SOUZA BRAGA</data>
       <data key="v_partido">MDB/AM</data>
@@ -685,34 +637,10 @@
       <data key="v_uf">AM</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">norte</data>
-      <data key="v_btwn">6.58264941021585e-05</data>
-      <data key="v_leiden_mod">4</data>
+      <data key="v_btwn">0.00364174461443724</data>
+      <data key="v_leiden_mod">2</data>
     </node>
-    <node id="n56">
-      <data key="v_name">SS:5585</data>
-      <data key="v_label">LUIZ CARLOS DO CARMO</data>
-      <data key="v_partido">PSC/GO</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSC</data>
-      <data key="v_uf">GO</data>
-      <data key="v_ideol_partido">right</data>
-      <data key="v_regiao">centro-oeste</data>
-      <data key="v_btwn">8.84764705674173e-05</data>
-      <data key="v_leiden_mod">5</data>
-    </node>
-    <node id="n57">
-      <data key="v_name">SS:5537</data>
-      <data key="v_label">DÁRIO ELIAS BERGER</data>
-      <data key="v_partido">PSB/SC</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSB</data>
-      <data key="v_uf">SC</data>
-      <data key="v_ideol_partido">centre-left</data>
-      <data key="v_regiao">sul</data>
-      <data key="v_btwn">0</data>
-      <data key="v_leiden_mod">5</data>
-    </node>
-    <node id="n58">
+    <node id="n52">
       <data key="v_name">SS:5535</data>
       <data key="v_label">TELMÁRIO MOTA DE OLIVEIRA</data>
       <data key="v_partido">PROS/RR</data>
@@ -721,22 +649,106 @@
       <data key="v_uf">RR</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.000123300809382753</data>
-      <data key="v_leiden_mod">5</data>
+      <data key="v_btwn">0.00447959446016431</data>
+      <data key="v_leiden_mod">2</data>
     </node>
-    <node id="n59">
-      <data key="v_name">SS:5998</data>
-      <data key="v_label">DANIELLA VELLOSO BORGES RIBEIRO</data>
-      <data key="v_partido">PP/PB</data>
+    <node id="n53">
+      <data key="v_name">SS:5976</data>
+      <data key="v_label">LUIS EDUARDO GRANGEIRO GIRÃO</data>
+      <data key="v_partido">NOVO/CE</data>
       <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PP</data>
-      <data key="v_uf">PB</data>
+      <data key="v_cod_partido">NOVO</data>
+      <data key="v_uf">CE</data>
       <data key="v_ideol_partido">right</data>
       <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">2.44195058766072e-05</data>
-      <data key="v_leiden_mod">0</data>
+      <data key="v_btwn">0.00379351715204858</data>
+      <data key="v_leiden_mod">3</data>
+    </node>
+    <node id="n54">
+      <data key="v_name">SS:3396</data>
+      <data key="v_label">TASSO RIBEIRO JEREISSATI</data>
+      <data key="v_partido">PSDB/CE</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PSDB</data>
+      <data key="v_uf">CE</data>
+      <data key="v_ideol_partido">centre</data>
+      <data key="v_regiao">nordeste</data>
+      <data key="v_btwn">0</data>
+      <data key="v_leiden_mod">3</data>
+    </node>
+    <node id="n55">
+      <data key="v_name">SS:5540</data>
+      <data key="v_label">FERNANDO BEZERRA DE SOUZA COELHO</data>
+      <data key="v_partido">MDB/PE</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">MDB</data>
+      <data key="v_uf">PE</data>
+      <data key="v_ideol_partido">centre</data>
+      <data key="v_regiao">nordeste</data>
+      <data key="v_btwn">0</data>
+      <data key="v_leiden_mod">3</data>
+    </node>
+    <node id="n56">
+      <data key="v_name">SS:5557</data>
+      <data key="v_label">MAILZA ASSIS DA SILVA</data>
+      <data key="v_partido">PP/AC</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PP</data>
+      <data key="v_uf">AC</data>
+      <data key="v_ideol_partido">right</data>
+      <data key="v_regiao">norte</data>
+      <data key="v_btwn">0.0119013844913035</data>
+      <data key="v_leiden_mod">3</data>
+    </node>
+    <node id="n57">
+      <data key="v_name">SS:5929</data>
+      <data key="v_label">SELMA ROSANE SANTOS ARRUDA</data>
+      <data key="v_partido">PODEMOS/MT</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PODE</data>
+      <data key="v_uf">MT</data>
+      <data key="v_ideol_partido">centre-right</data>
+      <data key="v_regiao">centro-oeste</data>
+      <data key="v_btwn">5.69788470454168e-05</data>
+      <data key="v_leiden_mod">3</data>
+    </node>
+    <node id="n58">
+      <data key="v_name">SS:5732</data>
+      <data key="v_label">RODRIGO OTAVIO SOARES PACHECO</data>
+      <data key="v_partido">PSD/MG</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PSD</data>
+      <data key="v_uf">MG</data>
+      <data key="v_ideol_partido">centre</data>
+      <data key="v_regiao">sudeste</data>
+      <data key="v_btwn">4.24687058723603e-06</data>
+      <data key="v_leiden_mod">4</data>
+    </node>
+    <node id="n59">
+      <data key="v_name">SS:5585</data>
+      <data key="v_label">LUIZ CARLOS DO CARMO</data>
+      <data key="v_partido">PSC/GO</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PSC</data>
+      <data key="v_uf">GO</data>
+      <data key="v_ideol_partido">right</data>
+      <data key="v_regiao">centro-oeste</data>
+      <data key="v_btwn">0.00194754407012999</data>
+      <data key="v_leiden_mod">4</data>
     </node>
     <node id="n60">
+      <data key="v_name">SS:3777</data>
+      <data key="v_label">CARLOS EDUARDO TORRES GOMES</data>
+      <data key="v_partido">PL/TO</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PL</data>
+      <data key="v_uf">TO</data>
+      <data key="v_ideol_partido">far-right</data>
+      <data key="v_regiao">norte</data>
+      <data key="v_btwn">0</data>
+      <data key="v_leiden_mod">4</data>
+    </node>
+    <node id="n61">
       <data key="v_name">SS:90</data>
       <data key="v_label">JOSÉ SERRA</data>
       <data key="v_partido">PSDB/SP</data>
@@ -745,46 +757,22 @@
       <data key="v_uf">SP</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">sudeste</data>
-      <data key="v_btwn">0.00208185135245133</data>
+      <data key="v_btwn">0.000132360799968856</data>
       <data key="v_leiden_mod">0</data>
     </node>
-    <node id="n61">
-      <data key="v_name">SS:5926</data>
-      <data key="v_label">LUIZ CANTUÁRIA BARRETO</data>
-      <data key="v_partido">PSD/AP</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSD</data>
-      <data key="v_uf">AP</data>
-      <data key="v_ideol_partido">centre</data>
-      <data key="v_regiao">norte</data>
-      <data key="v_btwn">3.50366823446972e-05</data>
-      <data key="v_leiden_mod">2</data>
-    </node>
     <node id="n62">
-      <data key="v_name">SS:5529</data>
-      <data key="v_label">ANTONIO AUGUSTO JUNHO ANASTASIA</data>
-      <data key="v_partido">PSD/MG</data>
+      <data key="v_name">SS:5998</data>
+      <data key="v_label">DANIELLA VELLOSO BORGES RIBEIRO</data>
+      <data key="v_partido">PP/PB</data>
       <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSD</data>
-      <data key="v_uf">MG</data>
-      <data key="v_ideol_partido">centre</data>
-      <data key="v_regiao">sudeste</data>
-      <data key="v_btwn">0.00254174561180836</data>
-      <data key="v_leiden_mod">4</data>
+      <data key="v_cod_partido">PP</data>
+      <data key="v_uf">PB</data>
+      <data key="v_ideol_partido">right</data>
+      <data key="v_regiao">nordeste</data>
+      <data key="v_btwn">2.12343529361802e-06</data>
+      <data key="v_leiden_mod">0</data>
     </node>
     <node id="n63">
-      <data key="v_name">SS:5967</data>
-      <data key="v_label">ANGELO MARIO CORONEL DE AZEVEDO MARTINS</data>
-      <data key="v_partido">PSD/BA</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSD</data>
-      <data key="v_uf">BA</data>
-      <data key="v_ideol_partido">centre</data>
-      <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0</data>
-      <data key="v_leiden_mod">4</data>
-    </node>
-    <node id="n64">
       <data key="v_name">SS:742</data>
       <data key="v_label">MARCELO COSTA E CASTRO</data>
       <data key="v_partido">MDB/PI</data>
@@ -793,8 +781,20 @@
       <data key="v_uf">PI</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.0228993807991821</data>
-      <data key="v_leiden_mod">4</data>
+      <data key="v_btwn">0.0466295882844345</data>
+      <data key="v_leiden_mod">0</data>
+    </node>
+    <node id="n64">
+      <data key="v_name">SS:5529</data>
+      <data key="v_label">ANTONIO AUGUSTO JUNHO ANASTASIA</data>
+      <data key="v_partido">PSD/MG</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PSD</data>
+      <data key="v_uf">MG</data>
+      <data key="v_ideol_partido">centre</data>
+      <data key="v_regiao">sudeste</data>
+      <data key="v_btwn">0.00188083281132216</data>
+      <data key="v_leiden_mod">1</data>
     </node>
     <node id="n65">
       <data key="v_name">SS:677</data>
@@ -805,22 +805,46 @@
       <data key="v_uf">MA</data>
       <data key="v_ideol_partido">right</data>
       <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.000400479896376358</data>
-      <data key="v_leiden_mod">5</data>
+      <data key="v_btwn">5.83944705744954e-05</data>
+      <data key="v_leiden_mod">1</data>
     </node>
     <node id="n66">
-      <data key="v_name">SS:5936</data>
-      <data key="v_label">CARLOS FRANCISCO PORTINHO</data>
-      <data key="v_partido">PL/RJ</data>
+      <data key="v_name">SS:5967</data>
+      <data key="v_label">ANGELO MARIO CORONEL DE AZEVEDO MARTINS</data>
+      <data key="v_partido">PSD/BA</data>
       <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PL</data>
-      <data key="v_uf">RJ</data>
-      <data key="v_ideol_partido">far-right</data>
-      <data key="v_regiao">sudeste</data>
-      <data key="v_btwn">0</data>
+      <data key="v_cod_partido">PSD</data>
+      <data key="v_uf">BA</data>
+      <data key="v_ideol_partido">centre</data>
+      <data key="v_regiao">nordeste</data>
+      <data key="v_btwn">0.00186012931720938</data>
       <data key="v_leiden_mod">1</data>
     </node>
     <node id="n67">
+      <data key="v_name">SS:5926</data>
+      <data key="v_label">LUIZ CANTUÁRIA BARRETO</data>
+      <data key="v_partido">PSD/AP</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PSD</data>
+      <data key="v_uf">AP</data>
+      <data key="v_ideol_partido">centre</data>
+      <data key="v_regiao">norte</data>
+      <data key="v_btwn">0.00110381194324178</data>
+      <data key="v_leiden_mod">3</data>
+    </node>
+    <node id="n68">
+      <data key="v_name">SS:6005</data>
+      <data key="v_label">JOSE WILSON SIQUEIRA CAMPOS</data>
+      <data key="v_partido">DEM/TO</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">DEM</data>
+      <data key="v_uf">TO</data>
+      <data key="v_ideol_partido">centre-right</data>
+      <data key="v_regiao">norte</data>
+      <data key="v_btwn">0</data>
+      <data key="v_leiden_mod">0</data>
+    </node>
+    <node id="n69">
       <data key="v_name">SS:5422</data>
       <data key="v_label">MARCOS ROGÉRIO DA SILVA BRITO</data>
       <data key="v_partido">PL/RO</data>
@@ -829,10 +853,10 @@
       <data key="v_uf">RO</data>
       <data key="v_ideol_partido">far-right</data>
       <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.021178939830983</data>
-      <data key="v_leiden_mod">1</data>
+      <data key="v_btwn">0.00203814397599102</data>
+      <data key="v_leiden_mod">0</data>
     </node>
-    <node id="n68">
+    <node id="n70">
       <data key="v_name">SS:6295</data>
       <data key="v_label">CARLOS HENRIQUE BAQUETA FÁVARO</data>
       <data key="v_partido">PSD/MT</data>
@@ -841,10 +865,10 @@
       <data key="v_uf">MT</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">centro-oeste</data>
-      <data key="v_btwn">1.27406117617081e-05</data>
-      <data key="v_leiden_mod">5</data>
+      <data key="v_btwn">0</data>
+      <data key="v_leiden_mod">1</data>
     </node>
-    <node id="n69">
+    <node id="n71">
       <data key="v_name">SS:4560</data>
       <data key="v_label">SÉRGIO DE OLIVEIRA CUNHA</data>
       <data key="v_partido">PSD/AC</data>
@@ -853,34 +877,22 @@
       <data key="v_uf">AC</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">norte</data>
-      <data key="v_btwn">8.28139764511026e-05</data>
-      <data key="v_leiden_mod">5</data>
-    </node>
-    <node id="n70">
-      <data key="v_name">SS:2331</data>
-      <data key="v_label">ROSILDA DE FREITAS</data>
-      <data key="v_partido">MDB/ES</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">MDB</data>
-      <data key="v_uf">ES</data>
-      <data key="v_ideol_partido">centre</data>
-      <data key="v_regiao">sudeste</data>
-      <data key="v_btwn">0.0182988598313921</data>
-      <data key="v_leiden_mod">2</data>
-    </node>
-    <node id="n71">
-      <data key="v_name">SS:5988</data>
-      <data key="v_label">SORAYA VIEIRA THRONICKE</data>
-      <data key="v_partido">PODEMOS/MS</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PODE</data>
-      <data key="v_uf">MS</data>
-      <data key="v_ideol_partido">centre-right</data>
-      <data key="v_regiao">centro-oeste</data>
-      <data key="v_btwn">0.0040593004696331</data>
-      <data key="v_leiden_mod">3</data>
+      <data key="v_btwn">0.001862252752503</data>
+      <data key="v_leiden_mod">1</data>
     </node>
     <node id="n72">
+      <data key="v_name">SS:5936</data>
+      <data key="v_label">CARLOS FRANCISCO PORTINHO</data>
+      <data key="v_partido">PL/RJ</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PL</data>
+      <data key="v_uf">RJ</data>
+      <data key="v_ideol_partido">far-right</data>
+      <data key="v_regiao">sudeste</data>
+      <data key="v_btwn">0.00393550419201517</data>
+      <data key="v_leiden_mod">4</data>
+    </node>
+    <node id="n73">
       <data key="v_name">SS:3830</data>
       <data key="v_label">DAVID SAMUEL ALCOLUMBRE TOBELEM</data>
       <data key="v_partido">UNIÃO/AP</data>
@@ -889,10 +901,10 @@
       <data key="v_uf">AP</data>
       <data key="v_ideol_partido">centre-right</data>
       <data key="v_regiao">norte</data>
-      <data key="v_btwn">9.75718517417478e-05</data>
-      <data key="v_leiden_mod">4</data>
+      <data key="v_btwn">0.00508074362703982</data>
+      <data key="v_leiden_mod">3</data>
     </node>
-    <node id="n73">
+    <node id="n74">
       <data key="v_name">SS:5281</data>
       <data key="v_label">OZANILDA GONDIM VITAL DO REGO</data>
       <data key="v_partido">MDB/PB</data>
@@ -901,10 +913,34 @@
       <data key="v_uf">PB</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">1.06171764680901e-06</data>
-      <data key="v_leiden_mod">5</data>
+      <data key="v_btwn">0.0149015256882585</data>
+      <data key="v_leiden_mod">3</data>
     </node>
-    <node id="n74">
+    <node id="n75">
+      <data key="v_name">SS:5988</data>
+      <data key="v_label">SORAYA VIEIRA THRONICKE</data>
+      <data key="v_partido">PODEMOS/MS</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PODE</data>
+      <data key="v_uf">MS</data>
+      <data key="v_ideol_partido">centre-right</data>
+      <data key="v_regiao">centro-oeste</data>
+      <data key="v_btwn">0.000155860150551562</data>
+      <data key="v_leiden_mod">4</data>
+    </node>
+    <node id="n76">
+      <data key="v_name">SS:2331</data>
+      <data key="v_label">ROSILDA DE FREITAS</data>
+      <data key="v_partido">MDB/ES</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">MDB</data>
+      <data key="v_uf">ES</data>
+      <data key="v_ideol_partido">centre</data>
+      <data key="v_regiao">sudeste</data>
+      <data key="v_btwn">0</data>
+      <data key="v_leiden_mod">4</data>
+    </node>
+    <node id="n77">
       <data key="v_name">SS:3361</data>
       <data key="v_label">JOSÉ TARGINO MARANHÃO</data>
       <data key="v_partido">MDB/PB</data>
@@ -913,10 +949,10 @@
       <data key="v_uf">PB</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.00564324770704921</data>
-      <data key="v_leiden_mod">2</data>
+      <data key="v_btwn">0.0024627956441264</data>
+      <data key="v_leiden_mod">1</data>
     </node>
-    <node id="n75">
+    <node id="n78">
       <data key="v_name">SS:35</data>
       <data key="v_label">JADER FONTENELLE BARBALHO</data>
       <data key="v_partido">MDB/PA</data>
@@ -925,10 +961,10 @@
       <data key="v_uf">PA</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.000163929204667311</data>
+      <data key="v_btwn">6.37030588085405e-06</data>
       <data key="v_leiden_mod">4</data>
     </node>
-    <node id="n76">
+    <node id="n79">
       <data key="v_name">SS:5008</data>
       <data key="v_label">HUMBERTO SÉRGIO COSTA LIMA</data>
       <data key="v_partido">PT/PE</data>
@@ -937,34 +973,10 @@
       <data key="v_uf">PE</data>
       <data key="v_ideol_partido">centre-left</data>
       <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.00442758017530965</data>
-      <data key="v_leiden_mod">4</data>
+      <data key="v_btwn">0.00185977541132711</data>
+      <data key="v_leiden_mod">0</data>
     </node>
-    <node id="n77">
-      <data key="v_name">SS:4642</data>
-      <data key="v_label">EFRAIM DE ARAÚJO MORAIS FILHO</data>
-      <data key="v_partido">UNIÃO/PB</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">UNIÃO</data>
-      <data key="v_uf">PB</data>
-      <data key="v_ideol_partido">centre-right</data>
-      <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.0374388072661447</data>
-      <data key="v_leiden_mod">4</data>
-    </node>
-    <node id="n78">
-      <data key="v_name">SS:4811</data>
-      <data key="v_label">LAÉRCIO JOSÉ DE OLIVEIRA</data>
-      <data key="v_partido">PP/SE</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PP</data>
-      <data key="v_uf">SE</data>
-      <data key="v_ideol_partido">right</data>
-      <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0</data>
-      <data key="v_leiden_mod">4</data>
-    </node>
-    <node id="n79">
+    <node id="n80">
       <data key="v_name">SS:4525</data>
       <data key="v_label">FERNANDO AFFONSO COLLOR DE MELLO</data>
       <data key="v_partido">PTB/AL</data>
@@ -973,10 +985,10 @@
       <data key="v_uf">AL</data>
       <data key="v_ideol_partido">right</data>
       <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">9.02459999787656e-05</data>
-      <data key="v_leiden_mod">2</data>
+      <data key="v_btwn">4.77772941064054e-05</data>
+      <data key="v_leiden_mod">0</data>
     </node>
-    <node id="n80">
+    <node id="n81">
       <data key="v_name">SS:4770</data>
       <data key="v_label">IZALCI LUCAS FERREIRA</data>
       <data key="v_partido">PL/DF</data>
@@ -985,34 +997,10 @@
       <data key="v_uf">DF</data>
       <data key="v_ideol_partido">far-right</data>
       <data key="v_regiao">centro-oeste</data>
-      <data key="v_btwn">0.00197479482306475</data>
-      <data key="v_leiden_mod">5</data>
-    </node>
-    <node id="n81">
-      <data key="v_name">SS:70</data>
-      <data key="v_label">JOSÉ RENAN VASCONCELOS CALHEIROS</data>
-      <data key="v_partido">MDB/AL</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">MDB</data>
-      <data key="v_uf">AL</data>
-      <data key="v_ideol_partido">centre</data>
-      <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.00844419897070465</data>
-      <data key="v_leiden_mod">0</data>
+      <data key="v_btwn">0.037524208923748</data>
+      <data key="v_leiden_mod">3</data>
     </node>
     <node id="n82">
-      <data key="v_name">SS:5973</data>
-      <data key="v_label">CID FERREIRA GOMES</data>
-      <data key="v_partido">PSB/CE</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSB</data>
-      <data key="v_uf">CE</data>
-      <data key="v_ideol_partido">centre-left</data>
-      <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0</data>
-      <data key="v_leiden_mod">1</data>
-    </node>
-    <node id="n83">
       <data key="v_name">SS:6008</data>
       <data key="v_label">ALEXANDRE LUIZ GIORDANO</data>
       <data key="v_partido">MDB/SP</data>
@@ -1021,10 +1009,34 @@
       <data key="v_uf">SP</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">sudeste</data>
-      <data key="v_btwn">9.29356846840151e-05</data>
+      <data key="v_btwn">0</data>
+      <data key="v_leiden_mod">4</data>
+    </node>
+    <node id="n83">
+      <data key="v_name">SS:5973</data>
+      <data key="v_label">CID FERREIRA GOMES</data>
+      <data key="v_partido">PSB/CE</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PSB</data>
+      <data key="v_uf">CE</data>
+      <data key="v_ideol_partido">centre-left</data>
+      <data key="v_regiao">nordeste</data>
+      <data key="v_btwn">0.00204911505834138</data>
       <data key="v_leiden_mod">1</data>
     </node>
     <node id="n84">
+      <data key="v_name">SS:70</data>
+      <data key="v_label">JOSÉ RENAN VASCONCELOS CALHEIROS</data>
+      <data key="v_partido">MDB/AL</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">MDB</data>
+      <data key="v_uf">AL</data>
+      <data key="v_ideol_partido">centre</data>
+      <data key="v_regiao">nordeste</data>
+      <data key="v_btwn">0.00420687922253956</data>
+      <data key="v_leiden_mod">4</data>
+    </node>
+    <node id="n85">
       <data key="v_name">SS:878</data>
       <data key="v_label">JOSÉ ANÍBAL PERES DE PONTES</data>
       <data key="v_partido">PSDB/SP</data>
@@ -1033,10 +1045,10 @@
       <data key="v_uf">SP</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">sudeste</data>
-      <data key="v_btwn">0.00599739987245686</data>
+      <data key="v_btwn">0.0045212538177597</data>
       <data key="v_leiden_mod">0</data>
     </node>
-    <node id="n85">
+    <node id="n86">
       <data key="v_name">SS:5898</data>
       <data key="v_label">ELIANE E SILVA NOGUEIRA LIMA</data>
       <data key="v_partido">PP/PI</data>
@@ -1045,10 +1057,10 @@
       <data key="v_uf">PI</data>
       <data key="v_ideol_partido">right</data>
       <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.000433936227189199</data>
-      <data key="v_leiden_mod">3</data>
+      <data key="v_btwn">0</data>
+      <data key="v_leiden_mod">2</data>
     </node>
-    <node id="n86">
+    <node id="n87">
       <data key="v_name">SS:6304</data>
       <data key="v_label">MARGARETH GETTERT BUSETTI</data>
       <data key="v_partido">PP/MT</data>
@@ -1057,20 +1069,8 @@
       <data key="v_uf">MT</data>
       <data key="v_ideol_partido">right</data>
       <data key="v_regiao">centro-oeste</data>
-      <data key="v_btwn">1.38023294085171e-05</data>
-      <data key="v_leiden_mod">1</data>
-    </node>
-    <node id="n87">
-      <data key="v_name">SS:5906</data>
-      <data key="v_label">EUDOCIA MARIA HOLANDA DE ARAUJO CALDAS</data>
-      <data key="v_partido">PL/AL</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PL</data>
-      <data key="v_uf">AL</data>
-      <data key="v_ideol_partido">far-right</data>
-      <data key="v_regiao">nordeste</data>
       <data key="v_btwn">0</data>
-      <data key="v_leiden_mod">1</data>
+      <data key="v_leiden_mod">0</data>
     </node>
     <node id="n88">
       <data key="v_name">SS:5531</data>
@@ -1081,8 +1081,8 @@
       <data key="v_uf">PI</data>
       <data key="v_ideol_partido">right</data>
       <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.000416830348137216</data>
-      <data key="v_leiden_mod">3</data>
+      <data key="v_btwn">0.00021375915289088</data>
+      <data key="v_leiden_mod">2</data>
     </node>
     <node id="n89">
       <data key="v_name">SS:5913</data>
@@ -1094,9 +1094,21 @@
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">nordeste</data>
       <data key="v_btwn">0</data>
-      <data key="v_leiden_mod">4</data>
+      <data key="v_leiden_mod">3</data>
     </node>
     <node id="n90">
+      <data key="v_name">SS:5906</data>
+      <data key="v_label">EUDOCIA MARIA HOLANDA DE ARAUJO CALDAS</data>
+      <data key="v_partido">PL/AL</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PL</data>
+      <data key="v_uf">AL</data>
+      <data key="v_ideol_partido">far-right</data>
+      <data key="v_regiao">nordeste</data>
+      <data key="v_btwn">0</data>
+      <data key="v_leiden_mod">3</data>
+    </node>
+    <node id="n91">
       <data key="v_name">SS:4610</data>
       <data key="v_label">ALEXANDRE SILVEIRA DE OLIVEIRA</data>
       <data key="v_partido">PSD/MG</data>
@@ -1105,20 +1117,8 @@
       <data key="v_uf">MG</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">sudeste</data>
-      <data key="v_btwn">9.76780235064287e-05</data>
-      <data key="v_leiden_mod">0</data>
-    </node>
-    <node id="n91">
-      <data key="v_name">SS:5972</data>
-      <data key="v_label">JULIO VENTURA NETO</data>
-      <data key="v_partido">PDT/CE</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PDT</data>
-      <data key="v_uf">CE</data>
-      <data key="v_ideol_partido">centre-left</data>
-      <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0</data>
-      <data key="v_leiden_mod">0</data>
+      <data key="v_btwn">0.0114550383925849</data>
+      <data key="v_leiden_mod">2</data>
     </node>
     <node id="n92">
       <data key="v_name">SS:5639</data>
@@ -1129,10 +1129,22 @@
       <data key="v_uf">TO</data>
       <data key="v_ideol_partido">right</data>
       <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.002051238493635</data>
-      <data key="v_leiden_mod">0</data>
+      <data key="v_btwn">0</data>
+      <data key="v_leiden_mod">2</data>
     </node>
     <node id="n93">
+      <data key="v_name">SS:5972</data>
+      <data key="v_label">JULIO VENTURA NETO</data>
+      <data key="v_partido">PDT/CE</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PDT</data>
+      <data key="v_uf">CE</data>
+      <data key="v_ideol_partido">centre-left</data>
+      <data key="v_regiao">nordeste</data>
+      <data key="v_btwn">0</data>
+      <data key="v_leiden_mod">4</data>
+    </node>
+    <node id="n94">
       <data key="v_name">SS:5917</data>
       <data key="v_label">FERNANDO ANTONIO CAMINHA DUEIRE</data>
       <data key="v_partido">MDB/PE</data>
@@ -1142,9 +1154,9 @@
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">nordeste</data>
       <data key="v_btwn">0</data>
-      <data key="v_leiden_mod">0</data>
+      <data key="v_leiden_mod">2</data>
     </node>
-    <node id="n94">
+    <node id="n95">
       <data key="v_name">SS:6009</data>
       <data key="v_label">MARCOS CESAR PONTES</data>
       <data key="v_partido">PL/SP</data>
@@ -1153,46 +1165,10 @@
       <data key="v_uf">SP</data>
       <data key="v_ideol_partido">far-right</data>
       <data key="v_regiao">sudeste</data>
-      <data key="v_btwn">0.00180916687016255</data>
-      <data key="v_leiden_mod">4</data>
-    </node>
-    <node id="n95">
-      <data key="v_name">SS:5736</data>
-      <data key="v_label">TEREZA CRISTINA CORREA DA COSTA DIAS</data>
-      <data key="v_partido">PP/MS</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PP</data>
-      <data key="v_uf">MS</data>
-      <data key="v_ideol_partido">right</data>
-      <data key="v_regiao">centro-oeste</data>
-      <data key="v_btwn">4.24687058723603e-06</data>
-      <data key="v_leiden_mod">0</data>
-    </node>
-    <node id="n96">
-      <data key="v_name">SS:6342</data>
-      <data key="v_label">JORGE SEIF JÚNIOR</data>
-      <data key="v_partido">PL/SC</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PL</data>
-      <data key="v_uf">SC</data>
-      <data key="v_ideol_partido">far-right</data>
-      <data key="v_regiao">sul</data>
-      <data key="v_btwn">0</data>
-      <data key="v_leiden_mod">1</data>
-    </node>
-    <node id="n97">
-      <data key="v_name">SS:6337</data>
-      <data key="v_label">CLEITON GONTIJO DE AZEVEDO</data>
-      <data key="v_partido">REPUBLICANOS/MG</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">REPUBLICANOS</data>
-      <data key="v_uf">MG</data>
-      <data key="v_ideol_partido">right</data>
-      <data key="v_regiao">sudeste</data>
-      <data key="v_btwn">0</data>
+      <data key="v_btwn">4.74233882241357e-05</data>
       <data key="v_leiden_mod">2</data>
     </node>
-    <node id="n98">
+    <node id="n96">
       <data key="v_name">SS:6335</data>
       <data key="v_label">DAMARES REGINA ALVES</data>
       <data key="v_partido">REPUBLICANOS/DF</data>
@@ -1201,10 +1177,10 @@
       <data key="v_uf">DF</data>
       <data key="v_ideol_partido">right</data>
       <data key="v_regiao">centro-oeste</data>
-      <data key="v_btwn">0</data>
-      <data key="v_leiden_mod">2</data>
+      <data key="v_btwn">2.01726352893711e-05</data>
+      <data key="v_leiden_mod">0</data>
     </node>
-    <node id="n99">
+    <node id="n97">
       <data key="v_name">SS:5070</data>
       <data key="v_label">WILDER PEDRO DE MORAIS</data>
       <data key="v_partido">PL/GO</data>
@@ -1213,10 +1189,10 @@
       <data key="v_uf">GO</data>
       <data key="v_ideol_partido">far-right</data>
       <data key="v_regiao">centro-oeste</data>
-      <data key="v_btwn">0</data>
-      <data key="v_leiden_mod">3</data>
+      <data key="v_btwn">0.000436406399225047</data>
+      <data key="v_leiden_mod">0</data>
     </node>
-    <node id="n100">
+    <node id="n98">
       <data key="v_name">SS:5672</data>
       <data key="v_label">ALAN RICK MIRANDA</data>
       <data key="v_partido">UNIÃO/AC</data>
@@ -1225,34 +1201,10 @@
       <data key="v_uf">AC</data>
       <data key="v_ideol_partido">centre-right</data>
       <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.0103542855877302</data>
-      <data key="v_leiden_mod">3</data>
+      <data key="v_btwn">0.00212768216420525</data>
+      <data key="v_leiden_mod">0</data>
     </node>
-    <node id="n101">
-      <data key="v_name">SS:5894</data>
-      <data key="v_label">FLÁVIO NANTES BOLSONARO</data>
-      <data key="v_partido">PL/RJ</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PL</data>
-      <data key="v_uf">RJ</data>
-      <data key="v_ideol_partido">far-right</data>
-      <data key="v_regiao">sudeste</data>
-      <data key="v_btwn">0.000276537077210206</data>
-      <data key="v_leiden_mod">4</data>
-    </node>
-    <node id="n102">
-      <data key="v_name">SS:6341</data>
-      <data key="v_label">ANTONIO HAMILTON MARTINS MOURÃO</data>
-      <data key="v_partido">REPUBLICANOS/RS</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">REPUBLICANOS</data>
-      <data key="v_uf">RS</data>
-      <data key="v_ideol_partido">right</data>
-      <data key="v_regiao">sul</data>
-      <data key="v_btwn">0.00195416211012843</data>
-      <data key="v_leiden_mod">4</data>
-    </node>
-    <node id="n103">
+    <node id="n99">
       <data key="v_name">SS:631</data>
       <data key="v_label">MAGNO PEREIRA MALTA</data>
       <data key="v_partido">PL/ES</data>
@@ -1262,9 +1214,21 @@
       <data key="v_ideol_partido">far-right</data>
       <data key="v_regiao">sudeste</data>
       <data key="v_btwn">0</data>
-      <data key="v_leiden_mod">4</data>
+      <data key="v_leiden_mod">1</data>
     </node>
-    <node id="n104">
+    <node id="n100">
+      <data key="v_name">SS:6342</data>
+      <data key="v_label">JORGE SEIF JÚNIOR</data>
+      <data key="v_partido">PL/SC</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PL</data>
+      <data key="v_uf">SC</data>
+      <data key="v_ideol_partido">far-right</data>
+      <data key="v_regiao">sul</data>
+      <data key="v_btwn">0.0013476306253972</data>
+      <data key="v_leiden_mod">2</data>
+    </node>
+    <node id="n101">
       <data key="v_name">SS:6340</data>
       <data key="v_label">JAIME MAXIMINO BAGATTOLI</data>
       <data key="v_partido">PL/RO</data>
@@ -1273,10 +1237,10 @@
       <data key="v_uf">RO</data>
       <data key="v_ideol_partido">far-right</data>
       <data key="v_regiao">norte</data>
-      <data key="v_btwn">4.19378470489558e-05</data>
-      <data key="v_leiden_mod">5</data>
+      <data key="v_btwn">0</data>
+      <data key="v_leiden_mod">3</data>
     </node>
-    <node id="n105">
+    <node id="n102">
       <data key="v_name">SS:6331</data>
       <data key="v_label">SERGIO FERNANDO MORO</data>
       <data key="v_partido">UNIÃO/PR</data>
@@ -1286,19 +1250,55 @@
       <data key="v_ideol_partido">centre-right</data>
       <data key="v_regiao">sul</data>
       <data key="v_btwn">0</data>
-      <data key="v_leiden_mod">5</data>
+      <data key="v_leiden_mod">4</data>
+    </node>
+    <node id="n103">
+      <data key="v_name">SS:5736</data>
+      <data key="v_label">TEREZA CRISTINA CORREA DA COSTA DIAS</data>
+      <data key="v_partido">PP/MS</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PP</data>
+      <data key="v_uf">MS</data>
+      <data key="v_ideol_partido">right</data>
+      <data key="v_regiao">centro-oeste</data>
+      <data key="v_btwn">8.49374117447206e-06</data>
+      <data key="v_leiden_mod">4</data>
+    </node>
+    <node id="n104">
+      <data key="v_name">SS:6337</data>
+      <data key="v_label">CLEITON GONTIJO DE AZEVEDO</data>
+      <data key="v_partido">REPUBLICANOS/MG</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">REPUBLICANOS</data>
+      <data key="v_uf">MG</data>
+      <data key="v_ideol_partido">right</data>
+      <data key="v_regiao">sudeste</data>
+      <data key="v_btwn">0</data>
+      <data key="v_leiden_mod">4</data>
+    </node>
+    <node id="n105">
+      <data key="v_name">SS:5894</data>
+      <data key="v_label">FLÁVIO NANTES BOLSONARO</data>
+      <data key="v_partido">PL/RJ</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PL</data>
+      <data key="v_uf">RJ</data>
+      <data key="v_ideol_partido">far-right</data>
+      <data key="v_regiao">sudeste</data>
+      <data key="v_btwn">0.00096495977859648</data>
+      <data key="v_leiden_mod">4</data>
     </node>
     <node id="n106">
-      <data key="v_name">SS:6362</data>
-      <data key="v_label">MAURO CARVALHO JUNIOR</data>
-      <data key="v_partido">UNIÃO/MT</data>
+      <data key="v_name">SS:6341</data>
+      <data key="v_label">ANTONIO HAMILTON MARTINS MOURÃO</data>
+      <data key="v_partido">REPUBLICANOS/RS</data>
       <data key="v_type">Senador</data>
-      <data key="v_cod_partido">UNIÃO</data>
-      <data key="v_uf">MT</data>
-      <data key="v_ideol_partido">centre-right</data>
-      <data key="v_regiao">centro-oeste</data>
-      <data key="v_btwn">0</data>
-      <data key="v_leiden_mod">1</data>
+      <data key="v_cod_partido">REPUBLICANOS</data>
+      <data key="v_uf">RS</data>
+      <data key="v_ideol_partido">right</data>
+      <data key="v_regiao">sul</data>
+      <data key="v_btwn">0.0002766482281702</data>
+      <data key="v_leiden_mod">4</data>
     </node>
     <node id="n107">
       <data key="v_name">SS:4694</data>
@@ -1310,9 +1310,21 @@
       <data key="v_ideol_partido">far-right</data>
       <data key="v_regiao">nordeste</data>
       <data key="v_btwn">0</data>
-      <data key="v_leiden_mod">1</data>
+      <data key="v_leiden_mod">2</data>
     </node>
     <node id="n108">
+      <data key="v_name">SS:6362</data>
+      <data key="v_label">MAURO CARVALHO JUNIOR</data>
+      <data key="v_partido">UNIÃO/MT</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">UNIÃO</data>
+      <data key="v_uf">MT</data>
+      <data key="v_ideol_partido">centre-right</data>
+      <data key="v_regiao">centro-oeste</data>
+      <data key="v_btwn">0</data>
+      <data key="v_leiden_mod">3</data>
+    </node>
+    <node id="n109">
       <data key="v_name">SS:5386</data>
       <data key="v_label">MARIA AUXILIADORA SEABRA REZENDE</data>
       <data key="v_partido">UNIÃO/TO</data>
@@ -1321,10 +1333,10 @@
       <data key="v_uf">TO</data>
       <data key="v_ideol_partido">centre-right</data>
       <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.00547230905074814</data>
+      <data key="v_btwn">0.00277042215222179</data>
       <data key="v_leiden_mod">4</data>
     </node>
-    <node id="n109">
+    <node id="n110">
       <data key="v_name">SS:4639</data>
       <data key="v_label">JOSÉ ROBERTO OLIVEIRA FARO</data>
       <data key="v_partido">PT/PA</data>
@@ -1333,46 +1345,10 @@
       <data key="v_uf">PA</data>
       <data key="v_ideol_partido">centre-left</data>
       <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.0319443711349833</data>
-      <data key="v_leiden_mod">2</data>
-    </node>
-    <node id="n110">
-      <data key="v_name">SS:5666</data>
-      <data key="v_label">SERGIO OLIMPIO GOMES</data>
-      <data key="v_partido">PSL/SP</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PSL</data>
-      <data key="v_uf">SP</data>
-      <data key="v_ideol_partido">far-right</data>
-      <data key="v_regiao">sudeste</data>
-      <data key="v_btwn">0.00219067741124925</data>
-      <data key="v_leiden_mod">3</data>
-    </node>
-    <node id="n111">
-      <data key="v_name">SS:6338</data>
-      <data key="v_label">MARIA TERESA LEITÃO DE MELO</data>
-      <data key="v_partido">PT/PE</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PT</data>
-      <data key="v_uf">PE</data>
-      <data key="v_ideol_partido">centre-left</data>
-      <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0</data>
+      <data key="v_btwn">0.0269712850265899</data>
       <data key="v_leiden_mod">0</data>
     </node>
-    <node id="n112">
-      <data key="v_name">SS:5793</data>
-      <data key="v_label">HIRAN MANUEL GONÇALVES DA SILVA</data>
-      <data key="v_partido">PP/RR</data>
-      <data key="v_type">Senador</data>
-      <data key="v_cod_partido">PP</data>
-      <data key="v_uf">RR</data>
-      <data key="v_ideol_partido">right</data>
-      <data key="v_regiao">norte</data>
-      <data key="v_btwn">0.00618622763462285</data>
-      <data key="v_leiden_mod">3</data>
-    </node>
-    <node id="n113">
+    <node id="n111">
       <data key="v_name">SS:6010</data>
       <data key="v_label">IVETE MARLI APPEL DA SILVEIRA</data>
       <data key="v_partido">MDB/SC</data>
@@ -1382,7 +1358,31 @@
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">sul</data>
       <data key="v_btwn">0</data>
-      <data key="v_leiden_mod">5</data>
+      <data key="v_leiden_mod">4</data>
+    </node>
+    <node id="n112">
+      <data key="v_name">SS:5666</data>
+      <data key="v_label">SERGIO OLIMPIO GOMES</data>
+      <data key="v_partido">PSL/SP</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PSL</data>
+      <data key="v_uf">SP</data>
+      <data key="v_ideol_partido">far-right</data>
+      <data key="v_regiao">sudeste</data>
+      <data key="v_btwn">0.0215766302019542</data>
+      <data key="v_leiden_mod">3</data>
+    </node>
+    <node id="n113">
+      <data key="v_name">SS:6338</data>
+      <data key="v_label">MARIA TERESA LEITÃO DE MELO</data>
+      <data key="v_partido">PT/PE</data>
+      <data key="v_type">Senador</data>
+      <data key="v_cod_partido">PT</data>
+      <data key="v_uf">PE</data>
+      <data key="v_ideol_partido">centre-left</data>
+      <data key="v_regiao">nordeste</data>
+      <data key="v_btwn">0</data>
+      <data key="v_leiden_mod">3</data>
     </node>
     <node id="n114">
       <data key="v_name">SS:5561</data>
@@ -1393,8 +1393,8 @@
       <data key="v_uf">AL</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">nordeste</data>
-      <data key="v_btwn">0.00192807924660516</data>
-      <data key="v_leiden_mod">1</data>
+      <data key="v_btwn">0.00367495868148824</data>
+      <data key="v_leiden_mod">4</data>
     </node>
     <node id="n115">
       <data key="v_name">SS:151</data>
@@ -1405,7 +1405,7 @@
       <data key="v_uf">ES</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">sudeste</data>
-      <data key="v_btwn">1.23867058794384e-05</data>
+      <data key="v_btwn">0</data>
       <data key="v_leiden_mod">3</data>
     </node>
     <node id="n116">
@@ -1417,8 +1417,8 @@
       <data key="v_uf">AP</data>
       <data key="v_ideol_partido">centre</data>
       <data key="v_regiao">norte</data>
-      <data key="v_btwn">0</data>
-      <data key="v_leiden_mod">3</data>
+      <data key="v_btwn">2.12343529361802e-06</data>
+      <data key="v_leiden_mod">1</data>
     </node>
     <node id="n117">
       <data key="v_name">SS:5971</data>
@@ -1430,7 +1430,7 @@
       <data key="v_ideol_partido">centre-left</data>
       <data key="v_regiao">nordeste</data>
       <data key="v_btwn">0</data>
-      <data key="v_leiden_mod">5</data>
+      <data key="v_leiden_mod">1</data>
     </node>
     <node id="n118">
       <data key="v_name">SS:6363</data>
@@ -1441,1879 +1441,1849 @@
       <data key="v_uf">MT</data>
       <data key="v_ideol_partido">far-right</data>
       <data key="v_regiao">centro-oeste</data>
-      <data key="v_btwn">0.00204274475246053</data>
-      <data key="v_leiden_mod">1</data>
+      <data key="v_btwn">0.00204486818775415</data>
+      <data key="v_leiden_mod">3</data>
     </node>
     <edge source="n0" target="n1">
-      <data key="e_weight">6.750001</data>
+      <data key="e_weight">6.000001</data>
     </edge>
     <edge source="n0" target="n2">
-      <data key="e_weight">0.750001</data>
+      <data key="e_weight">2.500001</data>
     </edge>
     <edge source="n2" target="n3">
-      <data key="e_weight">3.750001</data>
+      <data key="e_weight">1.000001</data>
     </edge>
     <edge source="n3" target="n4">
-      <data key="e_weight">4.750001</data>
+      <data key="e_weight">6.250001</data>
     </edge>
     <edge source="n4" target="n5">
-      <data key="e_weight">1.750001</data>
+      <data key="e_weight">7.000001</data>
     </edge>
     <edge source="n5" target="n6">
-      <data key="e_weight">2.000001</data>
+      <data key="e_weight">7.750001</data>
     </edge>
     <edge source="n6" target="n7">
-      <data key="e_weight">2.250001</data>
+      <data key="e_weight">7.500001</data>
     </edge>
     <edge source="n7" target="n8">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n8" target="n9">
-      <data key="e_weight">3.500001</data>
+      <data key="e_weight">0.750001</data>
     </edge>
     <edge source="n9" target="n10">
       <data key="e_weight">1.250001</data>
     </edge>
     <edge source="n10" target="n11">
-      <data key="e_weight">0.750001</data>
+      <data key="e_weight">1.250001</data>
     </edge>
     <edge source="n11" target="n12">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n12" target="n13">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n13" target="n14">
-      <data key="e_weight">3.500001</data>
-    </edge>
-    <edge source="n14" target="n15">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n15" target="n16">
-      <data key="e_weight">2.500001</data>
-    </edge>
-    <edge source="n16" target="n17">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n17" target="n18">
       <data key="e_weight">2.750001</data>
     </edge>
+    <edge source="n12" target="n13">
+      <data key="e_weight">4.500001</data>
+    </edge>
+    <edge source="n13" target="n14">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n14" target="n15">
+      <data key="e_weight">3.500001</data>
+    </edge>
+    <edge source="n15" target="n16">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n16" target="n17">
+      <data key="e_weight">3.750001</data>
+    </edge>
+    <edge source="n17" target="n18">
+      <data key="e_weight">4.750001</data>
+    </edge>
     <edge source="n18" target="n19">
-      <data key="e_weight">7.500001</data>
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n19" target="n20">
+      <data key="e_weight">3.750001</data>
     </edge>
     <edge source="n20" target="n21">
-      <data key="e_weight">6.250001</data>
+      <data key="e_weight">4.000001</data>
     </edge>
     <edge source="n21" target="n22">
-      <data key="e_weight">3.250001</data>
+      <data key="e_weight">1.250001</data>
     </edge>
     <edge source="n22" target="n23">
-      <data key="e_weight">4.250001</data>
+      <data key="e_weight">2.750001</data>
     </edge>
     <edge source="n23" target="n24">
-      <data key="e_weight">8.000001</data>
+      <data key="e_weight">4.500001</data>
     </edge>
     <edge source="n24" target="n25">
-      <data key="e_weight">1.000001</data>
+      <data key="e_weight">2.750001</data>
     </edge>
     <edge source="n25" target="n26">
-      <data key="e_weight">5.750001</data>
+      <data key="e_weight">2.750001</data>
     </edge>
-    <edge source="n11" target="n27">
-      <data key="e_weight">2.000001</data>
-    </edge>
-    <edge source="n11" target="n23">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n23" target="n28">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n3" target="n28">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n3" target="n29">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n4" target="n30">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n31" target="n32">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n9" target="n33">
+    <edge source="n27" target="n28">
       <data key="e_weight">1.000001</data>
     </edge>
-    <edge source="n34" target="n35">
+    <edge source="n14" target="n29">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n29" target="n30">
+      <data key="e_weight">2.000001</data>
+    </edge>
+    <edge source="n23" target="n30">
+      <data key="e_weight">2.000001</data>
+    </edge>
+    <edge source="n12" target="n31">
+      <data key="e_weight">4.250001</data>
+    </edge>
+    <edge source="n18" target="n32">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n33" target="n34">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n17" target="n35">
       <data key="e_weight">1.000001</data>
     </edge>
     <edge source="n36" target="n37">
       <data key="e_weight">1.000001</data>
     </edge>
-    <edge source="n36" target="n38">
-      <data key="e_weight">3.000001</data>
+    <edge source="n37" target="n38">
+      <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n38" target="n39">
-      <data key="e_weight">2.500001</data>
+    <edge source="n35" target="n39">
+      <data key="e_weight">3.500001</data>
     </edge>
-    <edge source="n2" target="n39">
-      <data key="e_weight">2.750001</data>
+    <edge source="n1" target="n39">
+      <data key="e_weight">5.250001</data>
     </edge>
     <edge source="n2" target="n40">
-      <data key="e_weight">2.250001</data>
+      <data key="e_weight">4.500001</data>
     </edge>
     <edge source="n40" target="n41">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n41" target="n42">
-      <data key="e_weight">2.500001</data>
-    </edge>
-    <edge source="n42" target="n43">
-      <data key="e_weight">2.000001</data>
-    </edge>
-    <edge source="n43" target="n44">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n44" target="n45">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n35" target="n45">
-      <data key="e_weight">5.000001</data>
-    </edge>
-    <edge source="n35" target="n46">
-      <data key="e_weight">3.250001</data>
-    </edge>
-    <edge source="n8" target="n46">
-      <data key="e_weight">5.000001</data>
-    </edge>
-    <edge source="n8" target="n47">
       <data key="e_weight">1.000001</data>
     </edge>
-    <edge source="n31" target="n47">
-      <data key="e_weight">1.000001</data>
+    <edge source="n34" target="n41">
+      <data key="e_weight">3.500001</data>
     </edge>
-    <edge source="n31" target="n48">
-      <data key="e_weight">7.750001</data>
+    <edge source="n34" target="n38">
+      <data key="e_weight">5.000001</data>
     </edge>
-    <edge source="n48" target="n49">
-      <data key="e_weight">6.000001</data>
-    </edge>
-    <edge source="n33" target="n49">
-      <data key="e_weight">2.500001</data>
-    </edge>
-    <edge source="n33" target="n50">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n18" target="n50">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n20" target="n51">
+    <edge source="n38" target="n42">
       <data key="e_weight">3.750001</data>
     </edge>
-    <edge source="n20" target="n52">
-      <data key="e_weight">3.000001</data>
-    </edge>
-    <edge source="n52" target="n53">
-      <data key="e_weight">3.000001</data>
-    </edge>
-    <edge source="n53" target="n54">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n24" target="n54">
+    <edge source="n42" target="n43">
       <data key="e_weight">2.500001</data>
     </edge>
-    <edge source="n24" target="n55">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n55" target="n56">
-      <data key="e_weight">2.500001</data>
-    </edge>
-    <edge source="n32" target="n56">
-      <data key="e_weight">5.000001</data>
-    </edge>
-    <edge source="n26" target="n32">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n26" target="n57">
-      <data key="e_weight">5.500001</data>
-    </edge>
-    <edge source="n57" target="n58">
-      <data key="e_weight">6.000001</data>
-    </edge>
-    <edge source="n0" target="n39">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n39" target="n59">
-      <data key="e_weight">3.250001</data>
-    </edge>
-    <edge source="n59" target="n60">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n44" target="n60">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n5" target="n44">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n5" target="n45">
-      <data key="e_weight">6.250001</data>
-    </edge>
-    <edge source="n9" target="n35">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n9" target="n47">
-      <data key="e_weight">5.500001</data>
-    </edge>
-    <edge source="n10" target="n47">
-      <data key="e_weight">4.000001</data>
-    </edge>
-    <edge source="n10" target="n12">
-      <data key="e_weight">3.500001</data>
-    </edge>
-    <edge source="n12" target="n34">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n34" target="n48">
-      <data key="e_weight">4.250001</data>
-    </edge>
-    <edge source="n48" target="n61">
-      <data key="e_weight">3.500001</data>
-    </edge>
-    <edge source="n49" target="n61">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n17" target="n33">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n62" target="n63">
-      <data key="e_weight">4.750001</data>
-    </edge>
-    <edge source="n62" target="n64">
-      <data key="e_weight">4.250001</data>
-    </edge>
-    <edge source="n20" target="n64">
-      <data key="e_weight">4.000001</data>
-    </edge>
-    <edge source="n20" target="n22">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n24" target="n56">
+    <edge source="n43" target="n44">
       <data key="e_weight">2.750001</data>
     </edge>
-    <edge source="n56" target="n65">
+    <edge source="n44" target="n45">
+      <data key="e_weight">2.750001</data>
+    </edge>
+    <edge source="n45" target="n46">
+      <data key="e_weight">2.500001</data>
+    </edge>
+    <edge source="n46" target="n47">
+      <data key="e_weight">3.250001</data>
+    </edge>
+    <edge source="n47" target="n48">
+      <data key="e_weight">2.750001</data>
+    </edge>
+    <edge source="n49" target="n50">
+      <data key="e_weight">4.500001</data>
+    </edge>
+    <edge source="n50" target="n51">
+      <data key="e_weight">3.750001</data>
+    </edge>
+    <edge source="n13" target="n51">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n13" target="n52">
+      <data key="e_weight">3.500001</data>
+    </edge>
+    <edge source="n37" target="n52">
+      <data key="e_weight">4.500001</data>
+    </edge>
+    <edge source="n15" target="n37">
+      <data key="e_weight">3.750001</data>
+    </edge>
+    <edge source="n15" target="n53">
+      <data key="e_weight">5.000001</data>
+    </edge>
+    <edge source="n53" target="n54">
+      <data key="e_weight">3.500001</data>
+    </edge>
+    <edge source="n54" target="n55">
+      <data key="e_weight">2.000001</data>
+    </edge>
+    <edge source="n55" target="n56">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n19" target="n56">
+      <data key="e_weight">2.000001</data>
+    </edge>
+    <edge source="n19" target="n57">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n33" target="n57">
       <data key="e_weight">1.250001</data>
     </edge>
-    <edge source="n25" target="n65">
+    <edge source="n33" target="n58">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n24" target="n58">
       <data key="e_weight">2.000001</data>
+    </edge>
+    <edge source="n24" target="n59">
+      <data key="e_weight">3.750001</data>
+    </edge>
+    <edge source="n59" target="n60">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n1" target="n35">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n0" target="n61">
+      <data key="e_weight">2.750001</data>
+    </edge>
+    <edge source="n2" target="n61">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n3" target="n40">
+      <data key="e_weight">6.250001</data>
+    </edge>
+    <edge source="n5" target="n62">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n62" target="n63">
+      <data key="e_weight">2.000001</data>
+    </edge>
+    <edge source="n6" target="n63">
+      <data key="e_weight">5.500001</data>
     </edge>
     <edge source="n6" target="n41">
       <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n1" target="n37">
-      <data key="e_weight">3.250001</data>
-    </edge>
-    <edge source="n0" target="n3">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n3" target="n66">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n44" target="n66">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n44" target="n67">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n45" target="n67">
-      <data key="e_weight">4.250001</data>
-    </edge>
-    <edge source="n6" target="n45">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n6" target="n46">
+    <edge source="n41" target="n64">
       <data key="e_weight">2.000001</data>
     </edge>
-    <edge source="n11" target="n46">
-      <data key="e_weight">1.000001</data>
+    <edge source="n64" target="n65">
+      <data key="e_weight">1.750001</data>
     </edge>
-    <edge source="n11" target="n61">
+    <edge source="n47" target="n65">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n36" target="n47">
+      <data key="e_weight">2.500001</data>
+    </edge>
+    <edge source="n36" target="n66">
       <data key="e_weight">3.500001</data>
     </edge>
-    <edge source="n15" target="n31">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n15" target="n18">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n19" target="n29">
-      <data key="e_weight">3.000001</data>
-    </edge>
-    <edge source="n51" target="n64">
-      <data key="e_weight">3.250001</data>
-    </edge>
-    <edge source="n51" target="n52">
-      <data key="e_weight">2.000001</data>
-    </edge>
-    <edge source="n23" target="n52">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n24" target="n32">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n32" target="n68">
-      <data key="e_weight">2.000001</data>
-    </edge>
-    <edge source="n28" target="n68">
-      <data key="e_weight">2.750001</data>
-    </edge>
-    <edge source="n28" target="n69">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n0" target="n37">
-      <data key="e_weight">2.500001</data>
-    </edge>
-    <edge source="n0" target="n59">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n2" target="n59">
-      <data key="e_weight">3.000001</data>
-    </edge>
-    <edge source="n40" target="n67">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n5" target="n35">
-      <data key="e_weight">5.000001</data>
-    </edge>
-    <edge source="n46" target="n70">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n47" target="n70">
-      <data key="e_weight">2.500001</data>
-    </edge>
-    <edge source="n12" target="n47">
-      <data key="e_weight">3.750001</data>
-    </edge>
-    <edge source="n12" target="n61">
-      <data key="e_weight">3.250001</data>
-    </edge>
-    <edge source="n61" target="n71">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n19" target="n71">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n20" target="n62">
-      <data key="e_weight">3.000001</data>
-    </edge>
-    <edge source="n21" target="n72">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n56" target="n72">
-      <data key="e_weight">2.000001</data>
-    </edge>
-    <edge source="n32" target="n65">
-      <data key="e_weight">2.500001</data>
-    </edge>
-    <edge source="n65" target="n73">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n57" target="n73">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n1" target="n59">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n2" target="n41">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n41" target="n45">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n6" target="n35">
-      <data key="e_weight">5.500001</data>
-    </edge>
-    <edge source="n8" target="n10">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n10" target="n74">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n11" target="n74">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n11" target="n48">
-      <data key="e_weight">3.500001</data>
-    </edge>
-    <edge source="n51" target="n53">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n24" target="n53">
-      <data key="e_weight">2.000001</data>
-    </edge>
-    <edge source="n24" target="n75">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n23" target="n75">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n23" target="n55">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n26" target="n28">
-      <data key="e_weight">2.000001</data>
-    </edge>
-    <edge source="n11" target="n76">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n23" target="n76">
+    <edge source="n48" target="n66">
       <data key="e_weight">6.000001</data>
     </edge>
-    <edge source="n28" target="n70">
-      <data key="e_weight">0.750001</data>
+    <edge source="n11" target="n13">
+      <data key="e_weight">6.500001</data>
     </edge>
-    <edge source="n3" target="n70">
-      <data key="e_weight">0.750001</data>
+    <edge source="n13" target="n37">
+      <data key="e_weight">4.750001</data>
     </edge>
-    <edge source="n77" target="n78">
-      <data key="e_weight">0.250001</data>
+    <edge source="n16" target="n53">
+      <data key="e_weight">3.000001</data>
     </edge>
-    <edge source="n0" target="n36">
+    <edge source="n17" target="n67">
+      <data key="e_weight">3.250001</data>
+    </edge>
+    <edge source="n56" target="n67">
       <data key="e_weight">3.500001</data>
     </edge>
-    <edge source="n2" target="n36">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n66" target="n67">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n9" target="n67">
+    <edge source="n21" target="n56">
       <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n47" target="n61">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n11" target="n79">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n33" target="n79">
+    <edge source="n21" target="n23">
       <data key="e_weight">1.500001</data>
     </edge>
-    <edge source="n16" target="n50">
-      <data key="e_weight">2.750001</data>
+    <edge source="n23" target="n59">
+      <data key="e_weight">2.500001</data>
     </edge>
-    <edge source="n16" target="n71">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n18" target="n71">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n18" target="n30">
-      <data key="e_weight">2.000001</data>
-    </edge>
-    <edge source="n20" target="n23">
+    <edge source="n26" target="n59">
       <data key="e_weight">1.500001</data>
     </edge>
-    <edge source="n56" target="n80">
-      <data key="e_weight">2.000001</data>
+    <edge source="n4" target="n68">
+      <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n32" target="n80">
+    <edge source="n12" target="n38">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n20" target="n38">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n10" target="n32">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n30" target="n39">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n30" target="n69">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n2" target="n69">
       <data key="e_weight">6.250001</data>
     </edge>
-    <edge source="n28" target="n32">
-      <data key="e_weight">2.000001</data>
+    <edge source="n2" target="n6">
+      <data key="e_weight">1.000001</data>
     </edge>
-    <edge source="n25" target="n28">
-      <data key="e_weight">4.250001</data>
+    <edge source="n41" target="n63">
+      <data key="e_weight">1.250001</data>
     </edge>
-    <edge source="n25" target="n57">
+    <edge source="n34" target="n64">
+      <data key="e_weight">3.500001</data>
+    </edge>
+    <edge source="n64" target="n70">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n29" target="n70">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n29" target="n45">
       <data key="e_weight">2.750001</data>
     </edge>
-    <edge source="n3" target="n36">
-      <data key="e_weight">1.000001</data>
+    <edge source="n47" target="n66">
+      <data key="e_weight">3.750001</data>
     </edge>
-    <edge source="n3" target="n81">
-      <data key="e_weight">0.750001</data>
+    <edge source="n66" target="n71">
+      <data key="e_weight">1.250001</data>
     </edge>
-    <edge source="n4" target="n81">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n4" target="n41">
-      <data key="e_weight">5.500001</data>
-    </edge>
-    <edge source="n35" target="n41">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n35" target="n82">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n10" target="n82">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n10" target="n61">
-      <data key="e_weight">2.750001</data>
-    </edge>
-    <edge source="n34" target="n61">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n11" target="n50">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n15" target="n50">
+    <edge source="n48" target="n71">
       <data key="e_weight">2.500001</data>
     </edge>
-    <edge source="n15" target="n19">
-      <data key="e_weight">0.750001</data>
+    <edge source="n12" target="n14">
+      <data key="e_weight">1.250001</data>
     </edge>
-    <edge source="n27" target="n63">
-      <data key="e_weight">2.500001</data>
+    <edge source="n15" target="n67">
+      <data key="e_weight">1.250001</data>
     </edge>
-    <edge source="n27" target="n62">
+    <edge source="n20" target="n67">
       <data key="e_weight">2.000001</data>
     </edge>
-    <edge source="n51" target="n62">
+    <edge source="n20" target="n33">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n22" target="n33">
       <data key="e_weight">2.500001</data>
     </edge>
-    <edge source="n21" target="n51">
+    <edge source="n22" target="n72">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n23" target="n72">
       <data key="e_weight">3.000001</data>
     </edge>
-    <edge source="n21" target="n52">
+    <edge source="n23" target="n60">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n26" target="n60">
       <data key="e_weight">4.250001</data>
     </edge>
-    <edge source="n22" target="n53">
-      <data key="e_weight">4.000001</data>
-    </edge>
-    <edge source="n55" target="n76">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n28" target="n55">
+    <edge source="n19" target="n35">
       <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n1" target="n39">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n3" target="n59">
+    <edge source="n0" target="n39">
       <data key="e_weight">1.000001</data>
     </edge>
-    <edge source="n45" target="n81">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n5" target="n83">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n6" target="n83">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n6" target="n10">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n10" target="n34">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n13" target="n48">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n13" target="n16">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n17" target="n50">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n17" target="n30">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n29" target="n30">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n51" target="n63">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n21" target="n53">
+    <edge source="n0" target="n69">
       <data key="e_weight">2.500001</data>
     </edge>
-    <edge source="n22" target="n24">
-      <data key="e_weight">2.500001</data>
-    </edge>
-    <edge source="n24" target="n76">
-      <data key="e_weight">3.000001</data>
-    </edge>
-    <edge source="n23" target="n80">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n28" target="n80">
-      <data key="e_weight">4.000001</data>
-    </edge>
-    <edge source="n28" target="n73">
-      <data key="e_weight">2.000001</data>
-    </edge>
-    <edge source="n26" target="n73">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n1" target="n84">
+    <edge source="n40" target="n69">
       <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n39" target="n84">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n3" target="n39">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n4" target="n83">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n6" target="n9">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n12" target="n48">
-      <data key="e_weight">4.500001</data>
-    </edge>
-    <edge source="n48" target="n50">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n50" target="n85">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n71" target="n85">
-      <data key="e_weight">2.000001</data>
-    </edge>
-    <edge source="n17" target="n71">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n53" target="n76">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n23" target="n65">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n25" target="n73">
-      <data key="e_weight">2.000001</data>
-    </edge>
-    <edge source="n26" target="n58">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n2" target="n66">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n66" target="n86">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n86" target="n87">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n45" target="n87">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n7" target="n35">
-      <data key="e_weight">2.000001</data>
-    </edge>
-    <edge source="n7" target="n46">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n31" target="n34">
-      <data key="e_weight">2.000001</data>
-    </edge>
-    <edge source="n48" target="n79">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n49" target="n79">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n16" target="n49">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n15" target="n88">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n71" target="n88">
-      <data key="e_weight">4.750001</data>
-    </edge>
-    <edge source="n18" target="n85">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n19" target="n30">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n21" target="n64">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n52" target="n89">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n24" target="n89">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n24" target="n72">
-      <data key="e_weight">2.000001</data>
-    </edge>
-    <edge source="n55" target="n72">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n54" target="n55">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n54" target="n56">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n58" target="n65">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n58" target="n69">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n0" target="n38">
-      <data key="e_weight">2.000001</data>
-    </edge>
-    <edge source="n59" target="n90">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n66" target="n90">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n45" target="n83">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n46" target="n83">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n46" target="n61">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n31" target="n61">
-      <data key="e_weight">3.000001</data>
-    </edge>
-    <edge source="n33" target="n48">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n14" target="n33">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n14" target="n18">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n52" target="n54">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n68" target="n80">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n26" target="n68">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n1" target="n91">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n1" target="n92">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n39" target="n92">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n3" target="n90">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n81" target="n90">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n41" target="n81">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n4" target="n35">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n35" target="n83">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n6" target="n70">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n9" target="n70">
-      <data key="e_weight">4.750001</data>
-    </edge>
-    <edge source="n9" target="n11">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n17" target="n19">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n27" target="n64">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n22" target="n54">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n22" target="n55">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n55" target="n75">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n75" target="n76">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n23" target="n68">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n1" target="n3">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n3" target="n40">
-      <data key="e_weight">1.500001</data>
     </edge>
     <edge source="n4" target="n40">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n4" target="n42">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n35" target="n44">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n6" target="n82">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n8" target="n82">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n13" target="n49">
-      <data key="e_weight">6.000001</data>
-    </edge>
-    <edge source="n14" target="n88">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n55" target="n80">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n58" target="n80">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n1" target="n36">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n2" target="n38">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n2" target="n67">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n5" target="n67">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n12" target="n49">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n13" target="n88">
       <data key="e_weight">2.000001</data>
     </edge>
-    <edge source="n24" target="n65">
-      <data key="e_weight">0.750001</data>
+    <edge source="n4" target="n62">
+      <data key="e_weight">1.500001</data>
     </edge>
-    <edge source="n93" target="n94">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n1" target="n38">
+    <edge source="n62" target="n65">
       <data key="e_weight">1.250001</data>
     </edge>
-    <edge source="n38" target="n40">
-      <data key="e_weight">0.750001</data>
+    <edge source="n34" target="n65">
+      <data key="e_weight">2.750001</data>
     </edge>
-    <edge source="n41" target="n95">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n66" target="n95">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n35" target="n67">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n35" target="n96">
+    <edge source="n43" target="n64">
       <data key="e_weight">3.000001</data>
     </edge>
-    <edge source="n46" target="n96">
+    <edge source="n43" target="n47">
       <data key="e_weight">1.000001</data>
     </edge>
-    <edge source="n46" target="n97">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n61" target="n97">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n31" target="n98">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n48" target="n98">
-      <data key="e_weight">2.500001</data>
-    </edge>
-    <edge source="n13" target="n33">
+    <edge source="n46" target="n66">
       <data key="e_weight">2.250001</data>
     </edge>
-    <edge source="n14" target="n71">
+    <edge source="n11" target="n52">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n15" target="n73">
       <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n71" target="n99">
+    <edge source="n67" target="n73">
+      <data key="e_weight">3.250001</data>
+    </edge>
+    <edge source="n67" target="n74">
       <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n18" target="n99">
+    <edge source="n19" target="n74">
       <data key="e_weight">1.000001</data>
     </edge>
-    <edge source="n19" target="n100">
-      <data key="e_weight">1.500001</data>
+    <edge source="n19" target="n75">
+      <data key="e_weight">2.500001</data>
     </edge>
-    <edge source="n101" target="n102">
-      <data key="e_weight">1.750001</data>
+    <edge source="n58" target="n75">
+      <data key="e_weight">1.250001</data>
     </edge>
-    <edge source="n21" target="n102">
+    <edge source="n58" target="n59">
       <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n52" target="n94">
-      <data key="e_weight">1.750001</data>
+    <edge source="n25" target="n59">
+      <data key="e_weight">3.500001</data>
     </edge>
-    <edge source="n24" target="n94">
-      <data key="e_weight">1.500001</data>
+    <edge source="n26" target="n76">
+      <data key="e_weight">4.750001</data>
     </edge>
-    <edge source="n24" target="n103">
+    <edge source="n1" target="n30">
+      <data key="e_weight">4.000001</data>
+    </edge>
+    <edge source="n30" target="n62">
       <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n77" target="n103">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n77" target="n80">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n80" target="n104">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n104" target="n105">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n32" target="n105">
+    <edge source="n6" target="n62">
       <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n63" target="n70">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n34" target="n70">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n38" target="n43">
+      <data key="e_weight">2.500001</data>
+    </edge>
+    <edge source="n43" target="n77">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n45" target="n77">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n45" target="n47">
+      <data key="e_weight">2.750001</data>
+    </edge>
+    <edge source="n8" target="n47">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n8" target="n48">
+      <data key="e_weight">3.500001</data>
+    </edge>
+    <edge source="n11" target="n50">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n16" target="n37">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n16" target="n19">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n20" target="n23">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n59" target="n78">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n6" target="n32">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n12" target="n79">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n31" target="n76">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n30" target="n35">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n0" target="n30">
+      <data key="e_weight">5.000001</data>
+    </edge>
+    <edge source="n0" target="n80">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n69" target="n80">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n3" target="n63">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n34" target="n63">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n43" target="n66">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n9" target="n49">
+      <data key="e_weight">3.000001</data>
+    </edge>
+    <edge source="n9" target="n13">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n12" target="n52">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n14" target="n52">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n14" target="n81">
+      <data key="e_weight">6.000001</data>
+    </edge>
+    <edge source="n54" target="n81">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n17" target="n54">
+      <data key="e_weight">2.750001</data>
+    </edge>
+    <edge source="n19" target="n67">
+      <data key="e_weight">3.500001</data>
+    </edge>
+    <edge source="n72" target="n75">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n23" target="n32">
+      <data key="e_weight">3.250001</data>
+    </edge>
+    <edge source="n32" target="n59">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n13" target="n82">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n30" target="n79">
+      <data key="e_weight">2.750001</data>
+    </edge>
+    <edge source="n3" target="n79">
+      <data key="e_weight">3.250001</data>
+    </edge>
+    <edge source="n3" target="n5">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n6" target="n64">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n38" target="n64">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n29" target="n38">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n36" target="n45">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n48" target="n83">
+      <data key="e_weight">2.750001</data>
+    </edge>
+    <edge source="n12" target="n51">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n31" target="n37">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n14" target="n37">
+      <data key="e_weight">5.000001</data>
+    </edge>
+    <edge source="n15" target="n54">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n16" target="n54">
+      <data key="e_weight">3.500001</data>
+    </edge>
+    <edge source="n16" target="n18">
+      <data key="e_weight">2.000001</data>
+    </edge>
+    <edge source="n18" target="n67">
+      <data key="e_weight">2.750001</data>
+    </edge>
+    <edge source="n67" target="n84">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n22" target="n84">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n23" target="n25">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n25" target="n60">
+      <data key="e_weight">2.500001</data>
+    </edge>
+    <edge source="n62" target="n79">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n7" target="n43">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n29" target="n43">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n29" target="n47">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n45" target="n66">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n36" target="n48">
+      <data key="e_weight">2.000001</data>
+    </edge>
+    <edge source="n13" target="n50">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n16" target="n81">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n18" target="n56">
+      <data key="e_weight">5.000001</data>
+    </edge>
+    <edge source="n56" target="n74">
+      <data key="e_weight">3.000001</data>
+    </edge>
+    <edge source="n20" target="n74">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n21" target="n84">
+      <data key="e_weight">2.000001</data>
+    </edge>
+    <edge source="n82" target="n84">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n23" target="n82">
+      <data key="e_weight">1.750001</data>
     </edge>
     <edge source="n25" target="n32">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n25" target="n69">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n40" target="n59">
       <data key="e_weight">1.250001</data>
     </edge>
-    <edge source="n40" target="n95">
+    <edge source="n0" target="n79">
+      <data key="e_weight">2.500001</data>
+    </edge>
+    <edge source="n40" target="n79">
+      <data key="e_weight">2.500001</data>
+    </edge>
+    <edge source="n3" target="n85">
       <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n86" target="n95">
+    <edge source="n4" target="n85">
       <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n67" target="n86">
+    <edge source="n63" target="n65">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n46" target="n65">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n46" target="n48">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n49" target="n51">
+      <data key="e_weight">2.000001</data>
+    </edge>
+    <edge source="n50" target="n52">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n52" target="n86">
+      <data key="e_weight">2.000001</data>
+    </edge>
+    <edge source="n14" target="n86">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n14" target="n16">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n20" target="n75">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n21" target="n75">
+      <data key="e_weight">2.000001</data>
+    </edge>
+    <edge source="n21" target="n82">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n39" target="n87">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n80" target="n87">
       <data key="e_weight">1.250001</data>
     </edge>
-    <edge source="n67" target="n106">
+    <edge source="n2" target="n80">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n2" target="n62">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n34" target="n47">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n36" target="n71">
       <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n106" target="n107">
+    <edge source="n8" target="n71">
       <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n45" target="n107">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n45" target="n96">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n35" target="n97">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n61" target="n98">
+    <edge source="n9" target="n51">
       <data key="e_weight">1.000001</data>
     </edge>
-    <edge source="n13" target="n19">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n52" target="n102">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n94" target="n108">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n24" target="n108">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n24" target="n77">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n72" target="n77">
+    <edge source="n51" target="n88">
       <data key="e_weight">1.500001</data>
     </edge>
+    <edge source="n13" target="n88">
+      <data key="e_weight">4.250001</data>
+    </edge>
+    <edge source="n37" target="n86">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n16" target="n55">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n17" target="n55">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n17" target="n89">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n73" target="n89">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n73" target="n90">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n19" target="n90">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n33" target="n75">
+      <data key="e_weight">4.000001</data>
+    </edge>
+    <edge source="n32" target="n72">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n24" target="n32">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n1" target="n69">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n62" target="n70">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n34" target="n42">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n42" target="n47">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n10" target="n13">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n52" target="n91">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n81" target="n91">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n15" target="n81">
+      <data key="e_weight">4.250001</data>
+    </edge>
+    <edge source="n15" target="n55">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n55" target="n73">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n33" target="n56">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n33" target="n82">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n72" target="n82">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n59" target="n72">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n38" target="n70">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n45" target="n71">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n9" target="n50">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n9" target="n12">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n12" target="n92">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n31" target="n92">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n31" target="n52">
+      <data key="e_weight">2.000001</data>
+    </edge>
+    <edge source="n37" target="n91">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n22" target="n82">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n23" target="n93">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n25" target="n93">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n25" target="n78">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n76" target="n78">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n0" target="n4">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n7" target="n41">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n44" target="n64">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n10" target="n51">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n10" target="n88">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n52" target="n88">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n55" target="n81">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n18" target="n53">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n18" target="n57">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n20" target="n57">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n20" target="n58">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n10" target="n60">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n35" target="n72">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n7" target="n65">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n42" target="n65">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n42" target="n45">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n45" target="n48">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n50" target="n88">
+      <data key="e_weight">2.000001</data>
+    </edge>
+    <edge source="n11" target="n37">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n32" target="n33">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n24" target="n60">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n94" target="n95">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n83" target="n95">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n39" target="n96">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n96" target="n97">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n27" target="n97">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n2" target="n27">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n3" target="n69">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n3" target="n98">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n7" target="n98">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n6" target="n34">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n42" target="n46">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n46" target="n71">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n48" target="n99">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n10" target="n95">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n13" target="n95">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n13" target="n100">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n37" target="n100">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n37" target="n81">
+      <data key="e_weight">4.000001</data>
+    </edge>
+    <edge source="n53" target="n101">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n67" target="n101">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n67" target="n102">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n75" target="n102">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n33" target="n103">
+      <data key="e_weight">0.750001</data>
+    </edge>
     <edge source="n72" target="n103">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n72" target="n104">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n58" target="n104">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n25" target="n58">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n25" target="n105">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n105" target="n106">
+      <data key="e_weight">2.500001</data>
+    </edge>
+    <edge source="n60" target="n106">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n1" target="n87">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n87" target="n96">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n27" target="n96">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n27" target="n69">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n62" target="n69">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n62" target="n98">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n7" target="n34">
+      <data key="e_weight">3.250001</data>
+    </edge>
+    <edge source="n95" target="n100">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n100" target="n107">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n37" target="n107">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n15" target="n108">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n53" target="n108">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n53" target="n73">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n102" target="n103">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n103" target="n104">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n58" target="n106">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n105" target="n109">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n60" target="n109">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n72" target="n81">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n72" target="n96">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n24" target="n96">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n60" target="n102">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n37" target="n102">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n27" target="n39">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n2" target="n110">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n5" target="n110">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n38" target="n66">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n37" target="n94">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n81" target="n94">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n17" target="n81">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n17" target="n73">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n67" target="n82">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n82" target="n103">
       <data key="e_weight">0.750001</data>
     </edge>
     <edge source="n32" target="n103">
       <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n80" target="n105">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n26" target="n105">
+    <edge source="n32" target="n106">
       <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n66" target="n102">
+    <edge source="n78" target="n106">
       <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n98" target="n102">
+    <edge source="n60" target="n78">
       <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n52" target="n98">
+    <edge source="n37" target="n111">
       <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n35" target="n52">
+    <edge source="n100" target="n111">
       <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n35" target="n80">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n8" target="n105">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n1" target="n93">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n1" target="n41">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n35" target="n95">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n9" target="n46">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n9" target="n61">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n48" target="n109">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n33" target="n109">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n13" target="n18">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n63" target="n102">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n22" target="n52">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n55" target="n77">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n72" target="n75">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n75" target="n80">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n3" target="n60">
+    <edge source="n40" target="n61">
       <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n4" target="n60">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n5" target="n42">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n6" target="n47">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n12" target="n31">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n31" target="n49">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n17" target="n88">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n17" target="n110">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n20" target="n101">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n0" target="n111">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n3" target="n111">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n4" target="n95">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n5" target="n86">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n9" target="n98">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n13" target="n100">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n100" target="n112">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n63" target="n101">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n27" target="n102">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n94" target="n102">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n23" target="n77">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n32" target="n77">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n25" target="n104">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n25" target="n113">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n5" target="n77">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n28" target="n29">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n39" target="n40">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n4" target="n43">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n6" target="n8">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n8" target="n70">
-      <data key="e_weight">3.500001</data>
-    </edge>
-    <edge source="n9" target="n12">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n12" target="n74">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n31" target="n74">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n13" target="n31">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n13" target="n50">
-      <data key="e_weight">2.750001</data>
-    </edge>
-    <edge source="n16" target="n88">
-      <data key="e_weight">2.000001</data>
-    </edge>
-    <edge source="n19" target="n62">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n76" target="n80">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n69" target="n80">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n36" target="n40">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n5" target="n40">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n7" target="n82">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n50" target="n88">
-      <data key="e_weight">2.250001</data>
-    </edge>
-    <edge source="n51" target="n71">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n20" target="n54">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n23" target="n54">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n23" target="n32">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n25" target="n58">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n4" target="n36">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n17" target="n62">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n28" target="n76">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n1" target="n2">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n2" target="n5">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n18" target="n88">
-      <data key="e_weight">1.750001</data>
-    </edge>
-    <edge source="n18" target="n101">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n3" target="n38">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n3" target="n41">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n41" target="n43">
-      <data key="e_weight">1.000001</data>
-    </edge>
-    <edge source="n5" target="n43">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n45" target="n46">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n29" target="n88">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n29" target="n63">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n20" target="n63">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n22" target="n76">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n32" target="n76">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n3" target="n43">
-      <data key="e_weight">0.250001</data>
     </edge>
     <edge source="n5" target="n7">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n7" target="n42">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n11" target="n88">
+      <data key="e_weight">4.500001</data>
+    </edge>
+    <edge source="n53" target="n81">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n53" target="n112">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n18" target="n112">
+      <data key="e_weight">2.750001</data>
+    </edge>
+    <edge source="n21" target="n33">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n23" target="n33">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n59" target="n105">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n60" target="n105">
+      <data key="e_weight">1.750001</data>
+    </edge>
+    <edge source="n3" target="n28">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n13" target="n31">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n31" target="n95">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n81" target="n113">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n53" target="n113">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n17" target="n101">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n18" target="n103">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n24" target="n105">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n105" target="n111">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n106" target="n111">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n26" target="n106">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n4" target="n79">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n4" target="n6">
+      <data key="e_weight">2.500001</data>
+    </edge>
+    <edge source="n64" target="n77">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n71" target="n77">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n15" target="n48">
+    <edge source="n49" target="n71">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n17" target="n29">
+    <edge source="n9" target="n88">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n13" target="n81">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n56" target="n57">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n60" target="n76">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n0" target="n40">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n34" target="n45">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n8" target="n45">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n49" target="n83">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n49" target="n88">
+      <data key="e_weight">2.000001</data>
+    </edge>
+    <edge source="n37" target="n55">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n53" target="n75">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n23" target="n58">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n24" target="n26">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n7" target="n64">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n8" target="n43">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n48" target="n88">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n37" target="n53">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n18" target="n75">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n23" target="n26">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n43" target="n48">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n48" target="n49">
+      <data key="e_weight">3.250001</data>
+    </edge>
+    <edge source="n19" target="n53">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n76" target="n105">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n14" target="n67">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n57" target="n67">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n26" target="n57">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n43" target="n65">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n29" target="n66">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n8" target="n66">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n11" target="n14">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n17" target="n57">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n21" target="n57">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n2" target="n4">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n46" target="n64">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n36" target="n46">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n12" target="n37">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n18" target="n54">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n22" target="n58">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n69" target="n79">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n6" target="n43">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n50" target="n83">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n16" target="n112">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n57" target="n75">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n4" target="n30">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n51" target="n83">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n2" target="n79">
+      <data key="e_weight">1.500001</data>
+    </edge>
+    <edge source="n3" target="n7">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n38" target="n47">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n17" target="n112">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n21" target="n24">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n7" target="n62">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n29" target="n64">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n29" target="n48">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n11" target="n31">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n14" target="n31">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n20" target="n56">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n20" target="n114">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n23" target="n114">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n23" target="n76">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n4" target="n7">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n38" target="n44">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n44" target="n66">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n49" target="n66">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n19" target="n21">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n24" target="n78">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n26" target="n78">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n61" target="n69">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n8" target="n46">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n8" target="n49">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n10" target="n50">
+      <data key="e_weight">1.250001</data>
+    </edge>
+    <edge source="n17" target="n53">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n5" target="n63">
+      <data key="e_weight">1.000001</data>
+    </edge>
+    <edge source="n7" target="n63">
+      <data key="e_weight">2.250001</data>
+    </edge>
+    <edge source="n6" target="n38">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n44" target="n47">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n8" target="n44">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n9" target="n52">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n73" target="n112">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n33" target="n114">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n22" target="n114">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n7" target="n38">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n29" target="n42">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n63" target="n79">
       <data key="e_weight">0.250001</data>
     </edge>
     <edge source="n63" target="n64">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n65" target="n76">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n65" target="n80">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n36" target="n59">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n35" target="n70">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n12" target="n70">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n11" target="n34">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n20" target="n53">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n23" target="n53">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n23" target="n26">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n43" target="n67">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n46" target="n82">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n46" target="n47">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n49" target="n88">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n19" target="n110">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n29" target="n110">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n29" target="n101">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n27" target="n101">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n20" target="n27">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n23" target="n56">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n1" target="n4">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n8" target="n12">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n62" target="n101">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n55" target="n65">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n28" target="n65">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n0" target="n4">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n41" target="n67">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n14" target="n50">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n18" target="n110">
+    <edge source="n48" target="n51">
       <data key="e_weight">1.000001</data>
     </edge>
-    <edge source="n63" target="n110">
+    <edge source="n21" target="n58">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n35" target="n79">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n34" target="n43">
       <data key="e_weight">0.500001</data>
     </edge>
-    <edge source="n21" target="n24">
+    <edge source="n9" target="n48">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n21" target="n114">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n18" target="n37">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n7" target="n77">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n42" target="n77">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n37" target="n56">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n0" target="n3">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n14" target="n55">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n53" target="n55">
       <data key="e_weight">0.500001</data>
     </edge>
-    <edge source="n25" target="n80">
+    <edge source="n23" target="n75">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n23" target="n105">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n44" target="n83">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n9" target="n83">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n12" target="n88">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n59" target="n76">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n30" target="n61">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n61" target="n79">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n44" target="n48">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n10" target="n49">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n52" target="n81">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n25" target="n33">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n25" target="n76">
       <data key="e_weight">1.000001</data>
     </edge>
-    <edge source="n36" target="n39">
-      <data key="e_weight">1.500001</data>
-    </edge>
-    <edge source="n4" target="n114">
+    <edge source="n67" target="n112">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n5" target="n114">
+    <edge source="n23" target="n67">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n19" target="n88">
+    <edge source="n4" target="n69">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n27" target="n29">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n42" target="n67">
+    <edge source="n6" target="n65">
       <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n46" target="n67">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n11" target="n33">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n18" target="n63">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n32" target="n75">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n39" target="n60">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n40" target="n60">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n15" target="n71">
+    <edge source="n18" target="n115">
       <data key="e_weight">0.500001</data>
     </edge>
-    <edge source="n17" target="n101">
+    <edge source="n20" target="n115">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n20" target="n105">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n53" target="n56">
+    <edge source="n38" target="n65">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n42" target="n64">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n33" target="n84">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n42" target="n114">
+    <edge source="n0" target="n35">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n43" target="n114">
+    <edge source="n17" target="n52">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n64" target="n116">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n47" target="n116">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n48" target="n117">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n49" target="n117">
       <data key="e_weight">0.250001</data>
     </edge>
     <edge source="n11" target="n49">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n14" target="n53">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n20" target="n84">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n58" target="n84">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n14" target="n30">
       <data key="e_weight">0.500001</data>
     </edge>
-    <edge source="n31" target="n33">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n5" target="n41">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n20" target="n29">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n21" target="n23">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n10" target="n41">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n34" target="n88">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n28" target="n56">
+    <edge source="n23" target="n79">
       <data key="e_weight">0.750001</data>
     </edge>
-    <edge source="n3" target="n114">
+    <edge source="n30" target="n80">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n45" target="n114">
+    <edge source="n61" target="n80">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n16" target="n33">
+    <edge source="n4" target="n41">
       <data key="e_weight">0.500001</data>
     </edge>
-    <edge source="n17" target="n27">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n57" target="n80">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n34" target="n70">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n52" target="n64">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n70" target="n74">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n34" target="n74">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n12" target="n46">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n49" target="n50">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n16" target="n110">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n101" target="n110">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n70" target="n82">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n19" target="n27">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n23" target="n27">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n56" target="n76">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n42" target="n60">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n42" target="n44">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n61" target="n70">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n21" target="n62">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n19" target="n51">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n36" target="n42">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n88" target="n110">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n62" target="n110">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n14" target="n48">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n88" target="n115">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n110" target="n115">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n24" target="n52">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n26" target="n65">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n42" target="n81">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n30" target="n63">
-      <data key="e_weight">1.250001</data>
-    </edge>
-    <edge source="n32" target="n55">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n4" target="n67">
-      <data key="e_weight">1e-06</data>
-    </edge>
-    <edge source="n8" target="n45">
-      <data key="e_weight">1e-06</data>
-    </edge>
-    <edge source="n15" target="n17">
-      <data key="e_weight">1e-06</data>
-    </edge>
-    <edge source="n18" target="n29">
-      <data key="e_weight">1e-06</data>
-    </edge>
-    <edge source="n40" target="n81">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n6" target="n12">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n50" target="n115">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n18" target="n115">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n18" target="n116">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n27" target="n116">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n28" target="n117">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n25" target="n117">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n5" target="n8">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n10" target="n70">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n16" target="n79">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n20" target="n76">
+    <edge source="n24" target="n33">
       <data key="e_weight">0.250001</data>
     </edge>
     <edge source="n23" target="n29">
       <data key="e_weight">0.500001</data>
     </edge>
-    <edge source="n23" target="n64">
+    <edge source="n12" target="n23">
       <data key="e_weight">1e-06</data>
     </edge>
-    <edge source="n27" target="n76">
+    <edge source="n31" target="n79">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n38" target="n63">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n38" target="n77">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n29" target="n77">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n29" target="n71">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n81" target="n112">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n2" target="n63">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n44" target="n63">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n36" target="n51">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n31" target="n81">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n20" target="n22">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n22" target="n59">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n44" target="n77">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n9" target="n37">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n17" target="n56">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n3" target="n32">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n32" target="n36">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n18" target="n36">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n4" target="n63">
       <data key="e_weight">0.500001</data>
     </edge>
-    <edge source="n6" target="n74">
+    <edge source="n9" target="n47">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n15" target="n56">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n29" target="n34">
       <data key="e_weight">1e-06</data>
     </edge>
-    <edge source="n22" target="n64">
+    <edge source="n9" target="n11">
       <data key="e_weight">1e-06</data>
     </edge>
-    <edge source="n33" target="n34">
+    <edge source="n56" target="n112">
       <data key="e_weight">1e-06</data>
     </edge>
-    <edge source="n39" target="n41">
+    <edge source="n35" target="n69">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n48" target="n74">
+    <edge source="n9" target="n45">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n50" target="n74">
+    <edge source="n1" target="n61">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n30" target="n51">
+    <edge source="n36" target="n43">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n52" target="n76">
+    <edge source="n8" target="n36">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n32" target="n57">
+    <edge source="n48" target="n50">
+      <data key="e_weight">0.750001</data>
+    </edge>
+    <edge source="n18" target="n20">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n25" target="n30">
+    <edge source="n30" target="n31">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n1" target="n37">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n29" target="n63">
       <data key="e_weight">1e-06</data>
     </edge>
-    <edge source="n30" target="n34">
-      <data key="e_weight">1e-06</data>
-    </edge>
-    <edge source="n2" target="n60">
+    <edge source="n15" target="n36">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n41" target="n44">
+    <edge source="n36" target="n78">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n11" target="n31">
+    <edge source="n5" target="n79">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n64" target="n110">
+    <edge source="n6" target="n66">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n24" target="n80">
+    <edge source="n40" target="n85">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n62" target="n85">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n65" target="n70">
       <data key="e_weight">0.500001</data>
     </edge>
-    <edge source="n35" target="n59">
+    <edge source="n43" target="n45">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n7" target="n70">
+    <edge source="n31" target="n86">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n3" target="n5">
+    <edge source="n20" target="n72">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n63" target="n85">
       <data key="e_weight">1e-06</data>
     </edge>
-    <edge source="n30" target="n110">
+    <edge source="n29" target="n46">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n11" target="n48">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n16" target="n74">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n23" target="n74">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n30" target="n40">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n5" target="n85">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n45" target="n51">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n10" target="n12">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n16" target="n73">
+      <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n21" target="n74">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n38" target="n59">
+    <edge source="n23" target="n84">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n40" target="n44">
-      <data key="e_weight">0.250001</data>
+    <edge source="n20" target="n31">
+      <data key="e_weight">1e-06</data>
     </edge>
-    <edge source="n18" target="n62">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n58" target="n68">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n36" target="n60">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n7" target="n9">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n14" target="n31">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n14" target="n17">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n30" target="n62">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n53" target="n64">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n27" target="n28">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n26" target="n35">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n19" target="n34">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n34" target="n75">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n48" target="n71">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n21" target="n27">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n35" target="n66">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n48" target="n85">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n27" target="n85">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n23" target="n72">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n65" target="n68">
+    <edge source="n34" target="n66">
       <data key="e_weight">0.500001</data>
     </edge>
-    <edge source="n37" target="n84">
+    <edge source="n55" target="n86">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n33" target="n72">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n24" target="n72">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n12" target="n48">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n31" target="n91">
       <data key="e_weight">1e-06</data>
     </edge>
-    <edge source="n0" target="n84">
+    <edge source="n14" target="n91">
       <data key="e_weight">1e-06</data>
     </edge>
-    <edge source="n5" target="n70">
+    <edge source="n18" target="n74">
       <data key="e_weight">1e-06</data>
+    </edge>
+    <edge source="n42" target="n66">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n47" target="n71">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n88" target="n92">
+      <data key="e_weight">0.500001</data>
+    </edge>
+    <edge source="n52" target="n92">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n74" target="n84">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n6" target="n70">
+      <data key="e_weight">0.250001</data>
+    </edge>
+    <edge source="n38" target="n45">
+      <data key="e_weight">0.250001</data>
     </edge>
     <edge source="n10" target="n48">
-      <data key="e_weight">1e-06</data>
-    </edge>
-    <edge source="n18" target="n49">
-      <data key="e_weight">1e-06</data>
-    </edge>
-    <edge source="n81" target="n84">
-      <data key="e_weight">1e-06</data>
-    </edge>
-    <edge source="n8" target="n81">
-      <data key="e_weight">1e-06</data>
-    </edge>
-    <edge source="n22" target="n62">
-      <data key="e_weight">1e-06</data>
-    </edge>
-    <edge source="n53" target="n72">
-      <data key="e_weight">1e-06</data>
-    </edge>
-    <edge source="n6" target="n76">
-      <data key="e_weight">1e-06</data>
-    </edge>
-    <edge source="n6" target="n28">
-      <data key="e_weight">1e-06</data>
-    </edge>
-    <edge source="n5" target="n46">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n33" target="n85">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n21" target="n63">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n54" target="n72">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n60" target="n90">
-      <data key="e_weight">1e-06</data>
-    </edge>
-    <edge source="n3" target="n67">
-      <data key="e_weight">1e-06</data>
-    </edge>
-    <edge source="n13" target="n71">
-      <data key="e_weight">1e-06</data>
-    </edge>
-    <edge source="n27" target="n51">
-      <data key="e_weight">1e-06</data>
-    </edge>
-    <edge source="n22" target="n51">
-      <data key="e_weight">1e-06</data>
-    </edge>
-    <edge source="n37" target="n92">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n60" target="n81">
-      <data key="e_weight">0.750001</data>
-    </edge>
-    <edge source="n70" target="n83">
+    <edge source="n56" target="n84">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n65" target="n75">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n73" target="n80">
+    <edge source="n72" target="n84">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n91" target="n92">
+    <edge source="n32" target="n93">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n0" target="n92">
+    <edge source="n12" target="n86">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n41" target="n66">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n45" target="n66">
-      <data key="e_weight">0.500001</data>
-    </edge>
-    <edge source="n47" target="n48">
+    <edge source="n67" target="n75">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n14" target="n49">
+    <edge source="n39" target="n106">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n30" target="n88">
+    <edge source="n23" target="n106">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n27" target="n30">
+    <edge source="n69" target="n96">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n21" target="n54">
+    <edge source="n69" target="n97">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n4" target="n45">
+    <edge source="n2" target="n97">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n8" target="n35">
+    <edge source="n2" target="n28">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n17" target="n85">
+    <edge source="n28" target="n98">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n30" target="n64">
+    <edge source="n41" target="n98">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n4" target="n38">
+    <edge source="n48" target="n95">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n13" target="n79">
+    <edge source="n81" target="n100">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n23" target="n46">
+    <edge source="n81" target="n118">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n23" target="n102">
+    <edge source="n101" target="n118">
       <data key="e_weight">0.250001</data>
     </edge>
-    <edge source="n38" target="n95">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n44" target="n86">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n46" target="n118">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n97" target="n118">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n48" target="n99">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n18" target="n100">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n101" target="n112">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n94" target="n104">
-      <data key="e_weight">0.250001</data>
-    </edge>
-    <edge source="n32" target="n69">
+    <edge source="n72" target="n105">
       <data key="e_weight">0.250001</data>
     </edge>
   </graph>
