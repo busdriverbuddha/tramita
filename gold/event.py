@@ -1,6 +1,11 @@
 from enum import Enum
 
 class Event(Enum):
+    """
+    Definimos aqui alguns eventos-chave que pudessem sinalizar
+    que uma proposição tivesse avançado no processo legislativo.
+    Nem todos foram usados na análise final.
+    """
     APRESENTADO = 'apresentado'
     DISTRIBUIDO = 'distribuido'
     RECEBIDO_COMISSAO = 'recebido_comissao'
