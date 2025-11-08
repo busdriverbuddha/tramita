@@ -93,3 +93,14 @@ def add_column_from_graph(g: ig.Graph, df: pd.DataFrame, attr_name: str) -> pd.D
         pd.DataFrame([{'name': v['name'], attr_name: v[attr_name]} for v in g.vs]).set_index('name', drop=True),
         on="name"
     )
+
+
+def get_gini(row: pd.Series) -> float:
+    K = len(row)  # vai ser sempre o número de colunas (comunidades)
+    g = 0.0
+    for v1 in row:
+        for v2 in row:
+            g += abs(v1 - v2)
+    g = 1 / (2*K) * g
+    g = g / (1.0 - 1.0 / K)  # normalizamos para 1.0
+    return round(g, 3)
